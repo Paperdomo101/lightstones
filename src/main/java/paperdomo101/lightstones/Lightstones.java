@@ -12,6 +12,8 @@ import net.minecraft.world.gen.decorator.RangeDecoratorConfig;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
+import paperdomo101.lightstones.registry.LightstonesBlocks;
+import paperdomo101.lightstones.registry.LightstonesItems;
 
 public class Lightstones implements ModInitializer {
     
