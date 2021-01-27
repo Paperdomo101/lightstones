@@ -1,5 +1,5 @@
 package paperdomo101.lightstones.block;
-
+/*
 import java.util.Map;
 
 import com.google.common.collect.ImmutableMap;
@@ -14,9 +14,7 @@ import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
-import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
@@ -26,14 +24,13 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
-public class WallLightstoneBlock extends LightstoneBlock {
+public class WallLightstoneBlockOld extends LightstoneBlockOld {
     public static final DirectionProperty FACING;
-    public static final BooleanProperty WATERLOGGED;
     private static final Map<Direction, VoxelShape> BOUNDING_SHAPES;
     
-    public WallLightstoneBlock(Settings settings) {
+    public WallLightstoneBlockOld(Settings settings) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH).with(WATERLOGGED, false));
+        this.setDefaultState((BlockState)(this.stateManager.getDefaultState()).with(FACING, Direction.NORTH));
     }
 
     public String getTranslationKey() {
@@ -104,16 +101,11 @@ public class WallLightstoneBlock extends LightstoneBlock {
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(WATERLOGGED, FACING);
-    }
-
-    public FluidState getFluidState(BlockState state) {
-        return (Boolean)state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
+        builder.add(FACING);
     }
 
     static {
-        WATERLOGGED = Properties.WATERLOGGED;
         FACING = HorizontalFacingBlock.FACING;
         BOUNDING_SHAPES = Maps.newEnumMap(ImmutableMap.of(Direction.NORTH, Block.createCuboidShape(6.5D, 4.0D, 13.0D, 9.5D, 12.0D, 16.0D), Direction.SOUTH, Block.createCuboidShape(6.5D, 4.0D, 0.0D, 9.5D, 12.0D, 3.0D), Direction.WEST, Block.createCuboidShape(13.0D, 4.0D, 6.5D, 16.0D, 12.0D, 9.5D), Direction.EAST, Block.createCuboidShape(0.0D, 4.0D, 6.5D, 3.0D, 12.0D, 9.5D)));
     }
-}
+}*/

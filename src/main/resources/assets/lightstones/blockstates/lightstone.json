@@ -1,6 +1,6 @@
 {
     "variants": {
-        "type=floor": { "model": "lightstones:block/lightstone" },
-        "type=roof": { "model": "lightstones:block/lightstone_roof" }
+        "on_roof=false": { "model": "lightstones:block/lightstone" },
+        "on_roof=true": { "model": "lightstones:block/lightstone_roof" }
     }
 }
