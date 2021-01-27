@@ -4,6 +4,7 @@
   "package": "paperdomo101.lightstones.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "DefaultBiomeCreatorMixin"
   ],
   "client": [
   ],

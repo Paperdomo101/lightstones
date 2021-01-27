@@ -1,11 +1,12 @@
 package paperdomo101.lightstones.block;
 
-import org.jetbrains.annotations.Nullable;
-
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.FacingBlock;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.block.Waterloggable;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
@@ -13,48 +14,61 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.BlockMirror;
+import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 
-public class LightstoneBlock extends Block implements Waterloggable {
+public class LightstoneBlock extends FacingBlock implements Waterloggable {
     
-    public static final BooleanProperty ON_ROOF;
-    public static final BooleanProperty WATERLOGGED;
-    protected static final VoxelShape FLOOR_SHAPE;
-    protected static final VoxelShape ROOF_SHAPE;
-
-    public LightstoneBlock(Settings settings) {
+    public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
+    protected static final VoxelShape Y_SHAPE = Block.createCuboidShape(6.5D, 0.0D, 6.5D, 9.5D, 8.0D, 9.5D);
+    protected static final VoxelShape Z_SHAPE = Block.createCuboidShape(6.5D, 4.0D, 13.0D, 9.5D, 12.0D, 16.0D);
+    protected static final VoxelShape X_SHAPE = Block.createCuboidShape(0.0D, 4.0D, 6.5D, 3.0D, 12.0D, 9.5D);
+    
+    public LightstoneBlock(AbstractBlock.Settings settings) {
         super(settings);
-        setDefaultState(getStateManager().getDefaultState().with(ON_ROOF, false).with(WATERLOGGED, false));
+        this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.UP).with(WATERLOGGED, false));
     }
 
     public boolean hasSidedTransparency(BlockState state) {
         return true;
     }
 
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(ON_ROOF, WATERLOGGED);
+    public PistonBehavior getPistonBehavior(BlockState state) {
+        return PistonBehavior.DESTROY;
     }
 
+    public BlockState rotate(BlockState state, BlockRotation rotation) {
+        return (BlockState)state.with(FACING, rotation.rotate((Direction)state.get(FACING)));
+    }
+
+    public BlockState mirror(BlockState state, BlockMirror mirror) {
+        return (BlockState)state.with(FACING, mirror.apply((Direction)state.get(FACING)));
+    }
+  
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        boolean on_roof = state.get(ON_ROOF);
-        if (on_roof) {
-            return ROOF_SHAPE;
-        } else {
-            return FLOOR_SHAPE;
+        switch(((Direction)state.get(FACING)).getAxis()) {
+        case X:
+        default:
+           return X_SHAPE;
+        case Z:
+           return Z_SHAPE;
+        case Y:
+           return Y_SHAPE;
         }
     }
 
-    @Nullable
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        BlockPos blockPos = ctx.getBlockPos();
-        FluidState fluidState = ctx.getWorld().getFluidState(blockPos);
-        BlockState blockState = (BlockState)((BlockState)this.getDefaultState().with(ON_ROOF, false)).with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
         Direction direction = ctx.getSide();
-        return direction != Direction.DOWN && (direction == Direction.UP || ctx.getHitPos().y - (double)blockPos.getY() <= 0.5D) ? blockState : (BlockState)blockState.with(ON_ROOF, true);
+        FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
+        boolean bl = fluidState.getFluid() == Fluids.WATER;
+        BlockState blockState = ctx.getWorld().getBlockState(ctx.getBlockPos().offset(direction.getOpposite()));
+
+        return blockState.isOf(this) && blockState.get(FACING) == direction ? (BlockState)this.getDefaultState().with(FACING, direction.getOpposite()).with(WATERLOGGED, bl) : (BlockState)this.getDefaultState().with(FACING, direction).with(WATERLOGGED, bl);
     }
 
     public FluidState getFluidState(BlockState state) {
@@ -76,11 +90,8 @@ public class LightstoneBlock extends Block implements Waterloggable {
 
         return super.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);
     }
-    
-    static {
-        ON_ROOF = BooleanProperty.of("on_roof");
-        WATERLOGGED = Properties.WATERLOGGED;
-        FLOOR_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D);
-        ROOF_SHAPE = Block.createCuboidShape(0.0D, 8.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(FACING, WATERLOGGED);
     }
 }

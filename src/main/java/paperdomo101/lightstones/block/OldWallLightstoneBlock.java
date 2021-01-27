@@ -1,5 +1,5 @@
 package paperdomo101.lightstones.block;
-/*
+
 import java.util.Map;
 
 import com.google.common.collect.ImmutableMap;
@@ -10,11 +10,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.block.Waterloggable;
+import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
@@ -22,19 +27,30 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-public class WallLightstoneBlockOld extends LightstoneBlockOld {
+public class OldWallLightstoneBlock extends Block implements Waterloggable {
+
+    public static final BooleanProperty WATERLOGGED;
     public static final DirectionProperty FACING;
     private static final Map<Direction, VoxelShape> BOUNDING_SHAPES;
-    
-    public WallLightstoneBlockOld(Settings settings) {
+
+    public OldWallLightstoneBlock(Settings settings) {
         super(settings);
         this.setDefaultState((BlockState)(this.stateManager.getDefaultState()).with(FACING, Direction.NORTH));
     }
 
     public String getTranslationKey() {
         return this.asItem().getTranslationKey();
+    }
+
+    public boolean hasSidedTransparency(BlockState state) {
+        return true;
+    }
+
+    public PistonBehavior getPistonBehavior(BlockState state) {
+        return PistonBehavior.DESTROY;
     }
 
     @Override
@@ -74,7 +90,7 @@ public class WallLightstoneBlockOld extends LightstoneBlockOld {
                 Direction direction2 = direction.getOpposite();
                 blockState = (BlockState)blockState.with(FACING, direction2);
                 if (blockState.canPlaceAt(worldView, blockPos)) {
-                return blockState;
+                    return blockState;
                 }
             }
         }
@@ -97,15 +113,37 @@ public class WallLightstoneBlockOld extends LightstoneBlockOld {
     }
 
     public BlockState mirror(BlockState state, BlockMirror mirror) {
-    return state.rotate(mirror.getRotation((Direction)state.get(FACING)));
+        return state.rotate(mirror.getRotation((Direction)state.get(FACING)));
     }
 
+    public FluidState getFluidState(BlockState state) {
+        return (Boolean)state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
+    }
+
+    public boolean tryFillWithFluid(WorldAccess world, BlockPos pos, BlockState state, FluidState fluidState) {
+        return Waterloggable.super.tryFillWithFluid(world, pos, state, fluidState);
+    }
+
+    public boolean canFillWithFluid(BlockView world, BlockPos pos, BlockState state, Fluid fluid) {
+        return Waterloggable.super.canFillWithFluid(world, pos, state, fluid);
+    }
+
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState newState, WorldAccess world, BlockPos pos, BlockPos posFrom) {
+        if ((Boolean)state.get(WATERLOGGED)) {
+        world.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+        }
+
+        return super.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);
+    }
+    
+
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
+        builder.add(WATERLOGGED, FACING);
     }
 
     static {
+        WATERLOGGED = Properties.WATERLOGGED;
         FACING = HorizontalFacingBlock.FACING;
         BOUNDING_SHAPES = Maps.newEnumMap(ImmutableMap.of(Direction.NORTH, Block.createCuboidShape(6.5D, 4.0D, 13.0D, 9.5D, 12.0D, 16.0D), Direction.SOUTH, Block.createCuboidShape(6.5D, 4.0D, 0.0D, 9.5D, 12.0D, 3.0D), Direction.WEST, Block.createCuboidShape(13.0D, 4.0D, 6.5D, 16.0D, 12.0D, 9.5D), Direction.EAST, Block.createCuboidShape(0.0D, 4.0D, 6.5D, 3.0D, 12.0D, 9.5D)));
     }
-}*/
+}

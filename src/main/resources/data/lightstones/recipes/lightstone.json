@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lightstones:lightstone_block"
+    }
+  ],
+  "result": {
+    "item": "lightstones:lightstone",
+    "count": 9
+  }
+}

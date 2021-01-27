@@ -12,7 +12,7 @@ import paperdomo101.lightstones.block.LightstoneBlock;
 
 public class LightstonesBlocks {
 
-    public static final Block LIGHTSTONE_ORE = new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE).materialColor(MaterialColor.YELLOW_TERRACOTTA).nonOpaque().strength(3f, 3f).luminance(7));
+    public static final Block LIGHTSTONE_ORE = new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE).materialColor(MaterialColor.YELLOW_TERRACOTTA).strength(3f, 3f).luminance(7));
     public static final Block LIGHTSTONE = new LightstoneBlock(FabricBlockSettings.of(Material.GLASS, MaterialColor.GOLD).nonOpaque().sounds(BlockSoundGroup.GLASS).strength(0.2f, 0.1f).luminance(15));
     //public static final Block LIGHTSTONE_WALL = new WallLightstoneBlock(FabricBlockSettings.of(Material.GLASS, MaterialColor.GOLD).nonOpaque().sounds(BlockSoundGroup.GLASS).strength(0.2f, 0.1f).luminance(15));
     public static final Block LIGHTSTONE_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK).materialColor(MaterialColor.GOLD).strength(2f, 2f).luminance(15));

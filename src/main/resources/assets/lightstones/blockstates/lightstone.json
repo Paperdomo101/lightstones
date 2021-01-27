@@ -1,6 +1,25 @@
 {
-    "variants": {
-        "on_roof=false": { "model": "lightstones:block/lightstone" },
-        "on_roof=true": { "model": "lightstones:block/lightstone_roof" }
+  "variants": {
+    "facing=down": {
+      "model": "lightstones:block/roof_lightstone"
+    },
+    "facing=east": {
+      "model": "lightstones:block/lightstone_wall",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "lightstones:block/lightstone_wall"
+    },
+    "facing=south": {
+      "model": "lightstones:block/lightstone_wall",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "lightstones:block/lightstone"
+    },
+    "facing=west": {
+      "model": "lightstones:block/lightstone_wall",
+      "y": 270
     }
+  }
 }
