@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "lightstones:block/lightstone_wall", "y": 0 },
-        "facing=east": { "model": "lightstones:block/lightstone_wall", "y": 90 },
-        "facing=south": { "model": "lightstones:block/lightstone_wall", "y": 180 },
-        "facing=west": { "model": "lightstones:block/lightstone_wall", "y": 270 }
-    }
-}

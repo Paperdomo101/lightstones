@@ -1,9 +1,11 @@
 {
     "itemGroup.lightstones.lightstones":"Lightstones",
     "block.lightstones.lightstone":"Lightstone",
-    "block.lightstones.lightstone_wall":"Lightstone",
     "block.lightstones.lightstone_ore":"Lightstone Ore",
     "block.lightstones.lightstone_block":"Lightstone Block",
+    "block.lightstones.blightstone":"Blightstone",
+    "block.lightstones.blightstone_ore":"Blightstone Ore",
+    "block.lightstones.blightstone_block":"Blightstone Block",
     "item.minecraft.potion.effect.ablepsy":"Potion of Ablepsy",
     "item.minecraft.potion.effect.long_ablepsy":"Potion of Ablepsy",
     "item.minecraft.splash_potion.effect.ablepsy":"Splash Potion of Ablepsy",
