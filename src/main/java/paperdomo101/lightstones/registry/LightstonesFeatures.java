@@ -22,13 +22,13 @@ public class LightstonesFeatures {
         .configure(new OreFeatureConfig(
         OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
         LightstonesBlocks.LIGHTSTONE_ORE.getDefaultState(),
-        8)) // vein size
+        7)) // vein size
         .decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
         0, // bottom offset
         0, // min y level
         34))) // max y level
         .spreadHorizontally()
-        .repeat(8); // number of veins per chunk
+        .repeat(6); // number of veins per chunk
 
     private static ConfiguredFeature<?, ?> ORE_LIGHTSTONE_EXTRA = Feature.ORE
         .configure(new OreFeatureConfig(
