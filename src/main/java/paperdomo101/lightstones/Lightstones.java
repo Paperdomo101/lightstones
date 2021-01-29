@@ -19,6 +19,7 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import paperdomo101.lightstones.registry.LightstonesBlocks;
 import paperdomo101.lightstones.registry.LightstonesItems;
+import paperdomo101.lightstones.registry.LightstonesPotions;
 
 @SuppressWarnings("deprecation")
 public class Lightstones implements ModInitializer {
@@ -58,14 +59,11 @@ public class Lightstones implements ModInitializer {
     builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, ORE_LIGHTSTONE_EXTRA);
   }
 
-  //@link TradeOffers#PROFESSION_TO_LEVELED_TRADE
-
-
   @Override
   public void onInitialize() {
     LightstonesBlocks.init();
     LightstonesItems.init();
-    //LightstonesPotions.init();
+    LightstonesPotions.init();
     
     RegistryKey<ConfiguredFeature<?, ?>> lightstoneOreOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN,
     id("lightstone_ore_overworld"));

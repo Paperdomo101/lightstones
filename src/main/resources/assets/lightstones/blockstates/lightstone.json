@@ -3,22 +3,22 @@
     "facing=down": {
       "model": "lightstones:block/roof_lightstone"
     },
-    "facing=east": {
-      "model": "lightstones:block/lightstone_wall",
-      "y": 90
-    },
-    "facing=north": {
-      "model": "lightstones:block/lightstone_wall"
-    },
-    "facing=south": {
-      "model": "lightstones:block/lightstone_wall",
-      "y": 180
-    },
     "facing=up": {
       "model": "lightstones:block/lightstone"
     },
+    "facing=east": {
+      "model": "lightstones:block/wall_lightstone",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "lightstones:block/wall_lightstone"
+    },
+    "facing=south": {
+      "model": "lightstones:block/wall_lightstone",
+      "y": 180
+    },
     "facing=west": {
-      "model": "lightstones:block/lightstone_wall",
+      "model": "lightstones:block/wall_lightstone",
       "y": 270
     }
   }
