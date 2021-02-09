@@ -1,3 +1,12 @@
+buildscript {
+    ext {
+        modMenuVersion = '1.14.13+build.19'
+        clothConfigVersion = '4.8.3'
+        autoConfig1uVersion = '3.3.1'
+        bannerPPVersion = '2.0.2+mc.1.16.3'
+    }
+}
+
 plugins {
 	id 'fabric-loom' version '0.5-SNAPSHOT'
 	id 'maven-publish'
@@ -10,6 +19,14 @@ archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
 
+repositories {
+	jcenter()
+
+	maven {
+		url 'https://server.bbkr.space/artifactory/libs-release/'
+	}
+}
+
 dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -19,8 +36,21 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
-	// You may need to force-disable transitiveness on them.
+    // PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
+    // You may need to force-disable transitiveness on them.
+
+    modImplementation "io.github.prospector:modmenu:${modMenuVersion}"
+    modImplementation "io.github.fablabsmc:bannerpp:${bannerPPVersion}"
+
+    modApi("me.shedaniel.cloth:config-2:${clothConfigVersion}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
+    include "me.shedaniel.cloth:config-2:${clothConfigVersion}"
+
+    modApi("me.sargunvohra.mcmods:autoconfig1u:${autoConfig1uVersion}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
+    include "me.sargunvohra.mcmods:autoconfig1u:${autoConfig1uVersion}"
 }
 
 processResources {
@@ -78,5 +108,6 @@ publishing {
 	// To publish to maven local, no extra repositories are necessary. Just use the task `publishToMavenLocal`.
 	repositories {
 		// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
+    	
 	}
 }

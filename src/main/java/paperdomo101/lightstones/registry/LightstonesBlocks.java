@@ -9,6 +9,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.registry.Registry;
 import paperdomo101.lightstones.Lightstones;
 import paperdomo101.lightstones.block.LightstoneBlock;
+import paperdomo101.lightstones.block.NuiStoneBlock;
 
 public class LightstonesBlocks {
 
@@ -20,6 +21,9 @@ public class LightstonesBlocks {
     public static final Block BLIGHTSTONE = new LightstoneBlock(FabricBlockSettings.of(Material.GLASS, MaterialColor.PURPLE).nonOpaque().sounds(BlockSoundGroup.GLASS).strength(0.2f, 0.1f).luminance(15));
     public static final Block BLIGHTSTONE_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK).materialColor(MaterialColor.PURPLE).strength(2f, 2f).luminance(15));
 
+    public static final Block MATA_NUI_STONE = new NuiStoneBlock(11579568, FabricBlockSettings.copyOf(Blocks.STONE).materialColor(MaterialColor.STONE).sounds(BlockSoundGroup.STONE).strength(3f, 3f), LightstonesSounds.BLOCK_MATA_NUI_STONE_FALL);
+    public static final Block MAKUTA_STONE = new NuiStoneBlock(2036251, FabricBlockSettings.copyOf(Blocks.BLACKSTONE).materialColor(MaterialColor.BLACK).sounds(BlockSoundGroup.STONE).strength(3f, 3f), LightstonesSounds.BLOCK_MAKUTA_STONE_FALL);
+
     public static void init() {
         Registry.register(Registry.BLOCK, Lightstones.id("lightstone_ore"), LIGHTSTONE_ORE);
         Registry.register(Registry.BLOCK, Lightstones.id("lightstone"), LIGHTSTONE);
@@ -28,5 +32,8 @@ public class LightstonesBlocks {
         Registry.register(Registry.BLOCK, Lightstones.id("blightstone_ore"), BLIGHTSTONE_ORE);
         Registry.register(Registry.BLOCK, Lightstones.id("blightstone"), BLIGHTSTONE);
         Registry.register(Registry.BLOCK, Lightstones.id("blightstone_block"), BLIGHTSTONE_BLOCK);
+
+        Registry.register(Registry.BLOCK, Lightstones.id("mata_nui_stone"), MATA_NUI_STONE);
+        Registry.register(Registry.BLOCK, Lightstones.id("makuta_stone"), MAKUTA_STONE);
     }
 }

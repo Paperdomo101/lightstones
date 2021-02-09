@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "lightstones:block/mata_nui_stone",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "lightstones:block/mata_nui_stone"
+    },
+    "facing=south": {
+      "model": "lightstones:block/mata_nui_stone",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "lightstones:block/mata_nui_stone",
+      "y": 270
+    }
+  }
+}

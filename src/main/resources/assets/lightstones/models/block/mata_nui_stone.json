@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "lightstones:block/mata_nui_stone_top",
+    "front": "lightstones:block/mata_nui_stone",
+    "side": "lightstones:block/mata_nui_stone_side"
+  }
+}

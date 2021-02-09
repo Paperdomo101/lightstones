@@ -20,6 +20,12 @@
   "entrypoints": {
     "main": [
       "paperdomo101.lightstones.Lightstones"
+    ],
+    "client": [
+      "paperdomo101.lightstones.client.LightstonesClient"
+    ],
+    "modmenu": [
+      "paperdomo101.lightstones.config.LightstonesModMenu"
     ]
   },
   "mixins": [
