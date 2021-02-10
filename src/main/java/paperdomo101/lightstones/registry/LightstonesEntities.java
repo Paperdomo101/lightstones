@@ -16,10 +16,12 @@ import paperdomo101.lightstones.entity.vehicle.LavaSurfboardEntity;
 public class LightstonesEntities {
     private static final Map<Identifier, EntityType<?>> ENTITY_TYPES = new LinkedHashMap<>();
 
-    public static final EntityType<LavaSurfboardEntity> LAVA_SURFBOARD = add("lava_surfboard", buildEntity(SpawnGroup.MISC, LavaSurfboardEntity::new, false, 1.375F, 0.5625F));
+    public static final EntityType<LavaSurfboardEntity> LAVA_SURFBOARD = add("lava_surfboard", buildEntity(SpawnGroup.MISC, LavaSurfboardEntity::new, false, 1.35F, 0.125F));
 
-    static <T extends Entity> EntityType<T> register(String name, EntityType<T> type) {
-        return Registry.register(Registry.ENTITY_TYPE, Lightstones.id(name), type);
+    public static void init() {
+        for (Identifier id : ENTITY_TYPES.keySet()) {
+            Registry.register(Registry.ENTITY_TYPE, id, ENTITY_TYPES.get(id));
+        }
     }
 
     private static <E extends EntityType<?>> E add(String name, E type) {
@@ -34,9 +36,5 @@ public class LightstonesEntities {
         }
         
         return FabricEntityTypeBuilder.create(group, factory).dimensions(EntityDimensions.fixed(width, height)).build();
-    }
-
-    public static void init() {
-
     }
 }

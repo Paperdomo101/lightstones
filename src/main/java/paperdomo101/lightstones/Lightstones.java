@@ -10,7 +10,6 @@ import net.minecraft.util.Identifier;
 import paperdomo101.lightstones.config.LightstonesConfig;
 import paperdomo101.lightstones.registry.LightstonesBannerPatterns;
 import paperdomo101.lightstones.registry.LightstonesBlocks;
-import paperdomo101.lightstones.registry.LightstonesEntities;
 import paperdomo101.lightstones.registry.LightstonesFeatures;
 import paperdomo101.lightstones.registry.LightstonesItems;
 import paperdomo101.lightstones.registry.LightstonesLoot;
@@ -35,7 +34,7 @@ public class Lightstones implements ModInitializer {
         LightstonesBlocks.init();
         LightstonesItems.init();
         LightstonesFeatures.init();
-        LightstonesEntities.init();
+        // LightstonesEntities.init();
         LightstonesLoot.init();
         LightstonesSounds.init();
         LightstonesBannerPatterns.init();

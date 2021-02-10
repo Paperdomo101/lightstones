@@ -30,17 +30,17 @@ public class LightstonesConfig implements ConfigData {
     public int blightstoneOreVeinsPerChunk = 5;
 
     // Loot tables
-    public boolean stridersDropHide = true;
-    public float striderHideMin = 0.0f; 
-    public float striderHideMax = 2.0f;
+    // public boolean stridersDropHide = true;
+    // public float striderHideMin = 0.0f; 
+    // public float striderHideMax = 2.0f;
 
     public boolean piglinsBarterBlightstones = true;
     public float piglinBlightstoneChanceMin = 0.2f;
     public float piglinBlightstoneChanceMax = 5.0f;
     
-    public boolean piglinsBarterLavaSurfboards = true;
-    public float piglinLavaSurfboardChanceMin = 0.0f;
-    public float piglinLavaSurfboardChanceMax = 0.05f;
+    // public boolean piglinsBarterLavaSurfboards = true;
+    // public float piglinLavaSurfboardChanceMin = 0.0f;
+    // public float piglinLavaSurfboardChanceMax = 0.05f;
 
     public boolean lightstonesAreFishingTreasure = true;
     public float fishLightstonesChanceMin = 2.0f;

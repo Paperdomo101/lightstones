@@ -16,14 +16,14 @@ public class LightstonesLoot {
     
     public static void init() {
         LootTableLoadingCallback.EVENT.register((resourceManager, lootManager, id, supplier, setter) -> {
-            if (STRIDER_LOOT_TABLE_ID.equals(id) && Lightstones.CONFIG.stridersDropHide) {
-                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
-                .rolls(UniformLootTableRange.between(Lightstones.CONFIG.striderHideMin, Lightstones.CONFIG.striderHideMax))
-                .with(ItemEntry.builder(LightstonesItems.STRIDER_HIDE));
+            // if (STRIDER_LOOT_TABLE_ID.equals(id) && Lightstones.CONFIG.stridersDropHide) {
+            //     FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+            //     .rolls(UniformLootTableRange.between(Lightstones.CONFIG.striderHideMin, Lightstones.CONFIG.striderHideMax))
+            //     .with(ItemEntry.builder(LightstonesItems.STRIDER_HIDE));
  
-                supplier.pool(poolBuilder);
+            //     supplier.pool(poolBuilder);
 
-            }
+            // }
             if (PIGLIN_BARTERING_LOOT_TABLE_ID.equals(id)) {
                 if (Lightstones.CONFIG.piglinsBarterBlightstones) {
                     FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
@@ -32,13 +32,13 @@ public class LightstonesLoot {
                     supplier.pool(poolBuilder);
                 }
 
-                if (Lightstones.CONFIG.piglinsBarterLavaSurfboards) {
-                    FabricLootPoolBuilder poolBuilder1 = FabricLootPoolBuilder.builder()
-                    .rolls(UniformLootTableRange.between(Lightstones.CONFIG.piglinLavaSurfboardChanceMin, Lightstones.CONFIG.piglinLavaSurfboardChanceMax))
-                    .with(ItemEntry.builder(LightstonesItems.LAVA_SURFBOARD));
+                // if (Lightstones.CONFIG.piglinsBarterLavaSurfboards) {
+                //     FabricLootPoolBuilder poolBuilder1 = FabricLootPoolBuilder.builder()
+                //     .rolls(UniformLootTableRange.between(Lightstones.CONFIG.piglinLavaSurfboardChanceMin, Lightstones.CONFIG.piglinLavaSurfboardChanceMax))
+                //     .with(ItemEntry.builder(LightstonesItems.LAVA_SURFBOARD));
     
-                    supplier.pool(poolBuilder1);
-                }
+                //     supplier.pool(poolBuilder1);
+                // }
             }
             if (TREASURE_FISHING_LOOT_TABLE_ID.equals(id) && Lightstones.CONFIG.lightstonesAreFishingTreasure) {
                 FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()

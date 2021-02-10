@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:blackstone"
+    },
+    "X": {
+      "item": "lightstones:blightstone"
+    }
+  },
+  "result": {
+    "item": "lightstones:makuta_stone"
+  }
+}

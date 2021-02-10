@@ -23,8 +23,8 @@ public class LightstonesItems {
     public static final Item MATA_NUI_STONE = register("mata_nui_stone", new BlockItem(LightstonesBlocks.MATA_NUI_STONE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
     public static final Item MAKUTA_STONE = register("makuta_stone", new BlockItem(LightstonesBlocks.MAKUTA_STONE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
 
-	public static final Item STRIDER_HIDE = register("strider_hide", new Item(new Item.Settings().group(ItemGroup.MATERIALS).fireproof()));
-	public static final Item LAVA_SURFBOARD = register("lava_surfboard", new LavaSurfboardItem(new Item.Settings().group(ItemGroup.TRANSPORTATION).fireproof().maxCount(1)));
+	// public static final Item STRIDER_HIDE = register("strider_hide", new Item(new Item.Settings().group(ItemGroup.MATERIALS).fireproof()));
+	// public static final Item LAVA_SURFBOARD = register("lava_surfboard", new LavaSurfboardItem(new Item.Settings().group(ItemGroup.TRANSPORTATION).fireproof().maxCount(1)));
 
 	public static final Item MUSIC_DISC_TELESCOPE = register("music_disc_telescope", new LightstonesMusicDiscItem(14, LightstonesSounds.MUSIC_DISC_TELESCOPE, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1).rarity(Rarity.RARE)));
 	public static final Item MUSIC_DISC_END = register("music_disc_end", new LightstonesMusicDiscItem(15, LightstonesSounds.MUSIC_DISC_END, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1).rarity(Rarity.RARE)));

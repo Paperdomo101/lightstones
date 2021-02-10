@@ -15,12 +15,13 @@ public class LavaSurfboardEntityModel extends EntityModel<LavaSurfboardEntity> {
 
 		lava_surfboard = new ModelPart(this);
 		lava_surfboard.setPivot(0.0F, 1.0F, 0.0F);
-		lava_surfboard.setTextureOffset(0, 28).addCuboid(-10.0F, -2.0F, -13.0F, 3.0F, 3.0F, 25.0F, 0.0F, false);
-		lava_surfboard.setTextureOffset(0, 0).addCuboid(7.0F, -2.0F, -13.0F, 3.0F, 3.0F, 25.0F, 0.0F, false);
-		lava_surfboard.setTextureOffset(31, 28).addCuboid(-7.0F, -1.0F, -12.0F, 5.0F, 1.0F, 23.0F, 0.0F, false);
-		lava_surfboard.setTextureOffset(31, 0).addCuboid(2.0F, -1.0F, -12.0F, 5.0F, 1.0F, 23.0F, 0.0F, false);
-		lava_surfboard.setTextureOffset(55, 55).addCuboid(-7.0F, 0.0F, -11.0F, 14.0F, 1.0F, 1.0F, 0.0F, false);
-		lava_surfboard.setTextureOffset(0, 56).addCuboid(-7.0F, 0.0F, 9.0F, 14.0F, 1.0F, 1.0F, 0.0F, false);
+		lava_surfboard.setTextureOffset(0, 28).addCuboid(-10.0F, -2.0F, -13.0F, 3.0F, 3.0F, 25.0F, 0.0F);
+		lava_surfboard.setTextureOffset(0, 0).addCuboid(7.0F, -2.0F, -13.0F, 3.0F, 3.0F, 25.0F, 0.0F);
+		lava_surfboard.setTextureOffset(31, 28).addCuboid(-7.0F, -1.0F, -12.0F, 5.0F, 1.0F, 23.0F, 0.0F);
+		lava_surfboard.setTextureOffset(31, 0).addCuboid(2.0F, -1.0F, -12.0F, 5.0F, 1.0F, 23.0F, 0.0F);
+		lava_surfboard.setTextureOffset(55, 55).addCuboid(-7.0F, 0.0F, -11.0F, 14.0F, 1.0F, 1.0F, 0.0F);
+		lava_surfboard.setTextureOffset(0, 56).addCuboid(-7.0F, 0.0F, 9.0F, 14.0F, 1.0F, 1.0F, 0.0F);
+		lava_surfboard.yaw = 4.58F;
 	}
 
 	@Override

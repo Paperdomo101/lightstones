@@ -8,7 +8,10 @@ import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.client.util.math.Vector3f;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Quaternion;
 import paperdomo101.lightstones.client.render.entity.model.LavaSurfboardEntityModel;
 import paperdomo101.lightstones.entity.vehicle.LavaSurfboardEntity;
 
@@ -23,22 +26,22 @@ public class LavaSurfboardEntityRenderer extends EntityRenderer<LavaSurfboardEnt
       this.shadowRadius = 0.8F;
     }
 
-    @Override
-	public void render(LavaSurfboardEntity entity, float yaw, float tickDelta, MatrixStack matrices, VertexConsumerProvider provider, int light) {
-		matrices.push();
+    // @Override
+	// public void render(LavaSurfboardEntity entity, float yaw, float tickDelta, MatrixStack matrices, VertexConsumerProvider provider, int light) {
+	// 	matrices.push();
 
-		VertexConsumer vertexConsumer = provider.getBuffer(this.model.getLayer(this.getTexture(entity)));
+	// 	VertexConsumer vertexConsumer = provider.getBuffer(this.model.getLayer(this.getTexture(entity)));
 
-		this.model.render(matrices, vertexConsumer, light, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
+	// 	this.model.render(matrices, vertexConsumer, light, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
 
-		matrices.pop();
+	// 	matrices.pop();
 
-		super.render(entity, yaw, tickDelta, matrices, provider, light);
-	}
+	// 	super.render(entity, yaw, tickDelta, matrices, provider, light);
+	// }
 
-    /*public void render(LavaSurfboardEntity lavaSurfboardEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
+    public void render(LavaSurfboardEntity lavaSurfboardEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
         matrixStack.push();
-        matrixStack.translate(0.0D, 0.375D, 0.0D);
+        matrixStack.translate(0.0D, 0.125D, 0.0D);
         matrixStack.multiply(Vector3f.POSITIVE_Y.getDegreesQuaternion(180.0F - f));
         float h = (float)lavaSurfboardEntity.getDamageWobbleTicks() - g;
         float j = lavaSurfboardEntity.getDamageWobbleStrength() - g;
@@ -63,7 +66,7 @@ public class LavaSurfboardEntityRenderer extends EntityRenderer<LavaSurfboardEnt
 
         matrixStack.pop();
         super.render(lavaSurfboardEntity, f, g, matrixStack, vertexConsumerProvider, i);
-    }*/
+    }
 
     @Override
     public Identifier getTexture(LavaSurfboardEntity lavaSurfboardEntity) {
