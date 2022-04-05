@@ -1,7 +1,7 @@
 package paperdomo101.lightstones.config;
 
-import me.sargunvohra.mcmods.autoconfig1u.ConfigData;
-import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
+import me.shedaniel.autoconfig.ConfigData;
+import me.shedaniel.autoconfig.annotation.Config;
 import paperdomo101.lightstones.Lightstones;
 
 @Config(name = Lightstones.MOD_ID)
