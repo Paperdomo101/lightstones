@@ -19,6 +19,10 @@ public class LightstonesItems {
     public static final Item BLIGHTSTONE_ORE = register("blightstone_ore", new BlockItem(LightstonesBlocks.BLIGHTSTONE_ORE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
     public static final Item BLIGHTSTONE_BLOCK = register("blightstone_block", new BlockItem(LightstonesBlocks.BLIGHTSTONE_BLOCK, new Item.Settings().group(Lightstones.LIGHTSTONES)));
 
+    public static final Item DEATHSTONE = register("deathstone", new BlockItem(LightstonesBlocks.DEATHSTONE, (new Item.Settings()).group(Lightstones.LIGHTSTONES)));
+    public static final Item DEATHSTONE_ORE = register("deathstone_ore", new BlockItem(LightstonesBlocks.DEATHSTONE_ORE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
+    public static final Item DEATHSTONE_BLOCK = register("deathstone_block", new BlockItem(LightstonesBlocks.DEATHSTONE_BLOCK, new Item.Settings().group(Lightstones.LIGHTSTONES)));
+
     public static final Item MATA_NUI_STONE = register("mata_nui_stone", new BlockItem(LightstonesBlocks.MATA_NUI_STONE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
     public static final Item MAKUTA_STONE = register("makuta_stone", new BlockItem(LightstonesBlocks.MAKUTA_STONE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
 
