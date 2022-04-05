@@ -1,8 +1,8 @@
 buildscript {
     ext {
-        modMenuVersion = '1.14.13+build.19'
-        clothConfigVersion = '4.8.3'
-        autoConfig1uVersion = '3.3.1'
+        modMenuVersion = '3.1.0'
+        clothConfigVersion = '6.2.57'
+        autoConfig1uVersion = '3.4.0'
         bannerPPVersion = '2.0.2+mc.1.16.3'
     }
 }
