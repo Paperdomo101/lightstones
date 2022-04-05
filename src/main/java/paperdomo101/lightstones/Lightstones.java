@@ -15,7 +15,7 @@ public class Lightstones implements ModInitializer {
     public static final String MOD_ID = "lightstones";
     public static final ItemGroup LIGHTSTONES = FabricItemGroupBuilder.build(id("lightstones"), () -> new ItemStack(LightstonesItems.LIGHTSTONE));
     public static LightstonesConfig CONFIG;
-    
+
     public static Identifier id(String name) {
         return new Identifier(MOD_ID, name);
     }
@@ -33,7 +33,6 @@ public class Lightstones implements ModInitializer {
         LightstonesLoot.init();
         LightstonesSounds.init();
         LightstonesBannerPatterns.init();
-        // LightstonesPotions.init();  
 
     }
 }

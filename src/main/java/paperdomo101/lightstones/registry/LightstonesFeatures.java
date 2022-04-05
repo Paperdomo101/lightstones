@@ -3,6 +3,7 @@ package paperdomo101.lightstones.registry;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.block.Blocks;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryEntry;
@@ -65,23 +66,12 @@ public class LightstonesFeatures {
     }
 
     public static void init() {
-
-        RegistryKey<ConfiguredFeature<?, ?>> lightstoneOre = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN,
-                Lightstones.id("lightstone_ore"));
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, lightstoneOre.getValue(), ORE_LIGHTSTONE);
-
-        RegistryKey<ConfiguredFeature<?, ?>> blightstoneOre = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN,
-                Lightstones.id("blightstone_ore"));
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, blightstoneOre.getValue(), ORE_BLIGHTSTONE);
-
-
-        if (Lightstones.CONFIG.spawnLightstoneOre)
-            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, lightstoneOre);
-
-        if (Lightstones.CONFIG.spawnBlightstoneOre)
-            BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, blightstoneOre);
-
-        if (Lightstones.CONFIG.spawnExtraLightstoneOreInOceans)
-            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OCEAN, BiomeKeys.COLD_OCEAN, BiomeKeys.DEEP_COLD_OCEAN, BiomeKeys.DEEP_FROZEN_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN, BiomeKeys.DEEP_OCEAN, BiomeKeys.DEEP_WARM_OCEAN), GenerationStep.Feature.UNDERGROUND_ORES, lightstoneOre);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
+                new Identifier(Lightstones.MOD_ID, "overworld_wool_ore"), OVERWORLD_ORE_LIGHTSTONE);
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier(Lightstones.MOD_ID, "overworld_wool_ore"),
+                ORE_LIGHTSTONE);
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
+                RegistryKey.of(Registry.PLACED_FEATURE_KEY,
+                        new Identifier(Lightstones.MOD_ID, "overworld_wool_ore")));
     }
 }
