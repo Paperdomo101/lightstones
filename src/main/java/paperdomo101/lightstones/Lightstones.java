@@ -1,7 +1,7 @@
 package paperdomo101.lightstones;
 
-import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
-import me.sargunvohra.mcmods.autoconfig1u.serializer.GsonConfigSerializer;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
@@ -15,7 +15,7 @@ public class Lightstones implements ModInitializer {
     public static final String MOD_ID = "lightstones";
     public static final ItemGroup LIGHTSTONES = FabricItemGroupBuilder.build(id("lightstones"), () -> new ItemStack(LightstonesItems.LIGHTSTONE));
     public static LightstonesConfig CONFIG;
-
+    
     public static Identifier id(String name) {
         return new Identifier(MOD_ID, name);
     }
