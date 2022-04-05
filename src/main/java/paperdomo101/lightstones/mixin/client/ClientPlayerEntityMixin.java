@@ -1,6 +1,6 @@
 package paperdomo101.lightstones.mixin.client;
 
-import com.mojang.authlib.GameProfile;
+/*import com.mojang.authlib.GameProfile;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.input.Input;
@@ -35,4 +35,4 @@ public abstract class ClientPlayerEntityMixin extends PlayerEntity {
             this.riding |= this.input.pressingLeft || this.input.pressingRight || this.input.pressingForward || this.input.pressingBack;
         }
     }
-}
+}*/
