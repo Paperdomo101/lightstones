@@ -1,6 +1,7 @@
 package paperdomo101.lightstones.registry;
 
 import io.github.fablabsmc.fablabs.api.bannerpattern.v1.LoomPatternItem;
+import net.minecraft.item.BannerPatternItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Rarity;
@@ -27,7 +28,7 @@ public class LightstonesItems {
     public static final Item MUSIC_DISC_TELESCOPE = register("music_disc_telescope", new LightstonesMusicDiscItem(14, LightstonesSounds.MUSIC_DISC_TELESCOPE, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1).rarity(Rarity.RARE)));
     public static final Item MUSIC_DISC_END = register("music_disc_end", new LightstonesMusicDiscItem(15, LightstonesSounds.MUSIC_DISC_END, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1).rarity(Rarity.RARE)));
 
-    public static final Item SKRALL_BANNER_PATTERN = new LoomPatternItem(LightstonesBannerPatterns.SKRALL, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1));
+    public static final Item SKRALL_BANNER_PATTERN = new BannerPatternItem(LightstonesBannerPatterns.SKRALL, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1));
 
     public static void init() {
         Registry.register(Registry.ITEM, Lightstones.id("skrall_banner_pattern"), SKRALL_BANNER_PATTERN);
