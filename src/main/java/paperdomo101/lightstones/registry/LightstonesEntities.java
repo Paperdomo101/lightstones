@@ -16,7 +16,7 @@ import java.util.Map;
 public class LightstonesEntities {
     private static final Map<Identifier, EntityType<?>> ENTITY_TYPES = new LinkedHashMap<>();
 
-    public static final EntityType<LavaSurfboardEntity> LAVA_SURFBOARD = add("lava_surfboard", buildEntity(SpawnGroup.MISC, LavaSurfboardEntity::new, false, 1.35F, 0.125F));
+    //public static final EntityType<LavaSurfboardEntity> LAVA_SURFBOARD = add("lava_surfboard", buildEntity(SpawnGroup.MISC, LavaSurfboardEntity::new, false, 1.35F, 0.125F));
 
     public static void init() {
         for (Identifier id : ENTITY_TYPES.keySet()) {
