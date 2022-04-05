@@ -5,7 +5,8 @@
   "name": "Lightstones",
   "description": "Authentic lightstones straight from Onu-Koro!",
   "authors": [
-    "Paperdomo101"
+    "Paperdomo101",
+    "Sunconure11"
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/lightstones",
@@ -30,6 +31,6 @@
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.16.x"
+    "minecraft": "1.18.2"
   }
 }
