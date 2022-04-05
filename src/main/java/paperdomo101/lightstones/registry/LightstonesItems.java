@@ -1,6 +1,5 @@
 package paperdomo101.lightstones.registry;
 
-import io.github.fablabsmc.fablabs.api.bannerpattern.v1.LoomPatternItem;
 import net.minecraft.item.BannerPatternItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;

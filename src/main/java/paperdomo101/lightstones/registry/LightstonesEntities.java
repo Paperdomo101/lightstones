@@ -8,7 +8,6 @@ import net.minecraft.entity.SpawnGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import paperdomo101.lightstones.Lightstones;
-import paperdomo101.lightstones.entity.vehicle.LavaSurfboardEntity;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
