@@ -1,8 +1,8 @@
 {
-	"ambientocclusion": false,
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "lightstones:block/lightstone_block",
-        "particle": "lightstones:block/lightstone_block"
-    }
+  "ambientocclusion": false,
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "lightstones:block/lightstone_block",
+    "particle": "lightstones:block/lightstone_block"
+  }
 }

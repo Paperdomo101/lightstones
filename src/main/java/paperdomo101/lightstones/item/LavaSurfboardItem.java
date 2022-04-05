@@ -1,11 +1,6 @@
 package paperdomo101.lightstones.item;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.function.Predicate;
-
-import com.google.common.base.Preconditions;
-
+/*import com.google.common.base.Preconditions;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerEntity;
@@ -23,11 +18,20 @@ import net.minecraft.world.World;
 import paperdomo101.lightstones.entity.vehicle.LavaSurfboardEntity;
 import paperdomo101.lightstones.registry.LightstonesEntities;
 
+import java.util.Iterator;
+import java.util.List;
+import java.util.function.Predicate;
+
 public class LavaSurfboardItem extends Item {
-    
-    private final EntityType<? extends LavaSurfboardEntity> entityType;
+
     private static final Predicate<Entity> RIDERS;
-    
+
+    static {
+        RIDERS = EntityPredicates.EXCEPT_SPECTATOR.and(Entity::collides);
+    }
+
+    private final EntityType<? extends LavaSurfboardEntity> entityType;
+
     public LavaSurfboardItem(Settings settings) {
         super(settings);
         this.entityType = LightstonesEntities.LAVA_SURFBOARD;
@@ -37,23 +41,23 @@ public class LavaSurfboardItem extends Item {
         ItemStack itemStack = user.getStackInHand(hand);
         HitResult hitResult = raycast(world, user, RaycastContext.FluidHandling.ANY);
         if (hitResult.getType() == HitResult.Type.MISS) {
-           return TypedActionResult.pass(itemStack);
+            return TypedActionResult.pass(itemStack);
         } else {
-           Vec3d vec3d = user.getRotationVec(1.0F);
-           List<Entity> list = world.getOtherEntities(user, user.getBoundingBox().stretch(vec3d.multiply(5.0D)).expand(1.0D), RIDERS);
+            Vec3d vec3d = user.getRotationVec(1.0F);
+            List<Entity> list = world.getOtherEntities(user, user.getBoundingBox().stretch(vec3d.multiply(5.0D)).expand(1.0D), RIDERS);
             if (!list.isEmpty()) {
                 Vec3d vec3d2 = user.getCameraPosVec(1.0F);
                 Iterator<Entity> var11 = list.iterator();
-    
-                while(var11.hasNext()) {
-                    Entity entity = (Entity)var11.next();
-                    Box box = entity.getBoundingBox().expand((double)entity.getTargetingMargin());
+
+                while (var11.hasNext()) {
+                    Entity entity = var11.next();
+                    Box box = entity.getBoundingBox().expand(entity.getTargetingMargin());
                     if (box.contains(vec3d2)) {
                         return TypedActionResult.pass(itemStack);
                     }
                 }
             }
-    
+
             if (hitResult.getType() == HitResult.Type.BLOCK) {
                 LavaSurfboardEntity lavaSurfboardEntity = Preconditions.checkNotNull(entityType.create(world));
                 lavaSurfboardEntity.updatePosition(hitResult.getPos().x, hitResult.getPos().y, hitResult.getPos().z);
@@ -67,7 +71,7 @@ public class LavaSurfboardItem extends Item {
                             itemStack.decrement(1);
                         }
                     }
-    
+
                     user.incrementStat(Stats.USED.getOrCreateStat(this));
                     return TypedActionResult.success(itemStack, world.isClient());
                 }
@@ -76,8 +80,4 @@ public class LavaSurfboardItem extends Item {
             }
         }
     }
-    
-    static {
-        RIDERS = EntityPredicates.EXCEPT_SPECTATOR.and(Entity::collides);
-    }
-}
+}*/

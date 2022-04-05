@@ -1,10 +1,6 @@
 package paperdomo101.lightstones.block;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.FacingBlock;
-import net.minecraft.block.ShapeContext;
-import net.minecraft.block.Waterloggable;
+import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
@@ -18,6 +14,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
+import net.minecraft.world.tick.OrderedTick;
 
 public class LightstoneBlock extends FacingBlock implements Waterloggable {
 
@@ -29,9 +26,19 @@ public class LightstoneBlock extends FacingBlock implements Waterloggable {
     protected static final VoxelShape WEST_SHAPE;
     protected static final VoxelShape EAST_SHAPE;
 
+    static {
+        WATERLOGGED = Properties.WATERLOGGED;
+        CEILING_SHAPE = Block.createCuboidShape(6.5D, 8.0D, 6.5D, 9.5D, 16.0D, 9.5D);
+        FLOOR_SHAPE = Block.createCuboidShape(6.5D, 0.0D, 6.5D, 9.5D, 8.0D, 9.5D);
+        NORTH_SHAPE = Block.createCuboidShape(6.5D, 4.0D, 13.0D, 9.5D, 12.0D, 16.0D);
+        SOUTH_SHAPE = Block.createCuboidShape(6.5D, 4.0D, 0.0D, 9.5D, 12.0D, 3.0D);
+        WEST_SHAPE = Block.createCuboidShape(13.0D, 4.0D, 6.5D, 16.0D, 12.0D, 9.5D);
+        EAST_SHAPE = Block.createCuboidShape(0.0D, 4.0D, 6.5D, 3.0D, 12.0D, 9.5D);
+    }
+
     public LightstoneBlock(Settings settings) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState)((BlockState)(this.stateManager.getDefaultState()).with(FACING, Direction.UP)).with(WATERLOGGED, false)));
+        this.setDefaultState((this.stateManager.getDefaultState()).with(FACING, Direction.UP).with(WATERLOGGED, false));
     }
 
     public boolean hasSidedTransparency(BlockState state) {
@@ -41,11 +48,11 @@ public class LightstoneBlock extends FacingBlock implements Waterloggable {
     public PistonBehavior getPistonBehavior(BlockState state) {
         return PistonBehavior.DESTROY;
     }
- 
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        Direction direction = (Direction)state.get(FACING);
 
-        switch(direction) {
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        Direction direction = state.get(FACING);
+
+        switch (direction) {
             case UP:
                 return FLOOR_SHAPE;
             case EAST:
@@ -58,8 +65,8 @@ public class LightstoneBlock extends FacingBlock implements Waterloggable {
                 return NORTH_SHAPE;
             case DOWN:
                 return CEILING_SHAPE;
-        default:
-            return FLOOR_SHAPE;
+            default:
+                return FLOOR_SHAPE;
         }
     }
 
@@ -68,11 +75,11 @@ public class LightstoneBlock extends FacingBlock implements Waterloggable {
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
         boolean bl = fluidState.getFluid() == Fluids.WATER;
 
-        return (BlockState)this.getDefaultState().with(FACING, direction).with(WATERLOGGED, bl);
+        return this.getDefaultState().with(FACING, direction).with(WATERLOGGED, bl);
     }
-    
+
     public FluidState getFluidState(BlockState state) {
-        return (Boolean)state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
+        return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
     public boolean tryFillWithFluid(WorldAccess world, BlockPos pos, BlockState state, FluidState fluidState) {
@@ -84,8 +91,8 @@ public class LightstoneBlock extends FacingBlock implements Waterloggable {
     }
 
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState newState, WorldAccess world, BlockPos pos, BlockPos posFrom) {
-        if ((Boolean)state.get(WATERLOGGED)) {
-        world.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+        if (state.get(WATERLOGGED)) {
+            world.getFluidTickScheduler().scheduleTick(OrderedTick.create(Fluids.WATER, pos));;
         }
 
         return super.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);
@@ -93,15 +100,5 @@ public class LightstoneBlock extends FacingBlock implements Waterloggable {
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING, WATERLOGGED);
-    }
-
-    static {
-        WATERLOGGED = Properties.WATERLOGGED;
-        CEILING_SHAPE = Block.createCuboidShape(6.5D, 8.0D, 6.5D, 9.5D, 16.0D, 9.5D);
-        FLOOR_SHAPE = Block.createCuboidShape(6.5D, 0.0D, 6.5D, 9.5D, 8.0D, 9.5D);
-        NORTH_SHAPE = Block.createCuboidShape(6.5D, 4.0D, 13.0D, 9.5D, 12.0D, 16.0D);
-        SOUTH_SHAPE = Block.createCuboidShape(6.5D, 4.0D, 0.0D, 9.5D, 12.0D, 3.0D);
-        WEST_SHAPE = Block.createCuboidShape(13.0D, 4.0D, 6.5D, 16.0D, 12.0D, 9.5D);
-        EAST_SHAPE = Block.createCuboidShape(0.0D, 4.0D, 6.5D, 3.0D, 12.0D, 9.5D);
     }
 }

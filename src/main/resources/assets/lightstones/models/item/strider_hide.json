@@ -1,6 +1,6 @@
 {
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "lightstones:item/strider_hide"
-    }
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lightstones:item/strider_hide"
+  }
 }

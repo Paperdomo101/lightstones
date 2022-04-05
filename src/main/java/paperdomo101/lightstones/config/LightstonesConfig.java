@@ -37,7 +37,7 @@ public class LightstonesConfig implements ConfigData {
     public boolean piglinsBarterBlightstones = true;
     public float piglinBlightstoneChanceMin = 0.2f;
     public float piglinBlightstoneChanceMax = 5.0f;
-    
+
     // public boolean piglinsBarterLavaSurfboards = true;
     // public float piglinLavaSurfboardChanceMin = 0.0f;
     // public float piglinLavaSurfboardChanceMax = 0.05f;

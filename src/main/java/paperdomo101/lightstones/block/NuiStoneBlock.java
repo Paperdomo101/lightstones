@@ -21,33 +21,37 @@ import net.minecraft.world.World;
 
 public class NuiStoneBlock extends FallingBlock {
 
-    public SoundEvent fallSound;
-    private final int color;
-
     public static final DirectionProperty FACING;
+
+    static {
+        FACING = Properties.HORIZONTAL_FACING;
+    }
+
+    private final int color;
+    public SoundEvent fallSound;
 
     public NuiStoneBlock(int color, Settings settings, SoundEvent fallSound) {
         super(settings);
         this.fallSound = fallSound;
         this.color = color;
-        this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH));
+        this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH));
     }
- 
+
     @Environment(EnvType.CLIENT)
     public int getColor(BlockState state, BlockView world, BlockPos pos) {
-       return this.color;
+        return this.color;
     }
 
     public BlockState rotate(BlockState state, BlockRotation rotation) {
-        return (BlockState)state.with(FACING, rotation.rotate((Direction)state.get(FACING)));
+        return state.with(FACING, rotation.rotate(state.get(FACING)));
     }
 
     public BlockState mirror(BlockState state, BlockMirror mirror) {
-        return state.rotate(mirror.getRotation((Direction)state.get(FACING)));
+        return state.rotate(mirror.getRotation(state.get(FACING)));
     }
 
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return (BlockState)this.getDefaultState().with(FACING, ctx.getPlayerFacing().getOpposite());
+        return this.getDefaultState().with(FACING, ctx.getPlayerFacing().getOpposite());
     }
 
     @Override
@@ -61,20 +65,16 @@ public class NuiStoneBlock extends FallingBlock {
                     1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
                     1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
             );
-        }  
+        }
     }
 
     public boolean hasComparatorOutput(BlockState state) {
         return true;
     }
-    
+
     @Override
     protected void appendProperties(Builder<Block, BlockState> builder) {
         builder.add(FACING);
     }
 
-    static {
-        FACING = Properties.HORIZONTAL_FACING;
-    }
-    
 }
