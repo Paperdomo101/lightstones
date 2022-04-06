@@ -38,6 +38,10 @@ public class LightstonesBlocks {
         Registry.register(Registry.BLOCK, Lightstones.id("blightstone"), BLIGHTSTONE);
         Registry.register(Registry.BLOCK, Lightstones.id("blightstone_block"), BLIGHTSTONE_BLOCK);
 
+        Registry.register(Registry.BLOCK, Lightstones.id("deathstone_ore"), DEATHSTONE_ORE);
+        Registry.register(Registry.BLOCK, Lightstones.id("deathstone"), DEATHSTONE);
+        Registry.register(Registry.BLOCK, Lightstones.id("deathstone_block"), DEATHSTONE_BLOCK);
+
         Registry.register(Registry.BLOCK, Lightstones.id("mata_nui_stone"), MATA_NUI_STONE);
         Registry.register(Registry.BLOCK, Lightstones.id("makuta_stone"), MAKUTA_STONE);
     }
