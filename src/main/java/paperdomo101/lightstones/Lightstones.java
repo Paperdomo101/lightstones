@@ -33,6 +33,7 @@ public class Lightstones implements ModInitializer {
         LightstonesLoot.init();
         LightstonesSounds.init();
         LightstonesBannerRegistry.registerBanner();
+        LightstonesBannerPatterns.init();
 
     }
 }
