@@ -12,7 +12,7 @@ import paperdomo101.lightstones.item.LightstonesMusicDiscItem;
 public class LightstonesItems {
 
     public static final Item LIGHTSTONE = register("lightstone", new BlockItem(LightstonesBlocks.LIGHTSTONE, (new Item.Settings()).group(Lightstones.LIGHTSTONES)));
-    public static final Item LIGHTSTONE_ORE = register("lightstone_ore", new BlockItem(LightstonesBlocks.LIGHTSTONE_ORE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
+    public static final Item DEEPSLATE_LIGHTSTONE_ORE = register("deepslate_lightstone_ore", new BlockItem(LightstonesBlocks.DEEPSLATE_LIGHTSTONE_ORE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
     public static final Item LIGHTSTONE_BLOCK = register("lightstone_block", new BlockItem(LightstonesBlocks.LIGHTSTONE_BLOCK, new Item.Settings().group(Lightstones.LIGHTSTONES)));
 
     public static final Item BLIGHTSTONE = register("blightstone", new BlockItem(LightstonesBlocks.BLIGHTSTONE, (new Item.Settings()).group(Lightstones.LIGHTSTONES)));
@@ -21,6 +21,7 @@ public class LightstonesItems {
 
     public static final Item DEATHSTONE = register("deathstone", new BlockItem(LightstonesBlocks.DEATHSTONE, (new Item.Settings()).group(Lightstones.LIGHTSTONES)));
     public static final Item DEATHSTONE_ORE = register("deathstone_ore", new BlockItem(LightstonesBlocks.DEATHSTONE_ORE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
+    public static final Item DEEPSLATE_DEATHSTONE_ORE = register("deepslate_deathstone_ore", new BlockItem(LightstonesBlocks.DEEPSLATE_DEATHSTONE_ORE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
     public static final Item DEATHSTONE_BLOCK = register("deathstone_block", new BlockItem(LightstonesBlocks.DEATHSTONE_BLOCK, new Item.Settings().group(Lightstones.LIGHTSTONES)));
 
     public static final Item MATA_NUI_STONE = register("mata_nui_stone", new BlockItem(LightstonesBlocks.MATA_NUI_STONE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
