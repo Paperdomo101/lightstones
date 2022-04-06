@@ -10,8 +10,6 @@ public class LightstonesConfig implements ConfigData {
 
     // Ore generation
     @ConfigEntry.Gui.RequiresRestart
-    public boolean spawnLightstoneOre = true;
-    @ConfigEntry.Gui.RequiresRestart
     public int lightstoneOreVeinSize = 7;
     @ConfigEntry.Gui.RequiresRestart
     public int lightstoneOreBottomOffset = 0;
@@ -23,8 +21,6 @@ public class LightstonesConfig implements ConfigData {
     public int lightstoneOreVeinsPerChunk = 4;
 
     @ConfigEntry.Gui.RequiresRestart
-    public boolean spawnExtraLightstoneOreInOceans = false;
-    @ConfigEntry.Gui.RequiresRestart
     public int extraLightstoneOreVeinSize = 10;
     @ConfigEntry.Gui.RequiresRestart
     public int extraLightstoneOreBottomOffset = 0;
@@ -35,8 +31,6 @@ public class LightstonesConfig implements ConfigData {
     @ConfigEntry.Gui.RequiresRestart
     public int extraLightstoneOreVeinsPerChunk = 7;
 
-    @ConfigEntry.Gui.RequiresRestart
-    public boolean spawnBlightstoneOre = true;
     @ConfigEntry.Gui.RequiresRestart
     public int blightstoneOreVeinSize = 8;
     @ConfigEntry.Gui.RequiresRestart
