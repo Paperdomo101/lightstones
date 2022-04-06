@@ -2,31 +2,50 @@ package paperdomo101.lightstones.config;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
+import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import paperdomo101.lightstones.Lightstones;
 
 @Config(name = Lightstones.MOD_ID)
 public class LightstonesConfig implements ConfigData {
 
     // Ore generation
+    @ConfigEntry.Gui.RequiresRestart
     public boolean spawnLightstoneOre = true;
+    @ConfigEntry.Gui.RequiresRestart
     public int lightstoneOreVeinSize = 7;
+    @ConfigEntry.Gui.RequiresRestart
     public int lightstoneOreBottomOffset = 0;
+    @ConfigEntry.Gui.RequiresRestart
     public int lightstoneOreMinYLevel = 0;
+    @ConfigEntry.Gui.RequiresRestart
     public int lightstoneOreMaxYLevel = 34;
+    @ConfigEntry.Gui.RequiresRestart
     public int lightstoneOreVeinsPerChunk = 4;
 
+    @ConfigEntry.Gui.RequiresRestart
     public boolean spawnExtraLightstoneOreInOceans = true;
+    @ConfigEntry.Gui.RequiresRestart
     public int extraLightstoneOreVeinSize = 10;
+    @ConfigEntry.Gui.RequiresRestart
     public int extraLightstoneOreBottomOffset = 0;
+    @ConfigEntry.Gui.RequiresRestart
     public int extraLightstoneOreMinYLevel = 0;
+    @ConfigEntry.Gui.RequiresRestart
     public int extraLightstoneOreMaxYLevel = 40;
+    @ConfigEntry.Gui.RequiresRestart
     public int extraLightstoneOreVeinsPerChunk = 7;
 
+    @ConfigEntry.Gui.RequiresRestart
     public boolean spawnBlightstoneOre = true;
+    @ConfigEntry.Gui.RequiresRestart
     public int blightstoneOreVeinSize = 8;
+    @ConfigEntry.Gui.RequiresRestart
     public int blightstoneOreBottomOffset = 2;
+    @ConfigEntry.Gui.RequiresRestart
     public int blightstoneOreMinYLevel = 30;
+    @ConfigEntry.Gui.RequiresRestart
     public int blightstoneOreMaxYLevel = 200;
+    @ConfigEntry.Gui.RequiresRestart
     public int blightstoneOreVeinsPerChunk = 5;
 
     // Loot tables
@@ -34,16 +53,22 @@ public class LightstonesConfig implements ConfigData {
     // public float striderHideMin = 0.0f; 
     // public float striderHideMax = 2.0f;
 
+    @ConfigEntry.Gui.RequiresRestart
     public boolean piglinsBarterBlightstones = true;
+    @ConfigEntry.Gui.RequiresRestart
     public float piglinBlightstoneChanceMin = 0.2f;
+    @ConfigEntry.Gui.RequiresRestart
     public float piglinBlightstoneChanceMax = 5.0f;
 
     // public boolean piglinsBarterLavaSurfboards = true;
     // public float piglinLavaSurfboardChanceMin = 0.0f;
     // public float piglinLavaSurfboardChanceMax = 0.05f;
 
+    @ConfigEntry.Gui.RequiresRestart
     public boolean lightstonesAreFishingTreasure = true;
+    @ConfigEntry.Gui.RequiresRestart
     public float fishLightstonesChanceMin = 2.0f;
+    @ConfigEntry.Gui.RequiresRestart
     public float fishLightstonesChanceMax = 8.0f;
 
 }
