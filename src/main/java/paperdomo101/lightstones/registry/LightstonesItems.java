@@ -31,7 +31,7 @@ public class LightstonesItems {
     // public static final Item LAVA_SURFBOARD = register("lava_surfboard", new LavaSurfboardItem(new Item.Settings().group(ItemGroup.TRANSPORTATION).fireproof().maxCount(1)));
 
     public static final Item MUSIC_DISC_TELESCOPE = register("music_disc_telescope", new LightstonesMusicDiscItem(14, LightstonesSounds.MUSIC_DISC_TELESCOPE, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1).rarity(Rarity.RARE)));
-    public static final Item MUSIC_DISC_MAKUTA = register("music_disc_makuta", new LightstonesMusicDiscItem(15, LightstonesSounds.MUSIC_DISC_MAKUTA, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1).rarity(Rarity.RARE)));
+    public static final Item MUSIC_DISC_MAKUTA = register("music_disc_makuta", new LightstonesMusicDiscItem(15, LightstonesSounds.MUSIC_DISC_MAKUTA, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1).rarity(Rarity.EPIC)));
     public static final Item MUSIC_DISC_END = register("music_disc_end", new LightstonesMusicDiscItem(15, LightstonesSounds.MUSIC_DISC_END, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1).rarity(Rarity.RARE)));
 
     public static final Item SKRALL_BANNER_PATTERN = new LoomPatternItem(LightstonesBannerPatterns.SKRALL, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1));
