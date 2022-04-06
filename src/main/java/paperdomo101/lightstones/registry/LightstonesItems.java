@@ -1,6 +1,5 @@
 package paperdomo101.lightstones.registry;
 
-import net.minecraft.item.BannerPatternItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Rarity;

@@ -2,14 +2,11 @@ package paperdomo101.lightstones.registry;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
-import net.minecraft.block.Blocks;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.util.registry.RegistryKey;
-import net.minecraft.world.biome.BiomeKeys;
-import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
@@ -28,7 +25,16 @@ public class LightstonesFeatures {
                     OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
                     LightstonesBlocks.LIGHTSTONE_ORE.getDefaultState(),
                     Lightstones.CONFIG.lightstoneOreVeinSize));
-
+    private static final ConfiguredFeature<?, ?> OVERWORLD_ORE_LIGHTSTONE_EXTRA = new ConfiguredFeature
+            (Feature.ORE, new OreFeatureConfig(
+                    OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
+                    LightstonesBlocks.LIGHTSTONE_ORE.getDefaultState(),
+                    Lightstones.CONFIG.extraLightstoneOreVeinSize));
+    private static final ConfiguredFeature<?, ?> NETHER_ORE_BLIGHTSTONE = new ConfiguredFeature
+            (Feature.ORE, new OreFeatureConfig(
+                    OreConfiguredFeatures.NETHERRACK,
+                    LightstonesBlocks.BLIGHTSTONE_ORE.getDefaultState(),
+                    Lightstones.CONFIG.blightstoneOreVeinSize));
     public static PlacedFeature ORE_LIGHTSTONE = new PlacedFeature(
             RegistryEntry.of(OVERWORLD_ORE_LIGHTSTONE),
             Arrays.asList(
@@ -36,13 +42,6 @@ public class LightstonesFeatures {
                     SquarePlacementModifier.of(), // spreading horizontally
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(Lightstones.CONFIG.lightstoneOreMinYLevel), YOffset.belowTop(Lightstones.CONFIG.lightstoneOreMaxYLevel))
             ));
-
-    private static final ConfiguredFeature<?, ?> OVERWORLD_ORE_LIGHTSTONE_EXTRA = new ConfiguredFeature
-            (Feature.ORE, new OreFeatureConfig(
-                    OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
-                    LightstonesBlocks.LIGHTSTONE_ORE.getDefaultState(),
-                    Lightstones.CONFIG.extraLightstoneOreVeinSize));
-
     public static PlacedFeature ORE_LIGHTSTONE_EXTRA = new PlacedFeature(
             RegistryEntry.of(OVERWORLD_ORE_LIGHTSTONE_EXTRA),
             Arrays.asList(
@@ -50,13 +49,6 @@ public class LightstonesFeatures {
                     SquarePlacementModifier.of(), // spreading horizontally
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(Lightstones.CONFIG.extraLightstoneOreMinYLevel), YOffset.belowTop(Lightstones.CONFIG.extraLightstoneOreMaxYLevel))
             ));
-
-    private static final ConfiguredFeature<?, ?> NETHER_ORE_BLIGHTSTONE = new ConfiguredFeature
-            (Feature.ORE, new OreFeatureConfig(
-                    OreConfiguredFeatures.NETHERRACK,
-                    LightstonesBlocks.BLIGHTSTONE_ORE.getDefaultState(),
-                    Lightstones.CONFIG.blightstoneOreVeinSize));
-
     public static PlacedFeature ORE_BLIGHTSTONE = new PlacedFeature(
             RegistryEntry.of(NETHER_ORE_BLIGHTSTONE),
             Arrays.asList(

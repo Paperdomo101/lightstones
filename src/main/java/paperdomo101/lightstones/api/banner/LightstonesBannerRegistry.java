@@ -22,31 +22,31 @@ import java.util.List;
 
 public class LightstonesBannerRegistry {
     public static final Registry<LoomPattern> LOOM_PATTERN_REGISTRY = FabricRegistryBuilder
-    .createSimple(LoomPattern.class, new Identifier(Lightstones.MOD_ID, "loom_patterns"))
-    .attribute(RegistryAttribute.SYNCED)
-    .buildAndRegister();
+            .createSimple(LoomPattern.class, new Identifier(Lightstones.MOD_ID, "loom_patterns"))
+            .attribute(RegistryAttribute.SYNCED)
+            .buildAndRegister();
 
 
     private static final List<Identifier> BANNER_LOOT_TABLES = Arrays.asList(
-    new Identifier("minecraft", "blocks/black_banner"),
-    new Identifier("minecraft", "blocks/red_banner"),
-    new Identifier("minecraft", "blocks/green_banner"),
-    new Identifier("minecraft", "blocks/brown_banner"),
-    new Identifier("minecraft", "blocks/blue_banner"),
-    new Identifier("minecraft", "blocks/purple_banner"),
-    new Identifier("minecraft", "blocks/cyan_banner"),
-    new Identifier("minecraft", "blocks/light_gray_banner"),
-    new Identifier("minecraft", "blocks/gray"),
-    new Identifier("minecraft", "blocks/pink_banner"),
-    new Identifier("minecraft", "blocks/lime_banner"),
-    new Identifier("minecraft", "blocks/yellow_banner"),
-    new Identifier("minecraft", "blocks/light_blue_banner"),
-    new Identifier("minecraft", "blocks/magenta_banner"),
-    new Identifier("minecraft", "blocks/orange_banner"),
-    new Identifier("minecraft", "blocks/white_banner")
+            new Identifier("minecraft", "blocks/black_banner"),
+            new Identifier("minecraft", "blocks/red_banner"),
+            new Identifier("minecraft", "blocks/green_banner"),
+            new Identifier("minecraft", "blocks/brown_banner"),
+            new Identifier("minecraft", "blocks/blue_banner"),
+            new Identifier("minecraft", "blocks/purple_banner"),
+            new Identifier("minecraft", "blocks/cyan_banner"),
+            new Identifier("minecraft", "blocks/light_gray_banner"),
+            new Identifier("minecraft", "blocks/gray"),
+            new Identifier("minecraft", "blocks/pink_banner"),
+            new Identifier("minecraft", "blocks/lime_banner"),
+            new Identifier("minecraft", "blocks/yellow_banner"),
+            new Identifier("minecraft", "blocks/light_blue_banner"),
+            new Identifier("minecraft", "blocks/magenta_banner"),
+            new Identifier("minecraft", "blocks/orange_banner"),
+            new Identifier("minecraft", "blocks/white_banner")
     );
 
-    public static void registerBanner(){
+    public static void registerBanner() {
         RegistryIdRemapCallback.event(LOOM_PATTERN_REGISTRY).register(state -> LoomPatternsInternal.remapLoomIndices());
 
         // registry sync is longer called on the server or in singleplayer, so we must set up the indices here using
@@ -59,26 +59,27 @@ public class LightstonesBannerRegistry {
         LootTableLoadingCallback.EVENT.register((resourceManager, lootManager, lootTableId, supplier, setter) -> {
             if (BANNER_LOOT_TABLES.contains(lootTableId)) {
                 supplier.withFunction(CopyNbtLootFunction
-                .builder(ContextLootNbtProvider.BLOCK_ENTITY)
-                .withOperation(LoomPatternContainer.NBT_KEY, "BlockEntityTag." + LoomPatternContainer.NBT_KEY)
-                .build()
+                        .builder(ContextLootNbtProvider.BLOCK_ENTITY)
+                        .withOperation(LoomPatternContainer.NBT_KEY, "BlockEntityTag." + LoomPatternContainer.NBT_KEY)
+                        .build()
                 );
             }
         });
     }
-    public static void registerBannerClient(){
+
+    public static void registerBannerClient() {
         ClientSpriteRegistryCallback.event(TexturedRenderLayers.BANNER_PATTERNS_ATLAS_TEXTURE)
-        .register((texture, registry) -> {
-            for (LoomPattern pattern : LoomPatterns.REGISTRY) {
-                registry.register(pattern.getSpriteId("banner"));
-            }
-        });
+                .register((texture, registry) -> {
+                    for (LoomPattern pattern : LoomPatterns.REGISTRY) {
+                        registry.register(pattern.getSpriteId("banner"));
+                    }
+                });
         ClientSpriteRegistryCallback.event(TexturedRenderLayers.SHIELD_PATTERNS_ATLAS_TEXTURE)
-        .register((texture, registry) -> {
-            for (LoomPattern pattern : LoomPatterns.REGISTRY) {
-                registry.register(pattern.getSpriteId("shield"));
-            }
-        });
+                .register((texture, registry) -> {
+                    for (LoomPattern pattern : LoomPatterns.REGISTRY) {
+                        registry.register(pattern.getSpriteId("shield"));
+                    }
+                });
     }
 
 }
