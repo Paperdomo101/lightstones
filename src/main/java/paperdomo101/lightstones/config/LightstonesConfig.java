@@ -23,7 +23,7 @@ public class LightstonesConfig implements ConfigData {
     public int lightstoneOreVeinsPerChunk = 4;
 
     @ConfigEntry.Gui.RequiresRestart
-    public boolean spawnExtraLightstoneOreInOceans = true;
+    public boolean spawnExtraLightstoneOreInOceans = false;
     @ConfigEntry.Gui.RequiresRestart
     public int extraLightstoneOreVeinSize = 10;
     @ConfigEntry.Gui.RequiresRestart
@@ -47,6 +47,19 @@ public class LightstonesConfig implements ConfigData {
     public int blightstoneOreMaxYLevel = 200;
     @ConfigEntry.Gui.RequiresRestart
     public int blightstoneOreVeinsPerChunk = 5;
+
+    @ConfigEntry.Gui.RequiresRestart
+    public boolean spawnDeathstoneOre = true;
+    @ConfigEntry.Gui.RequiresRestart
+    public int deathstoneOreVeinSize = 8;
+    @ConfigEntry.Gui.RequiresRestart
+    public int deathstoneOreBottomOffset = 2;
+    @ConfigEntry.Gui.RequiresRestart
+    public int deathstonestoneOreMinYLevel = 30;
+    @ConfigEntry.Gui.RequiresRestart
+    public int deathstonestoneOreMaxYLevel = 200;
+    @ConfigEntry.Gui.RequiresRestart
+    public int deathstonestoneOreVeinsPerChunk = 5;
 
     // Loot tables
     // public boolean stridersDropHide = true;
