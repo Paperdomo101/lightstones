@@ -42,6 +42,7 @@ public class LightstonesBlocks {
         Registry.register(Registry.BLOCK, Lightstones.id("blightstone_block"), BLIGHTSTONE_BLOCK);
 
         Registry.register(Registry.BLOCK, Lightstones.id("deathstone_ore"), DEATHSTONE_ORE);
+        Registry.register(Registry.BLOCK, Lightstones.id("deepslate_deathstone_ore"), DEEPSLATE_DEATHSTONE_ORE);
         Registry.register(Registry.BLOCK, Lightstones.id("deathstone"), DEATHSTONE);
         Registry.register(Registry.BLOCK, Lightstones.id("deathstone_block"), DEATHSTONE_BLOCK);
 

@@ -12,6 +12,7 @@ import paperdomo101.lightstones.item.LightstonesMusicDiscItem;
 public class LightstonesItems {
 
     public static final Item LIGHTSTONE = register("lightstone", new BlockItem(LightstonesBlocks.LIGHTSTONE, (new Item.Settings()).group(Lightstones.LIGHTSTONES)));
+    public static final Item LIGHTSTONE_ORE = register("lightstone_ore", new BlockItem(LightstonesBlocks.LIGHTSTONE_ORE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
     public static final Item DEEPSLATE_LIGHTSTONE_ORE = register("deepslate_lightstone_ore", new BlockItem(LightstonesBlocks.DEEPSLATE_LIGHTSTONE_ORE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
     public static final Item LIGHTSTONE_BLOCK = register("lightstone_block", new BlockItem(LightstonesBlocks.LIGHTSTONE_BLOCK, new Item.Settings().group(Lightstones.LIGHTSTONES)));
 
