@@ -37,41 +37,57 @@ public class LightstonesFeatures {
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(Lightstones.CONFIG.lightstoneOreMinYLevel), YOffset.belowTop(Lightstones.CONFIG.lightstoneOreMaxYLevel))
             ));
 
-    private static final ConfiguredFeature<?, ?> ORE_LIGHTSTONE_EXTRA = Feature.ORE
-            .configure(new OreFeatureConfig(
-                    OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+    private static final ConfiguredFeature<?, ?> OVERWORLD_ORE_LIGHTSTONE_EXTRA = new ConfiguredFeature
+            (Feature.ORE, new OreFeatureConfig(
+                    OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
                     LightstonesBlocks.LIGHTSTONE_ORE.getDefaultState(),
-                    Lightstones.CONFIG.extraLightstoneOreVeinSize)) // vein size
-            .decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
-                    Lightstones.CONFIG.extraLightstoneOreBottomOffset, // bottom offset
-                    Lightstones.CONFIG.extraLightstoneOreMinYLevel, // min y level
-                    Lightstones.CONFIG.extraLightstoneOreMaxYLevel))) // max y level
-            .spreadHorizontally()
-            .repeat(Lightstones.CONFIG.extraLightstoneOreVeinsPerChunk); // number of veins per chunk
+                    Lightstones.CONFIG.extraLightstoneOreVeinSize));
 
-    private static final ConfiguredFeature<?, ?> ORE_BLIGHTSTONE = Feature.ORE
-            .configure(new OreFeatureConfig(
-                    OreFeatureConfig.Rules.NETHERRACK,
+    public static PlacedFeature ORE_LIGHTSTONE_EXTRA = new PlacedFeature(
+            RegistryEntry.of(OVERWORLD_ORE_LIGHTSTONE_EXTRA),
+            Arrays.asList(
+                    CountPlacementModifier.of(Lightstones.CONFIG.extraLightstoneOreVeinsPerChunk), // number of veins per chunk
+                    SquarePlacementModifier.of(), // spreading horizontally
+                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(Lightstones.CONFIG.extraLightstoneOreMinYLevel), YOffset.belowTop(Lightstones.CONFIG.extraLightstoneOreMaxYLevel))
+            ));
+
+    private static final ConfiguredFeature<?, ?> NETHER_ORE_BLIGHTSTONE = new ConfiguredFeature
+            (Feature.ORE, new OreFeatureConfig(
+                    OreConfiguredFeatures.NETHERRACK,
                     LightstonesBlocks.BLIGHTSTONE_ORE.getDefaultState(),
-                    Lightstones.CONFIG.blightstoneOreVeinSize)) // vein size
-            .decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(
-                    Lightstones.CONFIG.blightstoneOreBottomOffset, // bottom offset
-                    Lightstones.CONFIG.blightstoneOreMinYLevel, // min y level
-                    Lightstones.CONFIG.blightstoneOreMaxYLevel))) // max y level
-            .spreadHorizontally()
-            .repeat(Lightstones.CONFIG.blightstoneOreVeinsPerChunk); // number of veins per chunk
+                    Lightstones.CONFIG.blightstoneOreVeinSize));
 
-    public static void addExtraLightstoneOre(GenerationSettings.Builder builder) {
-        builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, ORE_LIGHTSTONE_EXTRA);
-    }
+    public static PlacedFeature ORE_BLIGHTSTONE = new PlacedFeature(
+            RegistryEntry.of(NETHER_ORE_BLIGHTSTONE),
+            Arrays.asList(
+                    CountPlacementModifier.of(Lightstones.CONFIG.blightstoneOreVeinsPerChunk), // number of veins per chunk
+                    SquarePlacementModifier.of(), // spreading horizontally
+                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(Lightstones.CONFIG.blightstoneOreMinYLevel), YOffset.belowTop(Lightstones.CONFIG.blightstoneOreMaxYLevel))
+            ));
 
     public static void init() {
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
-                new Identifier(Lightstones.MOD_ID, "overworld_wool_ore"), OVERWORLD_ORE_LIGHTSTONE);
-        Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier(Lightstones.MOD_ID, "overworld_wool_ore"),
+                new Identifier(Lightstones.MOD_ID, "overworld_lightstone_gen_standard"), OVERWORLD_ORE_LIGHTSTONE);
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier(Lightstones.MOD_ID, "overworld_lightstone_gen_standard"),
                 ORE_LIGHTSTONE);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
                 RegistryKey.of(Registry.PLACED_FEATURE_KEY,
-                        new Identifier(Lightstones.MOD_ID, "overworld_wool_ore")));
+                        new Identifier(Lightstones.MOD_ID, "overworld_lightstone_gen_standard")));
+
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
+                new Identifier(Lightstones.MOD_ID, "overworld_lightstone_gen_extra"), OVERWORLD_ORE_LIGHTSTONE_EXTRA);
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier(Lightstones.MOD_ID, "overworld_lightstone_gen_extra"),
+                ORE_LIGHTSTONE_EXTRA);
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
+                RegistryKey.of(Registry.PLACED_FEATURE_KEY,
+                        new Identifier(Lightstones.MOD_ID, "overworld_lightstone_gen_extra")));
+
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
+                new Identifier(Lightstones.MOD_ID, "nether_lightstone_gen_standard"), NETHER_ORE_BLIGHTSTONE);
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier(Lightstones.MOD_ID, "nether_lightstone_gen_standard"),
+                ORE_BLIGHTSTONE);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES,
+                RegistryKey.of(Registry.PLACED_FEATURE_KEY,
+                        new Identifier(Lightstones.MOD_ID, "nether_lightstone_gen_standard")));
     }
 }
