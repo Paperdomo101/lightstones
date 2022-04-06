@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
+import paperdomo101.lightstones.api.banner.LightstonesBannerRegistry;
 import paperdomo101.lightstones.config.LightstonesConfig;
 import paperdomo101.lightstones.registry.*;
 
@@ -31,7 +32,7 @@ public class Lightstones implements ModInitializer {
         LightstonesFeatures.init();
         LightstonesLoot.init();
         LightstonesSounds.init();
-        LightstonesBannerPatterns.init();
+        LightstonesBannerRegistry.registerBanner();
 
     }
 }
