@@ -41,9 +41,7 @@ public class LightstonesConfig implements ConfigData {
     public int blightstoneOreMaxYLevel = 200;
     @ConfigEntry.Gui.RequiresRestart
     public int blightstoneOreVeinsPerChunk = 5;
-
-    @ConfigEntry.Gui.RequiresRestart
-    public boolean spawnDeathstoneOre = true;
+    
     @ConfigEntry.Gui.RequiresRestart
     public int deathstoneOreVeinSize = 8;
     @ConfigEntry.Gui.RequiresRestart
