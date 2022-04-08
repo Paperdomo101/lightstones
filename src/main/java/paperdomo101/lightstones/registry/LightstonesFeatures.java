@@ -55,42 +55,42 @@ public class LightstonesFeatures {
             Arrays.asList(
                     CountPlacementModifier.of(Lightstones.CONFIG.lightstoneOreVeinsPerChunk), // number of veins per chunk
                     SquarePlacementModifier.of(), // spreading horizontally
-                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(Lightstones.CONFIG.lightstoneOreMinYLevel), YOffset.belowTop(Lightstones.CONFIG.lightstoneOreMaxYLevel))
+                    HeightRangePlacementModifier.uniform(YOffset.fixed(Lightstones.CONFIG.lightstoneOreMinYLevel), YOffset.fixed(Lightstones.CONFIG.lightstoneOreMaxYLevel))
             ));
     public static PlacedFeature ORE_LIGHTSTONE_EXTRA = new PlacedFeature(
             RegistryEntry.of(OVERWORLD_ORE_LIGHTSTONE_EXTRA),
             Arrays.asList(
                     CountPlacementModifier.of(Lightstones.CONFIG.extraLightstoneOreVeinsPerChunk), // number of veins per chunk
                     SquarePlacementModifier.of(), // spreading horizontally
-                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(Lightstones.CONFIG.extraLightstoneOreMinYLevel), YOffset.belowTop(Lightstones.CONFIG.extraLightstoneOreMaxYLevel))
+                    HeightRangePlacementModifier.uniform(YOffset.fixed(Lightstones.CONFIG.extraLightstoneOreMinYLevel), YOffset.fixed(Lightstones.CONFIG.extraLightstoneOreMaxYLevel))
             ));
     public static PlacedFeature ORE_BLIGHTSTONE = new PlacedFeature(
             RegistryEntry.of(NETHER_ORE_BLIGHTSTONE),
             Arrays.asList(
                     CountPlacementModifier.of(Lightstones.CONFIG.blightstoneOreVeinsPerChunk), // number of veins per chunk
                     SquarePlacementModifier.of(), // spreading horizontally
-                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(Lightstones.CONFIG.blightstoneOreMinYLevel), YOffset.belowTop(Lightstones.CONFIG.blightstoneOreMaxYLevel))
+                    HeightRangePlacementModifier.uniform(YOffset.fixed(Lightstones.CONFIG.blightstoneOreMinYLevel), YOffset.fixed(Lightstones.CONFIG.blightstoneOreMaxYLevel))
             ));
     public static PlacedFeature ORE_DEEPSLATE_LIGHTSTONE = new PlacedFeature(
             RegistryEntry.of(OVERWORLD_ORE_DEEPSLATE_LIGHTSTONE),
             Arrays.asList(
                     CountPlacementModifier.of(Lightstones.CONFIG.deepslateLightstoneOreVeinsPerChunk), // number of veins per chunk
                     SquarePlacementModifier.of(), // spreading horizontally
-                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(Lightstones.CONFIG.deepslateLightstoneOreMinYLevel), YOffset.belowTop(Lightstones.CONFIG.deepslateLightstoneOreMaxYLevel))
+                    HeightRangePlacementModifier.uniform(YOffset.fixed(Lightstones.CONFIG.deepslateLightstoneOreMinYLevel), YOffset.fixed(Lightstones.CONFIG.deepslateLightstoneOreMaxYLevel))
             ));
     public static PlacedFeature ORE_DEEPSLATE_DEATHSTONE = new PlacedFeature(
             RegistryEntry.of(OVERWORLD_ORE_DEEPSLATE_DEATHSTONE),
             Arrays.asList(
                     CountPlacementModifier.of(Lightstones.CONFIG.deepslateDeathstoneOreVeinsPerChunk), // number of veins per chunk
                     SquarePlacementModifier.of(), // spreading horizontally
-                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(Lightstones.CONFIG.deepslateDeathstoneOreMinYLevel), YOffset.belowTop(Lightstones.CONFIG.deepslateDeathstoneOreMaxYLevel))
+                    HeightRangePlacementModifier.uniform(YOffset.fixed(Lightstones.CONFIG.deepslateDeathstoneOreMinYLevel), YOffset.fixed(Lightstones.CONFIG.deepslateDeathstoneOreMaxYLevel))
             ));
     public static PlacedFeature ORE_DEATHSTONE = new PlacedFeature(
             RegistryEntry.of(OVERWORLD_ORE_DEATHSTONE),
             Arrays.asList(
                     CountPlacementModifier.of(Lightstones.CONFIG.deathstoneOreVeinsPerChunk), // number of veins per chunk
                     SquarePlacementModifier.of(), // spreading horizontally
-                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(Lightstones.CONFIG.deathstoneOreMinYLevel), YOffset.belowTop(Lightstones.CONFIG.deathstoneMaxYLevel))
+                    HeightRangePlacementModifier.uniform(YOffset.fixed(Lightstones.CONFIG.deathstoneOreMinYLevel), YOffset.fixed(Lightstones.CONFIG.deathstoneMaxYLevel))
             ));
 
 
