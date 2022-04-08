@@ -37,12 +37,12 @@ public class LightstonesFeatures {
                     Lightstones.CONFIG.blightstoneOreVeinSize));
     private static final ConfiguredFeature<?, ?> OVERWORLD_ORE_DEEPSLATE_LIGHTSTONE = new ConfiguredFeature
             (Feature.ORE, new OreFeatureConfig(
-                    OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
+                    OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES,
                     LightstonesBlocks.DEEPSLATE_LIGHTSTONE_ORE.getDefaultState(),
                     Lightstones.CONFIG.deepslateLightstoneOreVeinSize));
     private static final ConfiguredFeature<?, ?> OVERWORLD_ORE_DEEPSLATE_DEATHSTONE = new ConfiguredFeature
             (Feature.ORE, new OreFeatureConfig(
-                    OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
+                    OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES,
                     LightstonesBlocks.DEEPSLATE_DEATHSTONE_ORE.getDefaultState(),
                     Lightstones.CONFIG.deepslateDeathstoneOreVeinSize));
     private static final ConfiguredFeature<?, ?> OVERWORLD_ORE_DEATHSTONE = new ConfiguredFeature
