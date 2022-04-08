@@ -35,6 +35,21 @@ public class LightstonesFeatures {
                     OreConfiguredFeatures.NETHERRACK,
                     LightstonesBlocks.BLIGHTSTONE_ORE.getDefaultState(),
                     Lightstones.CONFIG.blightstoneOreVeinSize));
+    private static final ConfiguredFeature<?, ?> OVERWORLD_ORE_DEEPSLATE_LIGHTSTONE = new ConfiguredFeature
+            (Feature.ORE, new OreFeatureConfig(
+                    OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
+                    LightstonesBlocks.DEEPSLATE_LIGHTSTONE_ORE.getDefaultState(),
+                    Lightstones.CONFIG.deepslateLightstoneOreVeinSize));
+    private static final ConfiguredFeature<?, ?> OVERWORLD_ORE_DEEPSLATE_DEATHSTONE = new ConfiguredFeature
+            (Feature.ORE, new OreFeatureConfig(
+                    OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
+                    LightstonesBlocks.DEEPSLATE_DEATHSTONE_ORE.getDefaultState(),
+                    Lightstones.CONFIG.deepslateDeathstoneOreVeinSize));
+    private static final ConfiguredFeature<?, ?> OVERWORLD_ORE_DEATHSTONE = new ConfiguredFeature
+            (Feature.ORE, new OreFeatureConfig(
+                    OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
+                    LightstonesBlocks.DEATHSTONE_ORE.getDefaultState(),
+                    Lightstones.CONFIG.deathstoneOreVeinSize));
     public static PlacedFeature ORE_LIGHTSTONE = new PlacedFeature(
             RegistryEntry.of(OVERWORLD_ORE_LIGHTSTONE),
             Arrays.asList(
@@ -56,13 +71,6 @@ public class LightstonesFeatures {
                     SquarePlacementModifier.of(), // spreading horizontally
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(Lightstones.CONFIG.blightstoneOreMinYLevel), YOffset.belowTop(Lightstones.CONFIG.blightstoneOreMaxYLevel))
             ));
-
-    private static final ConfiguredFeature<?, ?> OVERWORLD_ORE_DEEPSLATE_LIGHTSTONE = new ConfiguredFeature
-            (Feature.ORE, new OreFeatureConfig(
-                    OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
-                    LightstonesBlocks.DEEPSLATE_LIGHTSTONE_ORE.getDefaultState(),
-                    Lightstones.CONFIG.deepslateLightstoneOreVeinSize));
-
     public static PlacedFeature ORE_DEEPSLATE_LIGHTSTONE = new PlacedFeature(
             RegistryEntry.of(OVERWORLD_ORE_DEEPSLATE_LIGHTSTONE),
             Arrays.asList(
@@ -70,13 +78,6 @@ public class LightstonesFeatures {
                     SquarePlacementModifier.of(), // spreading horizontally
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(Lightstones.CONFIG.deepslateLightstoneOreMinYLevel), YOffset.belowTop(Lightstones.CONFIG.deepslateLightstoneOreMaxYLevel))
             ));
-
-    private static final ConfiguredFeature<?, ?> OVERWORLD_ORE_DEEPSLATE_DEATHSTONE = new ConfiguredFeature
-            (Feature.ORE, new OreFeatureConfig(
-                    OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
-                    LightstonesBlocks.DEEPSLATE_DEATHSTONE_ORE.getDefaultState(),
-                    Lightstones.CONFIG.deepslateDeathstoneOreVeinSize));
-
     public static PlacedFeature ORE_DEEPSLATE_DEATHSTONE = new PlacedFeature(
             RegistryEntry.of(OVERWORLD_ORE_DEEPSLATE_DEATHSTONE),
             Arrays.asList(
@@ -84,13 +85,6 @@ public class LightstonesFeatures {
                     SquarePlacementModifier.of(), // spreading horizontally
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(Lightstones.CONFIG.deepslateDeathstoneOreMinYLevel), YOffset.belowTop(Lightstones.CONFIG.deepslateDeathstoneOreMaxYLevel))
             ));
-
-    private static final ConfiguredFeature<?, ?> OVERWORLD_ORE_DEATHSTONE = new ConfiguredFeature
-            (Feature.ORE, new OreFeatureConfig(
-                    OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
-                    LightstonesBlocks.DEATHSTONE_ORE.getDefaultState(),
-                    Lightstones.CONFIG.deathstoneOreVeinSize));
-
     public static PlacedFeature ORE_DEATHSTONE = new PlacedFeature(
             RegistryEntry.of(OVERWORLD_ORE_DEATHSTONE),
             Arrays.asList(

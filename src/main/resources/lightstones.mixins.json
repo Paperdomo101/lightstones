@@ -10,8 +10,8 @@
   ],
   "client": [
     "client.BannerBlockEntityClientMixin",
-    "client.BannerItemMixin",
     "client.BannerBlockEntityRendererMixin",
+    "client.BannerItemMixin",
     "client.BuiltinModelItemRendererMixin",
     "client.LoomScreenMixin"
   ],

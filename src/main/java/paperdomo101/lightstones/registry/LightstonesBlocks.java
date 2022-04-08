@@ -1,13 +1,13 @@
 package paperdomo101.lightstones.registry;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.MapColor;
+import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.DyeColor;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.world.BlockView;
 import paperdomo101.lightstones.Lightstones;
 import paperdomo101.lightstones.block.EmissiveLightstoneBlock;
 import paperdomo101.lightstones.block.LightstoneBlock;
