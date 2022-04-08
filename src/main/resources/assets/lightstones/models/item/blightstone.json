@@ -1,6 +1,6 @@
 {
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "lightstones:item/blightstone"
-    }
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lightstones:item/blightstone"
+  }
 }

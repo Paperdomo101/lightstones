@@ -1,10 +1,9 @@
 package paperdomo101.lightstones.mixin;
 
-import org.spongepowered.asm.mixin.Mixin;
-
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.entity.Entity;
+import org.spongepowered.asm.mixin.Mixin;
 
 @Environment(EnvType.CLIENT)
 @Mixin(Entity.class)

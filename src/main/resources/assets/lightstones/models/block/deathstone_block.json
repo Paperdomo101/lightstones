@@ -1,0 +1,8 @@
+{
+  "ambientocclusion": false,
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "lightstones:block/deathstone_block",
+    "particle": "lightstones:block/deathstone_block"
+  }
+}

@@ -1,34 +1,42 @@
 {
-    "block.mata_nui_stone.place": {
-        "sounds": [
-            "lightstones:block/mata_nui_stone/place1", 
-            "lightstones:block/mata_nui_stone/place2", 
-            "lightstones:block/mata_nui_stone/place3", 
-            "lightstones:block/mata_nui_stone/place4"
-        ]
-    },
-    "block.makuta_stone.place": {
-        "sounds": [
-            "lightstones:block/makuta_stone/place1", 
-            "lightstones:block/makuta_stone/place2", 
-            "lightstones:block/makuta_stone/place3", 
-            "lightstones:block/makuta_stone/place4"
-        ]
-    },
-    "music_disc.telescope": {
-        "sounds": [
-            {
-                "name": "lightstones:records/telescope",
-                "stream": true
-            }
-        ]
-    },
-    "music_disc.end": {
-        "sounds": [
-            {
-                "name": "lightstones:records/end",
-                "stream": true
-            }
-        ]
-    }
+  "block.mata_nui_stone.place": {
+    "sounds": [
+      "lightstones:block/mata_nui_stone/place1",
+      "lightstones:block/mata_nui_stone/place2",
+      "lightstones:block/mata_nui_stone/place3",
+      "lightstones:block/mata_nui_stone/place4"
+    ]
+  },
+  "block.makuta_stone.place": {
+    "sounds": [
+      "lightstones:block/makuta_stone/place1",
+      "lightstones:block/makuta_stone/place2",
+      "lightstones:block/makuta_stone/place3",
+      "lightstones:block/makuta_stone/place4"
+    ]
+  },
+  "music_disc.telescope": {
+    "sounds": [
+      {
+        "name": "lightstones:records/telescope",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.makuta": {
+    "sounds": [
+      {
+        "name": "lightstones:records/the_makuta",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.end": {
+    "sounds": [
+      {
+        "name": "lightstones:records/end",
+        "stream": true
+      }
+    ]
+  }
 }
