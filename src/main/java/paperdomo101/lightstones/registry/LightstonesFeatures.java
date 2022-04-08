@@ -85,6 +85,20 @@ public class LightstonesFeatures {
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(Lightstones.CONFIG.deepslateDeathstoneOreMinYLevel), YOffset.belowTop(Lightstones.CONFIG.deepslateDeathstoneOreMaxYLevel))
             ));
 
+    private static final ConfiguredFeature<?, ?> OVERWORLD_ORE_DEATHSTONE = new ConfiguredFeature
+            (Feature.ORE, new OreFeatureConfig(
+                    OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
+                    LightstonesBlocks.DEATHSTONE_ORE.getDefaultState(),
+                    Lightstones.CONFIG.deathstoneOreVeinSize));
+
+    public static PlacedFeature ORE_DEATHSTONE = new PlacedFeature(
+            RegistryEntry.of(OVERWORLD_ORE_DEATHSTONE),
+            Arrays.asList(
+                    CountPlacementModifier.of(Lightstones.CONFIG.deepslateLightstoneOreVeinsPerChunk), // number of veins per chunk
+                    SquarePlacementModifier.of(), // spreading horizontally
+                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(Lightstones.CONFIG.deathstoneOreMinYLevel), YOffset.belowTop(Lightstones.CONFIG.deathstoneMaxYLevel))
+            ));
+
 
     public static void init() {
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
@@ -102,6 +116,22 @@ public class LightstonesFeatures {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
                 RegistryKey.of(Registry.PLACED_FEATURE_KEY,
                         new Identifier(Lightstones.MOD_ID, "overworld_lightstone_gen_deepslate")));
+
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
+                new Identifier(Lightstones.MOD_ID, "overworld_deepslate_deathstone"), OVERWORLD_ORE_DEEPSLATE_DEATHSTONE);
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier(Lightstones.MOD_ID, "overworld_deepslate_deathstone"),
+                ORE_DEEPSLATE_DEATHSTONE);
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
+                RegistryKey.of(Registry.PLACED_FEATURE_KEY,
+                        new Identifier(Lightstones.MOD_ID, "overworld_deepslate_deathstone")));
+
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
+                new Identifier(Lightstones.MOD_ID, "overworld_deathstone_gen_standard"), OVERWORLD_ORE_DEEPSLATE_LIGHTSTONE);
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier(Lightstones.MOD_ID, "overworld_deathstone_gen_standard"),
+                ORE_DEATHSTONE);
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
+                RegistryKey.of(Registry.PLACED_FEATURE_KEY,
+                        new Identifier(Lightstones.MOD_ID, "overworld_deathstone_gen_standard")));
 
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
                 new Identifier(Lightstones.MOD_ID, "overworld_lightstone_gen_extra"), OVERWORLD_ORE_LIGHTSTONE_EXTRA);
