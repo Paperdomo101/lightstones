@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lightstones:deathstone_block"
+    }
+  ],
+  "result": {
+    "item": "lightstones:deathstone",
+    "count": 9
+  }
+}
