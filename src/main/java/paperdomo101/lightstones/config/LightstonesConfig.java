@@ -30,18 +30,18 @@ public class LightstonesConfig implements ConfigData {
     @ConfigEntry.Gui.RequiresRestart
     public int deepslateLightstoneOreVeinSize = 12;
     @ConfigEntry.Gui.RequiresRestart
-    public int deepslateLightstoneOreMinYLevel = -48;
+    public int deepslateLightstoneOreMinYLevel = 1;
     @ConfigEntry.Gui.RequiresRestart
-    public int deepslateLightstoneOreMaxYLevel = 1;
+    public int deepslateLightstoneOreMaxYLevel = -48;
     @ConfigEntry.Gui.RequiresRestart
     public int deepslateLightstoneOreVeinsPerChunk = 10;
 
     @ConfigEntry.Gui.RequiresRestart
     public int deepslateDeathstoneOreVeinSize = 8;
     @ConfigEntry.Gui.RequiresRestart
-    public int deepslateDeathstoneOreMinYLevel = -48;
+    public int deepslateDeathstoneOreMinYLevel = 1;
     @ConfigEntry.Gui.RequiresRestart
-    public int deepslateDeathstoneOreMaxYLevel = 1;
+    public int deepslateDeathstoneOreMaxYLevel = 48;
     @ConfigEntry.Gui.RequiresRestart
     public int deepslateDeathstoneOreVeinsPerChunk = 8;
 

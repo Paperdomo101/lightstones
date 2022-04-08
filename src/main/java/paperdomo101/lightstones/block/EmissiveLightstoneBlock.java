@@ -15,8 +15,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 
-public class LightstoneBlock extends FacingBlock implements Waterloggable {
-
+public class EmissiveLightstoneBlock extends LightstoneBlock implements Waterloggable {
     public static final BooleanProperty WATERLOGGED;
     protected static final VoxelShape CEILING_SHAPE;
     protected static final VoxelShape FLOOR_SHAPE;
@@ -35,7 +34,7 @@ public class LightstoneBlock extends FacingBlock implements Waterloggable {
         EAST_SHAPE = Block.createCuboidShape(0.0D, 4.0D, 6.5D, 3.0D, 12.0D, 9.5D);
     }
 
-    public LightstoneBlock(Settings settings) {
+    public EmissiveLightstoneBlock(Settings settings) {
         super(settings);
         this.setDefaultState((this.stateManager.getDefaultState()).with(FACING, Direction.UP).with(WATERLOGGED, false));
     }
@@ -81,13 +80,11 @@ public class LightstoneBlock extends FacingBlock implements Waterloggable {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
-    public boolean tryFillWithFluid(WorldAccess world, BlockPos pos, BlockState state, FluidState fluidState) {
-        return Waterloggable.super.tryFillWithFluid(world, pos, state, fluidState);
+    @Override
+    public int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
+        return 6;
     }
 
-    public boolean canFillWithFluid(BlockView world, BlockPos pos, BlockState state, Fluid fluid) {
-        return Waterloggable.super.canFillWithFluid(world, pos, state, fluid);
-    }
 
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState newState, WorldAccess world, BlockPos pos, BlockPos posFrom) {
         if (state.get(WATERLOGGED)) {

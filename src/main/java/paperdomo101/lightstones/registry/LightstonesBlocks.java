@@ -1,14 +1,15 @@
 package paperdomo101.lightstones.registry;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.MapColor;
-import net.minecraft.block.Material;
+import net.minecraft.block.*;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.DyeColor;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.BlockView;
 import paperdomo101.lightstones.Lightstones;
+import paperdomo101.lightstones.block.EmissiveLightstoneBlock;
 import paperdomo101.lightstones.block.LightstoneBlock;
 import paperdomo101.lightstones.block.NuiStoneBlock;
 
@@ -25,7 +26,7 @@ public class LightstonesBlocks {
 
     public static final Block DEATHSTONE_ORE = new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE).materialColor(DyeColor.RED).strength(3f, 3f).luminance(7));
     public static final Block DEEPSLATE_DEATHSTONE_ORE = new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE).materialColor(DyeColor.RED).strength(3f, 3f).luminance(7));
-    public static final Block DEATHSTONE = new LightstoneBlock(FabricBlockSettings.of(Material.GLASS, DyeColor.RED).nonOpaque().sounds(BlockSoundGroup.GLASS).strength(0.2f, 0.1f).luminance(15));
+    public static final Block DEATHSTONE = new EmissiveLightstoneBlock(FabricBlockSettings.of(Material.GLASS, DyeColor.RED).nonOpaque().sounds(BlockSoundGroup.GLASS).strength(0.2f, 0.1f).luminance(15));
     public static final Block DEATHSTONE_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK).materialColor(DyeColor.RED).strength(2f, 2f).luminance(15));
 
     public static final Block MATA_NUI_STONE = new NuiStoneBlock(11579568, FabricBlockSettings.copyOf(Blocks.STONE).materialColor(DyeColor.GRAY).sounds(BlockSoundGroup.STONE).strength(3f, 3f), LightstonesSounds.BLOCK_MATA_NUI_STONE_FALL);

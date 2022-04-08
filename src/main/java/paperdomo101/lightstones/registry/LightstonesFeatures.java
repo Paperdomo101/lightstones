@@ -75,12 +75,12 @@ public class LightstonesFeatures {
             (Feature.ORE, new OreFeatureConfig(
                     OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
                     LightstonesBlocks.DEEPSLATE_DEATHSTONE_ORE.getDefaultState(),
-                    Lightstones.CONFIG.deepslateLightstoneOreVeinSize));
+                    Lightstones.CONFIG.deepslateDeathstoneOreVeinSize));
 
     public static PlacedFeature ORE_DEEPSLATE_DEATHSTONE = new PlacedFeature(
             RegistryEntry.of(OVERWORLD_ORE_DEEPSLATE_DEATHSTONE),
             Arrays.asList(
-                    CountPlacementModifier.of(Lightstones.CONFIG.deepslateLightstoneOreVeinsPerChunk), // number of veins per chunk
+                    CountPlacementModifier.of(Lightstones.CONFIG.deepslateDeathstoneOreVeinsPerChunk), // number of veins per chunk
                     SquarePlacementModifier.of(), // spreading horizontally
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(Lightstones.CONFIG.deepslateDeathstoneOreMinYLevel), YOffset.belowTop(Lightstones.CONFIG.deepslateDeathstoneOreMaxYLevel))
             ));
