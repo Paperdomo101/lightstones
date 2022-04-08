@@ -34,7 +34,7 @@ public class LightstonesConfig implements ConfigData {
     @ConfigEntry.Gui.RequiresRestart
     public int deepslateLightstoneOreMaxYLevel = 1;
     @ConfigEntry.Gui.RequiresRestart
-    public int deepslateLightstoneOreVeinsPerChunk = 9;
+    public int deepslateLightstoneOreVeinsPerChunk = 10;
 
     @ConfigEntry.Gui.RequiresRestart
     public int blightstoneOreVeinSize = 8;
