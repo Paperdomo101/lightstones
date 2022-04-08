@@ -126,7 +126,7 @@ public class LightstonesFeatures {
                         new Identifier(Lightstones.MOD_ID, "overworld_deepslate_deathstone")));
 
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
-                new Identifier(Lightstones.MOD_ID, "overworld_deathstone_gen_standard"), OVERWORLD_ORE_DEEPSLATE_LIGHTSTONE);
+                new Identifier(Lightstones.MOD_ID, "overworld_deathstone_gen_standard"), OVERWORLD_ORE_DEATHSTONE);
         Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier(Lightstones.MOD_ID, "overworld_deathstone_gen_standard"),
                 ORE_DEATHSTONE);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
