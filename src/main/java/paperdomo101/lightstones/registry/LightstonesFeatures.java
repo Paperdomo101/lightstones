@@ -88,7 +88,7 @@ public class LightstonesFeatures {
     public static PlacedFeature ORE_DEATHSTONE = new PlacedFeature(
             RegistryEntry.of(OVERWORLD_ORE_DEATHSTONE),
             Arrays.asList(
-                    CountPlacementModifier.of(Lightstones.CONFIG.deepslateLightstoneOreVeinsPerChunk), // number of veins per chunk
+                    CountPlacementModifier.of(Lightstones.CONFIG.deathstoneOreVeinsPerChunk), // number of veins per chunk
                     SquarePlacementModifier.of(), // spreading horizontally
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(Lightstones.CONFIG.deathstoneOreMinYLevel), YOffset.belowTop(Lightstones.CONFIG.deathstoneMaxYLevel))
             ));
