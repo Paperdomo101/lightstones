@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "lightstones:block/roof_deathstone"
+    },
+    "facing=up": {
+      "model": "lightstones:block/deathstone"
+    },
+    "facing=east": {
+      "model": "lightstones:block/wall_deathstone",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "lightstones:block/wall_deathstone"
+    },
+    "facing=south": {
+      "model": "lightstones:block/wall_deathstone",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "lightstones:block/wall_deathstone",
+      "y": 270
+    }
+  }
+}

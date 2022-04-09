@@ -1,0 +1,8 @@
+{
+  "ambientocclusion": false,
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "lightstones:block/deepslate_lightstone_ore",
+    "particle": "lightstones:block/deepslate_lightstone_ore"
+  }
+}

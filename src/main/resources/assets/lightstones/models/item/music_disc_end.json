@@ -1,6 +1,6 @@
 {
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "lightstones:item/music_disc_end"
-    }
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lightstones:item/music_disc_end"
+  }
 }

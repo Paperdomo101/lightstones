@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "": { "model": "lightstones:block/lightstone_block" }
+  "variants": {
+    "": {
+      "model": "lightstones:block/lightstone_block"
     }
+  }
 }

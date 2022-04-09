@@ -1,6 +1,6 @@
 package paperdomo101.lightstones.client.render.entity;
 
-import net.fabricmc.api.EnvType;
+/*import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumer;
@@ -22,35 +22,35 @@ public class LavaSurfboardEntityRenderer extends EntityRenderer<LavaSurfboardEnt
     protected final LavaSurfboardEntityModel model = new LavaSurfboardEntityModel();
 
     public LavaSurfboardEntityRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-      super(entityRenderDispatcher);
-      this.shadowRadius = 0.8F;
+        super(entityRenderDispatcher);
+        this.shadowRadius = 0.8F;
     }
 
     // @Override
-	// public void render(LavaSurfboardEntity entity, float yaw, float tickDelta, MatrixStack matrices, VertexConsumerProvider provider, int light) {
-	// 	matrices.push();
+    // public void render(LavaSurfboardEntity entity, float yaw, float tickDelta, MatrixStack matrices, VertexConsumerProvider provider, int light) {
+    // 	matrices.push();
 
-	// 	VertexConsumer vertexConsumer = provider.getBuffer(this.model.getLayer(this.getTexture(entity)));
+    // 	VertexConsumer vertexConsumer = provider.getBuffer(this.model.getLayer(this.getTexture(entity)));
 
-	// 	this.model.render(matrices, vertexConsumer, light, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
+    // 	this.model.render(matrices, vertexConsumer, light, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
 
-	// 	matrices.pop();
+    // 	matrices.pop();
 
-	// 	super.render(entity, yaw, tickDelta, matrices, provider, light);
-	// }
+    // 	super.render(entity, yaw, tickDelta, matrices, provider, light);
+    // }
 
     public void render(LavaSurfboardEntity lavaSurfboardEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
         matrixStack.push();
         matrixStack.translate(0.0D, 0.125D, 0.0D);
         matrixStack.multiply(Vector3f.POSITIVE_Y.getDegreesQuaternion(180.0F - f));
-        float h = (float)lavaSurfboardEntity.getDamageWobbleTicks() - g;
+        float h = (float) lavaSurfboardEntity.getDamageWobbleTicks() - g;
         float j = lavaSurfboardEntity.getDamageWobbleStrength() - g;
         if (j < 0.0F) {
             j = 0.0F;
         }
 
         if (h > 0.0F) {
-            matrixStack.multiply(Vector3f.POSITIVE_X.getDegreesQuaternion(MathHelper.sin(h) * h * j / 10.0F * (float)lavaSurfboardEntity.getDamageWobbleSide()));
+            matrixStack.multiply(Vector3f.POSITIVE_X.getDegreesQuaternion(MathHelper.sin(h) * h * j / 10.0F * (float) lavaSurfboardEntity.getDamageWobbleSide()));
         }
 
         float k = lavaSurfboardEntity.interpolateBubbleWobble(g);
@@ -72,4 +72,4 @@ public class LavaSurfboardEntityRenderer extends EntityRenderer<LavaSurfboardEnt
     public Identifier getTexture(LavaSurfboardEntity lavaSurfboardEntity) {
         return TEXTURE;
     }
-}
+}*/

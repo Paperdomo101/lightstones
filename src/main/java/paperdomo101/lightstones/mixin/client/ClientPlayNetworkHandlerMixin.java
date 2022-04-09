@@ -1,17 +1,16 @@
 package paperdomo101.lightstones.mixin.client;
 
+/*import net.minecraft.client.network.ClientPlayNetworkHandler;
+import net.minecraft.client.world.ClientWorld;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
-
-import net.minecraft.client.network.ClientPlayNetworkHandler;
-import net.minecraft.client.world.ClientWorld;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
 import paperdomo101.lightstones.entity.vehicle.LavaSurfboardEntity;
 import paperdomo101.lightstones.registry.LightstonesEntities;
 
@@ -42,4 +41,4 @@ public class ClientPlayNetworkHandlerMixin {
             ci.cancel();
         }
     }
-}
+}*/
