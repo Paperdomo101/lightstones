@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:blackstone"
+      "item": "minecraft:polished_blackstone"
     },
     "X": {
-      "item": "lightstones:blightstone"
+      "item": "lightstones:deathstone"
     }
   },
   "result": {

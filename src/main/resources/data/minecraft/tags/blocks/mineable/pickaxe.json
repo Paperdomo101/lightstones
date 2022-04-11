@@ -1,0 +1,18 @@
+{
+    "replace": false,
+    "values": [
+        "lightstones:lightstone_ore",
+        "lightstones:deepslate_lightstone_ore",
+        "lightstones:lightstone",
+        "lightstones:lightstone_block",
+        "lightstones:blightstone_ore",
+        "lightstones:blightstone",
+        "lightstones:blightstone_block",
+        "lightstones:deathstone_ore",
+        "lightstones:deepslate_deathstone_ore",
+        "lightstones:deathstone",
+        "lightstones:deathstone_block",
+        "lightstones:mata_nui_stone",
+        "lightstones:makuta_stone"
+    ]
+}

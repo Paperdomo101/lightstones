@@ -25,6 +25,8 @@ public class LightstoneBlock extends FacingBlock implements Waterloggable {
     protected static final VoxelShape WEST_SHAPE;
     protected static final VoxelShape EAST_SHAPE;
 
+    private int weakPower;
+
     static {
         WATERLOGGED = Properties.WATERLOGGED;
         CEILING_SHAPE = Block.createCuboidShape(6.5D, 8.0D, 6.5D, 9.5D, 16.0D, 9.5D);
@@ -35,8 +37,9 @@ public class LightstoneBlock extends FacingBlock implements Waterloggable {
         EAST_SHAPE = Block.createCuboidShape(0.0D, 4.0D, 6.5D, 3.0D, 12.0D, 9.5D);
     }
 
-    public LightstoneBlock(Settings settings) {
+    public LightstoneBlock(int weakPower, Settings settings) {
         super(settings);
+        this.weakPower = weakPower;
         this.setDefaultState((this.stateManager.getDefaultState()).with(FACING, Direction.UP).with(WATERLOGGED, false));
     }
 
@@ -75,6 +78,11 @@ public class LightstoneBlock extends FacingBlock implements Waterloggable {
         boolean bl = fluidState.getFluid() == Fluids.WATER;
 
         return this.getDefaultState().with(FACING, direction).with(WATERLOGGED, bl);
+    }
+
+    @Override
+    public int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
+        return weakPower;
     }
 
     public FluidState getFluidState(BlockState state) {
