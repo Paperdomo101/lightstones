@@ -3,6 +3,7 @@
   "values": [
     "lightstones:deathstone",
     "lightstones:blightstone",
-    "lightstones:lightstone"
+    "lightstones:lightstone",
+	"lightstones:corestone"
   ]
 }
