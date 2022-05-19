@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "lightstones:block/roof_corestone"
+    },
+    "facing=up": {
+      "model": "lightstones:block/corestone"
+    },
+    "facing=east": {
+      "model": "lightstones:block/wall_corestone",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "lightstones:block/wall_corestone"
+    },
+    "facing=south": {
+      "model": "lightstones:block/wall_corestone",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "lightstones:block/wall_corestone",
+      "y": 270
+    }
+  }
+}

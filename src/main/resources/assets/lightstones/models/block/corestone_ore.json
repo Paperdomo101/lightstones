@@ -1,0 +1,8 @@
+{
+  "ambientocclusion": false,
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "lightstones:block/corestone_ore",
+    "particle": "lightstones:block/corestone_ore"
+  }
+}
