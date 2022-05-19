@@ -27,6 +27,10 @@ public class LightstonesItems {
     public static final Item MATA_NUI_STONE = register("mata_nui_stone", new BlockItem(LightstonesBlocks.MATA_NUI_STONE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
     public static final Item MAKUTA_STONE = register("makuta_stone", new BlockItem(LightstonesBlocks.MAKUTA_STONE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
 
+    public static final Item CORESTONE = register("corestone", new BlockItem(LightstonesBlocks.CORESTONE, (new Item.Settings()).group(Lightstones.LIGHTSTONES)));
+    public static final Item CORESTONE_ORE = register("corestone_ore", new BlockItem(LightstonesBlocks.CORESTONE_ORE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
+    public static final Item CORESTONE_BLOCK = register("corestone_block", new BlockItem(LightstonesBlocks.CORESTONE_BLOCK, new Item.Settings().group(Lightstones.LIGHTSTONES)));
+
     // public static final Item STRIDER_HIDE = register("strider_hide", new Item(new Item.Settings().group(ItemGroup.MATERIALS).fireproof()));
     // public static final Item LAVA_SURFBOARD = register("lava_surfboard", new LavaSurfboardItem(new Item.Settings().group(ItemGroup.TRANSPORTATION).fireproof().maxCount(1)));
 
