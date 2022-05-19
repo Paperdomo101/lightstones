@@ -63,6 +63,7 @@ public class LightstonesConfig implements ConfigData {
     @ConfigEntry.Gui.RequiresRestart
     public int deathstoneOreVeinsPerChunk = 5;
 
+    //Todo: Proper values for The End
     @ConfigEntry.Gui.RequiresRestart
     public int corestoneOreVeinSize = 6;
     @ConfigEntry.Gui.RequiresRestart
