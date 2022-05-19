@@ -9,9 +9,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.registry.Registry;
 import paperdomo101.lightstones.Lightstones;
-import paperdomo101.lightstones.block.EmissiveLightstoneBlock;
-import paperdomo101.lightstones.block.LightstoneBlock;
-import paperdomo101.lightstones.block.NuiStoneBlock;
+import paperdomo101.lightstones.block.*;
 
 public class LightstonesBlocks {
 
@@ -24,10 +22,10 @@ public class LightstonesBlocks {
     public static final Block BLIGHTSTONE = new LightstoneBlock(FabricBlockSettings.of(Material.GLASS, DyeColor.PURPLE).nonOpaque().sounds(BlockSoundGroup.GLASS).strength(0.2f, 0.1f).luminance(15));
     public static final Block BLIGHTSTONE_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK).materialColor(DyeColor.PURPLE).strength(2f, 2f).luminance(15));
 
-    public static final Block DEATHSTONE_ORE = new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE).materialColor(DyeColor.RED).strength(3f, 3f).luminance(7));
-    public static final Block DEEPSLATE_DEATHSTONE_ORE = new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_COAL_ORE).materialColor(DyeColor.RED).strength(3f, 3f).luminance(7));
+    public static final Block DEATHSTONE_ORE = new EmissiveOreBlock(FabricBlockSettings.copyOf(Blocks.COAL_ORE).materialColor(DyeColor.RED).strength(3f, 3f).luminance(7));
+    public static final Block DEEPSLATE_DEATHSTONE_ORE = new EmissiveOreBlock(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_COAL_ORE).materialColor(DyeColor.RED).strength(3f, 3f).luminance(7));
     public static final Block DEATHSTONE = new EmissiveLightstoneBlock(FabricBlockSettings.of(Material.GLASS, DyeColor.RED).nonOpaque().sounds(BlockSoundGroup.GLASS).strength(0.2f, 0.1f).luminance(15));
-    public static final Block DEATHSTONE_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK).materialColor(DyeColor.RED).strength(2f, 2f).luminance(15));
+    public static final Block DEATHSTONE_BLOCK = new EmissiveLargeBlock(FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK).materialColor(DyeColor.RED).strength(2f, 2f).luminance(15));
 
     public static final Block MATA_NUI_STONE = new NuiStoneBlock(11579568, FabricBlockSettings.copyOf(Blocks.STONE).materialColor(DyeColor.GRAY).sounds(BlockSoundGroup.STONE).strength(3f, 3f), LightstonesSounds.BLOCK_MATA_NUI_STONE_FALL);
     public static final Block MAKUTA_STONE = new NuiStoneBlock(2036251, FabricBlockSettings.copyOf(Blocks.BLACKSTONE).materialColor(DyeColor.BLACK).sounds(BlockSoundGroup.STONE).strength(3f, 3f), LightstonesSounds.BLOCK_MAKUTA_STONE_FALL);
