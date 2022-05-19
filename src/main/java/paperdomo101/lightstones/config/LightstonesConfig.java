@@ -63,6 +63,15 @@ public class LightstonesConfig implements ConfigData {
     @ConfigEntry.Gui.RequiresRestart
     public int deathstoneOreVeinsPerChunk = 5;
 
+    @ConfigEntry.Gui.RequiresRestart
+    public int corestoneOreVeinSize = 6;
+    @ConfigEntry.Gui.RequiresRestart
+    public int corestoneOreMinYLevel = 2;
+    @ConfigEntry.Gui.RequiresRestart
+    public int corestoneMaxYLevel = 32;
+    @ConfigEntry.Gui.RequiresRestart
+    public int corestoneOreVeinsPerChunk = 5;
+
     // Loot tables
     // public boolean stridersDropHide = true;
     // public float striderHideMin = 0.0f; 

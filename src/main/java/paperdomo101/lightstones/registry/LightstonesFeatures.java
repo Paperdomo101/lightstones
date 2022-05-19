@@ -2,6 +2,8 @@ package paperdomo101.lightstones.registry;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.minecraft.block.Blocks;
+import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
@@ -50,6 +52,11 @@ public class LightstonesFeatures {
                     OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
                     LightstonesBlocks.DEATHSTONE_ORE.getDefaultState(),
                     Lightstones.CONFIG.deathstoneOreVeinSize));
+    private static final ConfiguredFeature<?, ?> END_CORESTONE = new ConfiguredFeature
+            (Feature.ORE, new OreFeatureConfig(
+                    new BlockMatchRuleTest(Blocks.END_STONE),
+                    LightstonesBlocks.CORESTONE_ORE.getDefaultState(),
+                    Lightstones.CONFIG.corestoneOreVeinSize));
     public static PlacedFeature ORE_LIGHTSTONE = new PlacedFeature(
             RegistryEntry.of(OVERWORLD_ORE_LIGHTSTONE),
             Arrays.asList(
@@ -92,6 +99,13 @@ public class LightstonesFeatures {
                     SquarePlacementModifier.of(), // spreading horizontally
                     HeightRangePlacementModifier.uniform(YOffset.fixed(Lightstones.CONFIG.deathstoneOreMinYLevel), YOffset.fixed(Lightstones.CONFIG.deathstoneMaxYLevel))
             ));
+    public static PlacedFeature ORE_CORESTONE = new PlacedFeature(
+            RegistryEntry.of(END_CORESTONE),
+            Arrays.asList(
+                    CountPlacementModifier.of(Lightstones.CONFIG.corestoneOreVeinsPerChunk), // number of veins per chunk
+                    SquarePlacementModifier.of(), // spreading horizontally
+                    HeightRangePlacementModifier.uniform(YOffset.fixed(Lightstones.CONFIG.corestoneOreMinYLevel), YOffset.fixed(Lightstones.CONFIG.corestoneMaxYLevel))
+            ));
 
 
     public static void init() {
@@ -118,6 +132,14 @@ public class LightstonesFeatures {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
                 RegistryKey.of(Registry.PLACED_FEATURE_KEY,
                         new Identifier(Lightstones.MOD_ID, "overworld_deepslate_deathstone")));
+
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
+                new Identifier(Lightstones.MOD_ID, "end_corestone"), END_CORESTONE);
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier(Lightstones.MOD_ID, "end_corestone"),
+                ORE_CORESTONE);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES,
+                RegistryKey.of(Registry.PLACED_FEATURE_KEY,
+                        new Identifier(Lightstones.MOD_ID, "end_corestone")));
 
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
                 new Identifier(Lightstones.MOD_ID, "overworld_deathstone_gen_standard"), OVERWORLD_ORE_DEATHSTONE);
