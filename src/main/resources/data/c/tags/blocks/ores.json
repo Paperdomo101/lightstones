@@ -4,6 +4,8 @@
     "lightstones:deathstone_ore",
     "lightstones:blightstone_ore",
     "lightstones:lightstone_ore",
-    "lightstones:corestone_ore"
+    "lightstones:corestone_ore",
+	"lightstones:deepslate_lightstone_ore",
+	"lightstones:deepslate_deathstone_ore"
   ]
 }
