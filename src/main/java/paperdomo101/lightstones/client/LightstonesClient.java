@@ -8,8 +8,6 @@ public class LightstonesClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        LightstonesBannerRegistry.registerBanner();
-        LightstonesBannerPatterns.init();
         LightstonesBannerRegistry.registerBannerClient();
     }
 }
