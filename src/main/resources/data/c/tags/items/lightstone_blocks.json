@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "lightstones:deathstone_block",
+    "lightstones:blightstone_block",
+    "lightstones:lightstone_block",
+    "lightstones:corestone_block"
+  ]
+}
