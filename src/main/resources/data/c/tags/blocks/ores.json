@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "lightstones:deathstone_ore",
+    "lightstones:blightstone_ore",
+    "lightstones:lightstone_ore",
+    "lightstones:corestone_ore"
+  ]
+}
