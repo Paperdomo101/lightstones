@@ -50,11 +50,9 @@ dependencies {
     modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
-
-    modApi("me.shedaniel.cloth:cloth-config-fabric:6.2.57") {
+    modApi("me.shedaniel.cloth:cloth-config-fabric:6.2.62") {
         exclude(group: "net.fabricmc.fabric-api")
     }
-    include "me.shedaniel.cloth:config-2:${clothConfigVersion}"
 }
 
 processResources {
