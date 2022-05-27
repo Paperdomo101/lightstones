@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "group": "lightstone",
+  "ingredient": {
+	"item": "lightstones:deathstone_ore"
+  },
+  "result": "lightstones:deathstone",
+  "experience": 0.3,
+  "cookingtime": 200
+}

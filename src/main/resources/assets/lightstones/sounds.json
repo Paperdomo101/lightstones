@@ -1,4 +1,9 @@
 {
+  "block.corestone.charge": {
+    "sounds": [
+      "lightstones:block/corestone/charge"
+    ]
+  },
   "block.mata_nui_stone.place": {
     "sounds": [
       "lightstones:block/mata_nui_stone/place1",

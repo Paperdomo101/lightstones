@@ -101,7 +101,7 @@ public class LightstoneBlock extends FacingBlock implements Waterloggable {
         if (state.get(WATERLOGGED)) {
             world.createAndScheduleBlockTick(pos, Blocks.WATER, Fluids.WATER.getTickRate(world));
         }
-
+        
         return super.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);
     }
 

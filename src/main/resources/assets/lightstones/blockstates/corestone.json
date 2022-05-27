@@ -1,0 +1,46 @@
+{
+  "variants": {
+    "facing=down,charged=false": {
+      "model": "lightstones:block/roof_corestone"
+    },
+    "facing=up,charged=false": {
+      "model": "lightstones:block/corestone"
+    },
+    "facing=east,charged=false": {
+      "model": "lightstones:block/wall_corestone",
+      "y": 90
+    },
+    "facing=north,charged=false": {
+      "model": "lightstones:block/wall_corestone"
+    },
+    "facing=south,charged=false": {
+      "model": "lightstones:block/wall_corestone",
+      "y": 180
+    },
+    "facing=west,charged=false": {
+      "model": "lightstones:block/wall_corestone",
+      "y": 270
+    },
+    "facing=down,charged=true": {
+      "model": "lightstones:block/charged_roof_corestone"
+    },
+    "facing=up,charged=true": {
+      "model": "lightstones:block/charged_corestone"
+    },
+    "facing=east,charged=true": {
+      "model": "lightstones:block/charged_wall_corestone",
+      "y": 90
+    },
+    "facing=north,charged=true": {
+      "model": "lightstones:block/charged_wall_corestone"
+    },
+    "facing=south,charged=true": {
+      "model": "lightstones:block/charged_wall_corestone",
+      "y": 180
+    },
+    "facing=west,charged=true": {
+      "model": "lightstones:block/charged_wall_corestone",
+      "y": 270
+    }
+  }
+}

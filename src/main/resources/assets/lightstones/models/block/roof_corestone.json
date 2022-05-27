@@ -1,0 +1,8 @@
+{
+  "ambientocclusion": false,
+  "parent": "lightstones:block/roof_lightstone",
+  "textures": {
+    "0": "lightstones:block/corestone",
+    "particle": "lightstones:block/corestone"
+  }
+}

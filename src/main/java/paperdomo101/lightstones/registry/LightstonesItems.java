@@ -19,6 +19,10 @@ public class LightstonesItems {
     public static final Item BLIGHTSTONE_ORE = register("blightstone_ore", new BlockItem(LightstonesBlocks.BLIGHTSTONE_ORE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
     public static final Item BLIGHTSTONE_BLOCK = register("blightstone_block", new BlockItem(LightstonesBlocks.BLIGHTSTONE_BLOCK, new Item.Settings().group(Lightstones.LIGHTSTONES)));
 
+    public static final Item CORESTONE = register("corestone", new BlockItem(LightstonesBlocks.CORESTONE, (new Item.Settings()).group(Lightstones.LIGHTSTONES)));
+    public static final Item CORESTONE_ORE = register("corestone_ore", new BlockItem(LightstonesBlocks.CORESTONE_ORE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
+    public static final Item CORESTONE_BLOCK = register("corestone_block", new BlockItem(LightstonesBlocks.CORESTONE_BLOCK, new Item.Settings().group(Lightstones.LIGHTSTONES)));
+
     public static final Item DEATHSTONE = register("deathstone", new BlockItem(LightstonesBlocks.DEATHSTONE, (new Item.Settings()).group(Lightstones.LIGHTSTONES)));
     public static final Item DEATHSTONE_ORE = register("deathstone_ore", new BlockItem(LightstonesBlocks.DEATHSTONE_ORE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
     public static final Item DEEPSLATE_DEATHSTONE_ORE = register("deepslate_deathstone_ore", new BlockItem(LightstonesBlocks.DEEPSLATE_DEATHSTONE_ORE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
@@ -27,17 +31,19 @@ public class LightstonesItems {
     public static final Item MATA_NUI_STONE = register("mata_nui_stone", new BlockItem(LightstonesBlocks.MATA_NUI_STONE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
     public static final Item MAKUTA_STONE = register("makuta_stone", new BlockItem(LightstonesBlocks.MAKUTA_STONE, new Item.Settings().group(Lightstones.LIGHTSTONES)));
 
-    // public static final Item STRIDER_HIDE = register("strider_hide", new Item(new Item.Settings().group(ItemGroup.MATERIALS).fireproof()));
-    // public static final Item LAVA_SURFBOARD = register("lava_surfboard", new LavaSurfboardItem(new Item.Settings().group(ItemGroup.TRANSPORTATION).fireproof().maxCount(1)));
-
     public static final Item MUSIC_DISC_TELESCOPE = register("music_disc_telescope", new LightstonesMusicDiscItem(14, LightstonesSounds.MUSIC_DISC_TELESCOPE, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1).rarity(Rarity.RARE)));
     public static final Item MUSIC_DISC_MAKUTA = register("music_disc_makuta", new LightstonesMusicDiscItem(15, LightstonesSounds.MUSIC_DISC_MAKUTA, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1).rarity(Rarity.EPIC)));
     public static final Item MUSIC_DISC_END = register("music_disc_end", new LightstonesMusicDiscItem(15, LightstonesSounds.MUSIC_DISC_END, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1).rarity(Rarity.RARE)));
 
     public static final Item SKRALL_BANNER_PATTERN = new LoomPatternItem(LightstonesBannerPatterns.SKRALL, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1));
+    public static final Item VIRTUES_BANNER_PATTERN = new LoomPatternItem(LightstonesBannerPatterns.VIRTUES, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1));
+
+    // public static final Item STRIDER_HIDE = register("strider_hide", new Item(new Item.Settings().group(ItemGroup.MATERIALS).fireproof()));
+    // public static final Item LAVA_SURFBOARD = register("lava_surfboard", new LavaSurfboardItem(new Item.Settings().group(ItemGroup.TRANSPORTATION).fireproof().maxCount(1)));
 
     public static void init() {
         Registry.register(Registry.ITEM, Lightstones.id("skrall_banner_pattern"), SKRALL_BANNER_PATTERN);
+        Registry.register(Registry.ITEM, Lightstones.id("virtues_banner_pattern"), VIRTUES_BANNER_PATTERN);
     }
 
     protected static <T extends Item> T register(String name, T item) {

@@ -8,8 +8,10 @@ import paperdomo101.lightstones.api.banner.loom.LoomPatterns;
 public class LightstonesBannerPatterns {
 
     public static final LoomPattern SKRALL = new LoomPattern(true);
+    public static final LoomPattern VIRTUES = new LoomPattern(true);
 
     public static void init() {
         Registry.register(LoomPatterns.REGISTRY, Lightstones.id("skrall"), SKRALL);
+        Registry.register(LoomPatterns.REGISTRY, Lightstones.id("virtues"), VIRTUES);
     }
 }
