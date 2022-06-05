@@ -37,6 +37,7 @@ public class LightstonesItems {
 
     public static final Item SKRALL_BANNER_PATTERN = new LoomPatternItem(LightstonesBannerPatterns.SKRALL, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1));
     public static final Item VIRTUES_BANNER_PATTERN = new LoomPatternItem(LightstonesBannerPatterns.VIRTUES, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1));
+    public static final Item RAHKSHI_BANNER_PATTERN = new LoomPatternItem(LightstonesBannerPatterns.RAHKSHI, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1));
 
     // public static final Item STRIDER_HIDE = register("strider_hide", new Item(new Item.Settings().group(ItemGroup.MATERIALS).fireproof()));
     // public static final Item LAVA_SURFBOARD = register("lava_surfboard", new LavaSurfboardItem(new Item.Settings().group(ItemGroup.TRANSPORTATION).fireproof().maxCount(1)));
@@ -44,6 +45,7 @@ public class LightstonesItems {
     public static void init() {
         Registry.register(Registry.ITEM, Lightstones.id("skrall_banner_pattern"), SKRALL_BANNER_PATTERN);
         Registry.register(Registry.ITEM, Lightstones.id("virtues_banner_pattern"), VIRTUES_BANNER_PATTERN);
+        Registry.register(Registry.ITEM, Lightstones.id("rahkshi_banner_pattern"), RAHKSHI_BANNER_PATTERN);
     }
 
     protected static <T extends Item> T register(String name, T item) {
