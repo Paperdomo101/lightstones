@@ -1,9 +1,12 @@
 package paperdomo101.lightstones.registry;
 
 import io.github.fablabsmc.fablabs.api.bannerpattern.v1.LoomPattern;
+import io.github.fablabsmc.fablabs.api.bannerpattern.v1.LoomPatternItem;
 import io.github.fablabsmc.fablabs.api.bannerpattern.v1.LoomPatterns;
+import net.minecraft.item.BannerPatternItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import paperdomo101.lightstones.Lightstones;
@@ -36,17 +39,17 @@ public class LightstonesItems {
     public static final Item MUSIC_DISC_MAKUTA = register("music_disc_makuta", new LightstonesMusicDiscItem(15, LightstonesSounds.MUSIC_DISC_MAKUTA, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1).rarity(Rarity.EPIC)));
     public static final Item MUSIC_DISC_END = register("music_disc_end", new LightstonesMusicDiscItem(15, LightstonesSounds.MUSIC_DISC_END, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1).rarity(Rarity.RARE)));
 
-    public static LoomPattern SKRALL_BANNER_PATTERN;
-    public static LoomPattern VIRTUES_BANNER_PATTERN;
-    public static LoomPattern RAHKSHI_BANNER_PATTERN;
-
     // public static final Item STRIDER_HIDE = register("strider_hide", new Item(new Item.Settings().group(ItemGroup.MATERIALS).fireproof()));
     // public static final Item LAVA_SURFBOARD = register("lava_surfboard", new LavaSurfboardItem(new Item.Settings().group(ItemGroup.TRANSPORTATION).fireproof().maxCount(1)));
 
+    public static final Item SKRALL_BANNER_PATTERN = new LoomPatternItem(LightstonesBannerPatterns.SKRALL, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1));
+    public static final Item VIRTUES_BANNER_PATTERN = new LoomPatternItem(LightstonesBannerPatterns.VIRTUES, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1));
+    public static final Item RAHKSHI_BANNER_PATTERN = new LoomPatternItem(LightstonesBannerPatterns.RAHKSHI, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1));
+
     public static void init() {
-        SKRALL_BANNER_PATTERN = Registry.register(LoomPatterns.REGISTRY, Lightstones.id("skrall_banner_pattern"), SKRALL_BANNER_PATTERN);
-        VIRTUES_BANNER_PATTERN = Registry.register(LoomPatterns.REGISTRY, Lightstones.id("virtues_banner_pattern"), VIRTUES_BANNER_PATTERN);
-        RAHKSHI_BANNER_PATTERN = Registry.register(LoomPatterns.REGISTRY, Lightstones.id("rahkshi_banner_pattern"), RAHKSHI_BANNER_PATTERN);
+        Registry.register(Registry.ITEM, Lightstones.id("skrall_banner_pattern"), SKRALL_BANNER_PATTERN);
+        Registry.register(Registry.ITEM, Lightstones.id("virtues_banner_pattern"), VIRTUES_BANNER_PATTERN);
+        Registry.register(Registry.ITEM, Lightstones.id("rahkshi_banner_pattern"), RAHKSHI_BANNER_PATTERN);
     }
 
     protected static <T extends Item> T register(String name, T item) {
