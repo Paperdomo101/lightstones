@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+    "charged=false": {
       "model": "lightstones:block/corestone_block"
+    },
+    "charged=true": {
+      "model": "lightstones:block/charged_corestone_block"
     }
   }
 }

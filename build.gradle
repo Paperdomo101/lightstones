@@ -6,8 +6,8 @@ buildscript {
 }
 
 plugins {
-    id 'fabric-loom' version '0.11-SNAPSHOT'
-    id 'maven-publish'
+	id 'fabric-loom' version '0.11-SNAPSHOT'
+	id 'maven-publish'
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -23,8 +23,8 @@ repositories {
         url = "https://maven.blamejared.com"
     }
     maven {
-        name = 'Cotton'
-        url = 'https://server.bbkr.space/artifactory/libs-release/'
+        name = "Cotton"
+        url = "https://server.bbkr.space/artifactory/libs-release/"
     }
     maven { url "https://maven.shedaniel.me/" }
     maven {
@@ -50,7 +50,8 @@ dependencies {
     modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
-    modApi("me.shedaniel.cloth:cloth-config-fabric:6.2.62") {
+
+    modApi("me.shedaniel.cloth:cloth-config-fabric:5.3.52") {
         exclude(group: "net.fabricmc.fabric-api")
     }
 }

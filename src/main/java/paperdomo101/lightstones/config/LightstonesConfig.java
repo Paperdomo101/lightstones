@@ -16,43 +16,25 @@ public class LightstonesConfig implements ConfigData {
     @ConfigEntry.Gui.RequiresRestart
     public int lightstoneOreMaxYLevel = 48;
     @ConfigEntry.Gui.RequiresRestart
-    public int lightstoneOreVeinsPerChunk = 7;
+    public int lightstoneOreVeinsPerChunk = 3;
 
     @ConfigEntry.Gui.RequiresRestart
-    public int extraLightstoneOreVeinSize = 10;
+    public int extraLightstoneOreVeinSize = 9;
     @ConfigEntry.Gui.RequiresRestart
     public int extraLightstoneOreMinYLevel = 0;
     @ConfigEntry.Gui.RequiresRestart
     public int extraLightstoneOreMaxYLevel = 40;
     @ConfigEntry.Gui.RequiresRestart
-    public int extraLightstoneOreVeinsPerChunk = 7;
+    public int extraLightstoneOreVeinsPerChunk = 4;
 
     @ConfigEntry.Gui.RequiresRestart
-    public int deepslateLightstoneOreVeinSize = 12;
+    public int deepslateLightstoneOreVeinSize = 10;
     @ConfigEntry.Gui.RequiresRestart
     public int deepslateLightstoneOreMinYLevel = -48;
     @ConfigEntry.Gui.RequiresRestart
     public int deepslateLightstoneOreMaxYLevel = 1;
     @ConfigEntry.Gui.RequiresRestart
-    public int deepslateLightstoneOreVeinsPerChunk = 10;
-
-    @ConfigEntry.Gui.RequiresRestart
-    public int deepslateDeathstoneOreVeinSize = 8;
-    @ConfigEntry.Gui.RequiresRestart
-    public int deepslateDeathstoneOreMinYLevel = -48;
-    @ConfigEntry.Gui.RequiresRestart
-    public int deepslateDeathstoneOreMaxYLevel = 1;
-    @ConfigEntry.Gui.RequiresRestart
-    public int deepslateDeathstoneOreVeinsPerChunk = 8;
-
-    @ConfigEntry.Gui.RequiresRestart
-    public int blightstoneOreVeinSize = 8;
-    @ConfigEntry.Gui.RequiresRestart
-    public int blightstoneOreMinYLevel = 10;
-    @ConfigEntry.Gui.RequiresRestart
-    public int blightstoneOreMaxYLevel = 64;
-    @ConfigEntry.Gui.RequiresRestart
-    public int blightstoneOreVeinsPerChunk = 7;
+    public int deepslateLightstoneOreVeinsPerChunk = 6;
 
     @ConfigEntry.Gui.RequiresRestart
     public int deathstoneOreVeinSize = 6;
@@ -61,17 +43,34 @@ public class LightstonesConfig implements ConfigData {
     @ConfigEntry.Gui.RequiresRestart
     public int deathstoneMaxYLevel = 32;
     @ConfigEntry.Gui.RequiresRestart
-    public int deathstoneOreVeinsPerChunk = 5;
+    public int deathstoneOreVeinsPerChunk = 2;
 
-    //Todo: Proper values for The End
     @ConfigEntry.Gui.RequiresRestart
-    public int corestoneOreVeinSize = 6;
+    public int deepslateDeathstoneOreVeinSize = 8;
     @ConfigEntry.Gui.RequiresRestart
-    public int corestoneOreMinYLevel = 12;
+    public int deepslateDeathstoneOreMinYLevel = -48;
     @ConfigEntry.Gui.RequiresRestart
-    public int corestoneMaxYLevel = 65;
+    public int deepslateDeathstoneOreMaxYLevel = 1;
     @ConfigEntry.Gui.RequiresRestart
-    public int corestoneOreVeinsPerChunk = 4;
+    public int deepslateDeathstoneOreVeinsPerChunk = 7;
+
+    @ConfigEntry.Gui.RequiresRestart
+    public int corestoneOreVeinSize = 8;
+    @ConfigEntry.Gui.RequiresRestart
+    public int corestoneOreMinYLevel = 10;
+    @ConfigEntry.Gui.RequiresRestart
+    public int corestoneMaxYLevel = 64;
+    @ConfigEntry.Gui.RequiresRestart
+    public int corestoneOreVeinsPerChunk = 7;
+
+    @ConfigEntry.Gui.RequiresRestart
+    public int blightstoneOreVeinSize = 6;
+    @ConfigEntry.Gui.RequiresRestart
+    public int blightstoneOreMinYLevel = 12;
+    @ConfigEntry.Gui.RequiresRestart
+    public int blightstoneOreMaxYLevel = 65;
+    @ConfigEntry.Gui.RequiresRestart
+    public int blightstoneOreVeinsPerChunk = 4;
 
     // Loot tables
     // public boolean stridersDropHide = true;

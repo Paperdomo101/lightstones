@@ -7,12 +7,16 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
 
 public class EmissiveOreBlock extends RedstoneOreBlock {
-    public EmissiveOreBlock(Settings settings) {
+    
+    private int weakPower;
+
+    public EmissiveOreBlock(int weakPower, Settings settings) {
         super(settings);
+        this.weakPower = weakPower;
     }
 
     @Override
     public int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
-        return 3;
+        return weakPower;
     }
 }

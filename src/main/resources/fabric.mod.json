@@ -13,7 +13,7 @@
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/lightstones",
     "sources": "https://github.com/Paperdomo101/lightstones"
   },
-  "license": "CC0-1.0",
+  "license": "MIT License",
   "icon": "assets/lightstones/icon.png",
   "environment": "*",
   "entrypoints": {

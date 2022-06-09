@@ -1,0 +1,7 @@
+{
+  "parent": "lightstones:block/wall_lightstone",
+  "textures": {
+    "0": "lightstones:block/charged_corestone",
+    "particle": "lightstones:block/corestone"
+  }
+}

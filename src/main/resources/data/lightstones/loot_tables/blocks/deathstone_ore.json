@@ -49,7 +49,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "lightstones:lightstone"
+              "name": "lightstones:deathstone"
             }
           ]
         }

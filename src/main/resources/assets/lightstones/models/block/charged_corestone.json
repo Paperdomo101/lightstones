@@ -1,0 +1,8 @@
+{
+  "ambientocclusion": false,
+  "parent": "lightstones:block/lightstone",
+  "textures": {
+    "0": "lightstones:block/charged_corestone",
+    "particle": "lightstones:block/corestone"
+  }
+}
