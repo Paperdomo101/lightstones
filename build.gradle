@@ -50,6 +50,7 @@ dependencies {
     modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
+    modImplementation(include('com.github.Chocohead:Fabric-ASM:v2.3'))
 
     maven {
         name = 'JitPack'
