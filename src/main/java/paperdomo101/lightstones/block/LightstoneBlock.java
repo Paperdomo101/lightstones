@@ -25,8 +25,6 @@ public class LightstoneBlock extends FacingBlock implements Waterloggable {
     protected static final VoxelShape WEST_SHAPE;
     protected static final VoxelShape EAST_SHAPE;
 
-    private int weakPower;
-
     static {
         WATERLOGGED = Properties.WATERLOGGED;
         CEILING_SHAPE = Block.createCuboidShape(6.5D, 8.0D, 6.5D, 9.5D, 16.0D, 9.5D);
@@ -36,6 +34,8 @@ public class LightstoneBlock extends FacingBlock implements Waterloggable {
         WEST_SHAPE = Block.createCuboidShape(13.0D, 4.0D, 6.5D, 16.0D, 12.0D, 9.5D);
         EAST_SHAPE = Block.createCuboidShape(0.0D, 4.0D, 6.5D, 3.0D, 12.0D, 9.5D);
     }
+
+    private final int weakPower;
 
     public LightstoneBlock(int weakPower, Settings settings) {
         super(settings);
@@ -101,7 +101,7 @@ public class LightstoneBlock extends FacingBlock implements Waterloggable {
         if (state.get(WATERLOGGED)) {
             world.createAndScheduleBlockTick(pos, Blocks.WATER, Fluids.WATER.getTickRate(world));
         }
-        
+
         return super.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);
     }
 

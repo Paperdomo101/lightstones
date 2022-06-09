@@ -13,7 +13,7 @@ public class LightstonesSounds {
     public static final Identifier MUSIC_DISC_TELESCOPE_ID = Lightstones.id("music_disc.telescope");
     public static final Identifier MUSIC_DISC_END_ID = Lightstones.id("music_disc.end");
     public static final Identifier MUSIC_DISC_MAKUTA_ID = Lightstones.id("music_disc.makuta");
-    
+
     public static SoundEvent BLOCK_MATA_NUI_STONE_FALL = new SoundEvent(BLOCK_MATA_NUI_STONE_FALL_ID);
     public static SoundEvent BLOCK_MAKUTA_STONE_FALL = new SoundEvent(BLOCK_MAKUTA_STONE_FALL_ID);
     public static SoundEvent BLOCK_CORESTONE_CHARGE = new SoundEvent(BLOCK_CORESTONE_CHARGE_ID);

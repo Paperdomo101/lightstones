@@ -12,14 +12,14 @@ public class ChargeableLightstoneBlock extends LightstoneBlock {
 
     public static final BooleanProperty CHARGED = BooleanProperty.of("charged");
 
-    private int weakPower;
+    private final int weakPower;
 
     public ChargeableLightstoneBlock(int weakPower, Settings settings) {
         super(weakPower, settings);
         this.weakPower = weakPower;
         this.setDefaultState((this.stateManager.getDefaultState()).with(FACING, Direction.UP).with(WATERLOGGED, false).with(CHARGED, false));
     }
-    
+
     @Override
     public int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
         return state.get(CHARGED) ? weakPower : 0;

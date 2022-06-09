@@ -2,7 +2,7 @@
   "type": "minecraft:blasting",
   "group": "lightstone",
   "ingredient": {
-	"item": "lightstones:deathstone_ore"
+    "item": "lightstones:deathstone_ore"
   },
   "result": "lightstones:deathstone",
   "experience": 0.3,

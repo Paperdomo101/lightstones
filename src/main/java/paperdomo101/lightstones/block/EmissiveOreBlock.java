@@ -7,8 +7,8 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
 
 public class EmissiveOreBlock extends RedstoneOreBlock {
-    
-    private int weakPower;
+
+    private final int weakPower;
 
     public EmissiveOreBlock(int weakPower, Settings settings) {
         super(settings);

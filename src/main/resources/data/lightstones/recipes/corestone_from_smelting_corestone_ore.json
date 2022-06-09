@@ -2,7 +2,7 @@
   "type": "minecraft:smelting",
   "group": "lightstone",
   "ingredient": {
-	"item": "lightstones:corestone_ore"
+    "item": "lightstones:corestone_ore"
   },
   "result": "lightstones:corestone",
   "experience": 0.3,

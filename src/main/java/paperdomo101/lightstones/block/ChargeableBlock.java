@@ -10,10 +10,10 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
 
 public class ChargeableBlock extends RedstoneBlock {
-    
+
     public static final BooleanProperty CHARGED = BooleanProperty.of("charged");
 
-    private int weakPower;
+    private final int weakPower;
 
     public ChargeableBlock(int weakPower, Settings settings) {
         super(settings);

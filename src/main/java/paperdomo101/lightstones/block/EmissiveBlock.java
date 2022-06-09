@@ -8,7 +8,7 @@ import net.minecraft.world.BlockView;
 
 public class EmissiveBlock extends RedstoneBlock {
 
-    private int weakPower;
+    private final int weakPower;
 
     public EmissiveBlock(int weakPower, Settings settings) {
         super(settings);

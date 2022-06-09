@@ -2,7 +2,7 @@
   "type": "minecraft:smelting",
   "group": "lightstone",
   "ingredient": {
-	"item": "lightstones:deepslate_deathstone_ore"
+    "item": "lightstones:deepslate_deathstone_ore"
   },
   "result": "lightstones:deathstone",
   "experience": 0.3,

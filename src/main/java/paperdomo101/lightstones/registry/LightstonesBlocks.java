@@ -9,12 +9,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.registry.Registry;
 import paperdomo101.lightstones.Lightstones;
-import paperdomo101.lightstones.block.ChargeableBlock;
-import paperdomo101.lightstones.block.ChargeableLightstoneBlock;
-import paperdomo101.lightstones.block.EmissiveBlock;
-import paperdomo101.lightstones.block.EmissiveOreBlock;
-import paperdomo101.lightstones.block.LightstoneBlock;
-import paperdomo101.lightstones.block.NuiStoneBlock;
+import paperdomo101.lightstones.block.*;
 
 public class LightstonesBlocks {
 
