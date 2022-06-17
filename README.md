@@ -2,5 +2,5 @@
 
 ## What is this?
 
-A Minecraft mod that adds a new waterloggable lightsource. It is currently for Minecraft 1.16.5 and is for Fabric and
-Forge. Download it at https://www.curseforge.com/minecraft/mc-mods/lightstones
+A Minecraft mod that adds a new waterproof lightsource. Currently it is for Minecraft 1.18.2 Fabric or Forge. 
+Download it at https://www.curseforge.com/minecraft/mc-mods/lightstones

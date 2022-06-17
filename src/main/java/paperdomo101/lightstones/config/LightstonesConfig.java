@@ -41,7 +41,7 @@ public class LightstonesConfig implements ConfigData {
     @ConfigEntry.Gui.RequiresRestart
     public int deathstoneOreMinYLevel = 2;
     @ConfigEntry.Gui.RequiresRestart
-    public int deathstoneMaxYLevel = 32;
+    public int deathstoneOreMaxYLevel = 32;
     @ConfigEntry.Gui.RequiresRestart
     public int deathstoneOreVeinsPerChunk = 2;
 
@@ -59,7 +59,7 @@ public class LightstonesConfig implements ConfigData {
     @ConfigEntry.Gui.RequiresRestart
     public int corestoneOreMinYLevel = 10;
     @ConfigEntry.Gui.RequiresRestart
-    public int corestoneMaxYLevel = 64;
+    public int corestoneOreMaxYLevel = 64;
     @ConfigEntry.Gui.RequiresRestart
     public int corestoneOreVeinsPerChunk = 7;
 
@@ -72,21 +72,12 @@ public class LightstonesConfig implements ConfigData {
     @ConfigEntry.Gui.RequiresRestart
     public int blightstoneOreVeinsPerChunk = 4;
 
-    // Loot tables
-    // public boolean stridersDropHide = true;
-    // public float striderHideMin = 0.0f; 
-    // public float striderHideMax = 2.0f;
-
     @ConfigEntry.Gui.RequiresRestart
     public boolean piglinsBarterBlightstones = true;
     @ConfigEntry.Gui.RequiresRestart
     public float piglinBlightstoneChanceMin = 0.2f;
     @ConfigEntry.Gui.RequiresRestart
     public float piglinBlightstoneChanceMax = 5.0f;
-
-    // public boolean piglinsBarterLavaSurfboards = true;
-    // public float piglinLavaSurfboardChanceMin = 0.0f;
-    // public float piglinLavaSurfboardChanceMax = 0.05f;
 
     @ConfigEntry.Gui.RequiresRestart
     public boolean lightstonesAreFishingTreasure = true;

@@ -94,14 +94,14 @@ public class LightstonesFeatures {
                 Arrays.asList(
                         CountPlacementModifier.of(Lightstones.CONFIG.deathstoneOreVeinsPerChunk), // number of veins per chunk
                         SquarePlacementModifier.of(), // spreading horizontally
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(Lightstones.CONFIG.deathstoneOreMinYLevel), YOffset.fixed(Lightstones.CONFIG.deathstoneMaxYLevel))
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(Lightstones.CONFIG.deathstoneOreMinYLevel), YOffset.fixed(Lightstones.CONFIG.deathstoneOreMaxYLevel))
                 ));
         public static PlacedFeature ORE_CORESTONE = new PlacedFeature(
                 RegistryEntry.of(NETHER_ORE_CORESTONE),
                 Arrays.asList(
                         CountPlacementModifier.of(Lightstones.CONFIG.corestoneOreVeinsPerChunk), // number of veins per chunk
                         SquarePlacementModifier.of(), // spreading horizontally
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(Lightstones.CONFIG.corestoneOreMinYLevel), YOffset.fixed(Lightstones.CONFIG.corestoneMaxYLevel))
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(Lightstones.CONFIG.corestoneOreMinYLevel), YOffset.fixed(Lightstones.CONFIG.corestoneOreMaxYLevel))
                 ));
         public static PlacedFeature ORE_BLIGHTSTONE = new PlacedFeature(
                 RegistryEntry.of(END_ORE_BLIGHTSTONE),

@@ -28,6 +28,13 @@ repositories {
     }
     maven { url "https://maven.shedaniel.me/" }
     maven {
+        url 'https://server.bbkr.space/artifactory/libs-release/'
+    }
+    maven {
+        name = "banner++"
+        url "https://maven.theepicblock.nl"
+    }
+    maven {
         name = "TerraformersMC"
         url = "https://maven.terraformersmc.com/"
     }
@@ -47,6 +54,7 @@ dependencies {
 
     modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:8.0.442"
     modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:8.0.442"
+    modImplementation include("io.github.fablabsmc:bannerpp:2.0.6-teb.1+mc.1.18.2")
     modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }

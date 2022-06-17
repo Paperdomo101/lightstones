@@ -1,11 +1,11 @@
 package paperdomo101.lightstones.registry;
 
+import io.github.fablabsmc.fablabs.api.bannerpattern.v1.LoomPatternItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import paperdomo101.lightstones.Lightstones;
-import paperdomo101.lightstones.api.banner.loom.LoomPatternItem;
 import paperdomo101.lightstones.item.LightstonesMusicDiscItem;
 
 public class LightstonesItems {
@@ -38,9 +38,6 @@ public class LightstonesItems {
     public static final Item SKRALL_BANNER_PATTERN = new LoomPatternItem(LightstonesBannerPatterns.SKRALL, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1));
     public static final Item VIRTUES_BANNER_PATTERN = new LoomPatternItem(LightstonesBannerPatterns.VIRTUES, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1));
     public static final Item RAHKSHI_BANNER_PATTERN = new LoomPatternItem(LightstonesBannerPatterns.RAHKSHI, new Item.Settings().group(Lightstones.LIGHTSTONES).maxCount(1));
-
-    // public static final Item STRIDER_HIDE = register("strider_hide", new Item(new Item.Settings().group(ItemGroup.MATERIALS).fireproof()));
-    // public static final Item LAVA_SURFBOARD = register("lava_surfboard", new LavaSurfboardItem(new Item.Settings().group(ItemGroup.TRANSPORTATION).fireproof().maxCount(1)));
 
     public static void init() {
         Registry.register(Registry.ITEM, Lightstones.id("skrall_banner_pattern"), SKRALL_BANNER_PATTERN);

@@ -6,14 +6,14 @@
   "description": "Authentic lightstones straight from Onu-Koro!",
   "authors": [
     "Paperdomo101",
-    "Sunconure11",
-    "MrSterner deserves a mention too, he helped me deal with the banner issue!"
+    "Sunconure11"
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/lightstones",
+    "issues": "https://github.com/Sunconure11/lightstones/issues",
     "sources": "https://github.com/Paperdomo101/lightstones"
   },
-  "license": "MIT License",
+  "license": "MIT",
   "icon": "assets/lightstones/icon.png",
   "environment": "*",
   "entrypoints": {
@@ -21,7 +21,6 @@
       "paperdomo101.lightstones.Lightstones"
     ],
     "client": [
-      "paperdomo101.lightstones.client.LightstonesClient"
     ],
     "modmenu": [
       "paperdomo101.lightstones.config.LightstonesModMenu"
