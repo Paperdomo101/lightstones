@@ -52,14 +52,13 @@ dependencies {
     // PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
     // You may need to force-disable transitiveness on them.
 
-    modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:8.0.442"
-    modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:8.0.442"
-    modImplementation include("io.github.fablabsmc:bannerpp:2.0.6-teb.1+mc.1.18.2")
+    modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:9.1.530"
+    modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:9.1.530"
     modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
 
-    modApi("me.shedaniel.cloth:cloth-config-fabric:5.3.52") {
+    modApi("me.shedaniel.cloth:cloth-config-fabric:8.0.75") {
         exclude(group: "net.fabricmc.fabric-api")
     }
 }
