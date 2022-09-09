@@ -31,7 +31,7 @@
   "music_disc.makuta": {
     "sounds": [
       {
-        "name": "lightstones:records/the_makuta",
+        "name": "lightstones:records/makuta",
         "stream": true
       }
     ]

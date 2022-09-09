@@ -28,9 +28,9 @@ public class Lightstones implements ModInitializer {
 
         LightstonesBlocks.init();
         LightstonesItems.init();
+        LightstonesBannerPatterns.init();
         LightstonesFeatures.init();
         LightstonesLoot.init();
         LightstonesSounds.init();
-        LightstonesBannerPatterns.init();
     }
 }
