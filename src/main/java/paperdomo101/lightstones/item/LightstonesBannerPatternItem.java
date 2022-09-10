@@ -9,5 +9,4 @@ public class LightstonesBannerPatternItem extends BannerPatternItem {
     public LightstonesBannerPatternItem(TagKey<BannerPattern> patternItemTag, Settings settings) {
         super(patternItemTag, settings);
     }
-    
 }

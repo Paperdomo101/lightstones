@@ -21,7 +21,6 @@ public class LightstonesSounds {
     public static SoundEvent MUSIC_DISC_END = new SoundEvent(MUSIC_DISC_END_ID);
     public static SoundEvent MUSIC_DISC_MAKUTA = new SoundEvent(MUSIC_DISC_MAKUTA_ID);
 
-
     public static void init() {
         Registry.register(Registry.SOUND_EVENT, LightstonesSounds.BLOCK_MATA_NUI_STONE_FALL_ID, BLOCK_MATA_NUI_STONE_FALL);
         Registry.register(Registry.SOUND_EVENT, LightstonesSounds.BLOCK_MAKUTA_STONE_FALL_ID, BLOCK_MAKUTA_STONE_FALL);
