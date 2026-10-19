@@ -1,0 +1,16 @@
+{
+    "feature": "lightstones:end_blightstone_gen",
+    "placement": [
+      { "type": "minecraft:count", "count": 4 },
+      { "type": "minecraft:in_square" },
+      {
+        "type": "minecraft:height_range",
+        "height": {
+          "type": "minecraft:uniform",
+          "min_inclusive": { "absolute": 12 },
+          "max_inclusive": { "absolute": 65 }
+        }
+      },
+      { "type": "minecraft:biome" }
+    ]
+  }

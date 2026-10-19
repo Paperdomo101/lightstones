@@ -1,5 +1,4 @@
 {
-  "values": [
-    "lightstones:skrall"
-  ]
+  "replace": false,
+  "values": ["lightstones:skrall"]
 }

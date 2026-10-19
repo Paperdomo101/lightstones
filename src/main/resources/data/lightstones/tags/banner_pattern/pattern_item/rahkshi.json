@@ -1,5 +1,4 @@
 {
-  "values": [
-    "lightstones:rahkshi"
-  ]
+  "replace": false,
+  "values": ["lightstones:rahkshi"]
 }

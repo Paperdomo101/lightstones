@@ -2,7 +2,7 @@ package paperdomo101.lightstones.item;
 
 import net.minecraft.block.entity.BannerPattern;
 import net.minecraft.item.BannerPatternItem;
-import net.minecraft.tag.TagKey;
+import net.minecraft.registry.tag.TagKey;
 
 public class LightstonesBannerPatternItem extends BannerPatternItem {
 

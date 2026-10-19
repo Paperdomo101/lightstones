@@ -1,0 +1,16 @@
+{
+    "feature": "lightstones:overworld_lightstone_gen_deepslate",
+    "placement": [
+      { "type": "minecraft:count", "count": 6 },
+      { "type": "minecraft:in_square" },
+      {
+        "type": "minecraft:height_range",
+        "height": {
+          "type": "minecraft:uniform",
+          "min_inclusive": { "absolute": -48 },
+          "max_inclusive": { "absolute": 1 }
+        }
+      },
+      { "type": "minecraft:biome" }
+    ]
+  }

@@ -1,5 +1,4 @@
 {
-  "values": [
-    "lightstones:virtues"
-  ]
+  "replace": false,
+  "values": ["lightstones:virtues"]
 }
