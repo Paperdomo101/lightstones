@@ -1,26 +1,35 @@
 {
   "variants": {
-    "facing=down,charged=false": {
-      "model": "lightstones:block/roof_corestone"
-    },
-    "facing=up,charged=false": {
-      "model": "lightstones:block/corestone"
-    },
-    "facing=east,charged=false": {
-      "model": "lightstones:block/wall_corestone",
-      "y": 90
-    },
-    "facing=north,charged=false": {
-      "model": "lightstones:block/wall_corestone"
-    },
-    "facing=south,charged=false": {
-      "model": "lightstones:block/wall_corestone",
-      "y": 180
-    },
-    "facing=west,charged=false": {
-      "model": "lightstones:block/wall_corestone",
-      "y": 270
-    },
+    "facing=down,charged=false": [
+        { "model": "lightstones:block/roof_corestone" },
+        { "model": "lightstones:block/roof_corestone_1" },
+        { "model": "lightstones:block/roof_corestone_2" }
+    ],
+    "facing=up,charged=false": [
+        { "model": "lightstones:block/corestone" },
+        { "model": "lightstones:block/corestone_1" },
+        { "model": "lightstones:block/corestone_2" }
+    ],
+    "facing=east,charged=false": [
+        { "model": "lightstones:block/wall_corestone", "y": 90 },
+        { "model": "lightstones:block/wall_corestone_1", "y": 90 },
+        { "model": "lightstones:block/wall_corestone_2", "y": 90 }
+    ],
+    "facing=north,charged=false": [
+        { "model": "lightstones:block/wall_corestone" },
+        { "model": "lightstones:block/wall_corestone_1" },
+        { "model": "lightstones:block/wall_corestone_2" }
+    ],
+    "facing=south,charged=false": [
+        { "model": "lightstones:block/wall_corestone", "y": 180 },
+        { "model": "lightstones:block/wall_corestone_1", "y": 180 },
+        { "model": "lightstones:block/wall_corestone_2", "y": 180 }
+    ],
+    "facing=west,charged=false": [
+        { "model": "lightstones:block/wall_corestone", "y": 270 },
+        { "model": "lightstones:block/wall_corestone_1", "y": 270 },
+        { "model": "lightstones:block/wall_corestone_2", "y": 270 }
+    ],
     "facing=down,charged=true": {
       "model": "lightstones:block/charged_roof_corestone"
     },

@@ -3,6 +3,6 @@
   "parent": "lightstones:block/lightstone",
   "textures": {
     "0": "lightstones:block/deathstone",
-    "particle": "lightstones:block/deathstone"
+    "particle": "lightstones:block/deathstone_block"
   }
 }

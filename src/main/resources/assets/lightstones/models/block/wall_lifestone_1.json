@@ -1,0 +1,7 @@
+{
+  "parent": "lightstones:block/wall_lifestone",
+  "textures": {
+    "0": "lightstones:block/lifestone_1",
+    "particle": "lightstones:block/lifestone_block"
+  }
+}

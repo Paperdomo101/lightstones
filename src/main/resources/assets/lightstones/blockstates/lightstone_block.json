@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "lightstones:block/lightstone_block"
-    }
+    "": [
+      { "model": "lightstones:block/lightstone_block" },
+      { "model": "lightstones:block/lightstone_block_1" },
+      { "model": "lightstones:block/lightstone_block_2" }
+    ]
   }
 }

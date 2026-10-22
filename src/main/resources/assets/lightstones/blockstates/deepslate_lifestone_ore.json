@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "": [
+      { "model": "lightstones:block/deepslate_lifestone_ore" },
+      { "model": "lightstones:block/deepslate_lifestone_ore_1" },
+      { "model": "lightstones:block/deepslate_lifestone_ore_2" }
+    ]
+  }
+}

@@ -2,7 +2,15 @@
   "replace": false,
   "values": [
     "lightstones:music_disc_telescope",
+    "lightstones:music_disc_makuta",
     "lightstones:music_disc_end",
-    "lightstones:music_disc_makuta"
+    "lightstones:music_disc_band",
+    "lightstones:music_disc_company",
+    "lightstones:music_disc_mines",
+    "lightstones:music_disc_naho",
+    "lightstones:music_disc_plague",
+    "lightstones:music_disc_rama",
+    "lightstones:music_disc_sanctum",
+    "lightstones:music_disc_killing_machines"
   ]
 }

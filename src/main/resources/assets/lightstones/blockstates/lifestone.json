@@ -1,0 +1,79 @@
+{
+  "variants": {
+    "facing=down": [
+      {
+        "model": "lightstones:block/roof_lifestone"
+      },
+      {
+        "model": "lightstones:block/roof_lifestone_1"
+      },
+      {
+        "model": "lightstones:block/roof_lifestone_2"
+      }
+    ],
+    "facing=up": [
+      {
+        "model": "lightstones:block/lifestone"
+      },
+      {
+        "model": "lightstones:block/lifestone_1"
+      },
+      {
+        "model": "lightstones:block/lifestone_2"
+      }
+    ],
+    "facing=east": [
+      {
+        "model": "lightstones:block/wall_lifestone",
+        "y": 90
+      },
+      {
+        "model": "lightstones:block/wall_lifestone_1",
+        "y": 90
+      },
+      {
+        "model": "lightstones:block/wall_lifestone_2",
+        "y": 90
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "lightstones:block/wall_lifestone"
+      },
+      {
+        "model": "lightstones:block/wall_lifestone_1"
+      },
+      {
+        "model": "lightstones:block/wall_lifestone_2"
+      }
+    ],
+    "facing=south": [
+      {
+        "model": "lightstones:block/wall_lifestone",
+        "y": 180
+      },
+      {
+        "model": "lightstones:block/wall_lifestone_1",
+        "y": 180
+      },
+      {
+        "model": "lightstones:block/wall_lifestone_2",
+        "y": 180
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "lightstones:block/wall_lifestone",
+        "y": 270
+      },
+      {
+        "model": "lightstones:block/wall_lifestone_1",
+        "y": 270
+      },
+      {
+        "model": "lightstones:block/wall_lifestone_2",
+        "y": 270
+      }
+    ]
+  }
+}

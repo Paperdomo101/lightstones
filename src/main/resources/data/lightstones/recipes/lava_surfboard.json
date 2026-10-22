@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IHI",
+    "IHI",
+    "IHI"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "H": {
+      "item": "lightstones:strider_hide"
+    }
+  },
+  "result": {
+    "item": "lightstones:lava_surfboard"
+  }
+}

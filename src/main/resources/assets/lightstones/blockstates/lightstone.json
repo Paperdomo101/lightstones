@@ -1,25 +1,34 @@
 {
   "variants": {
-    "facing=down": {
-      "model": "lightstones:block/roof_lightstone"
-    },
-    "facing=up": {
-      "model": "lightstones:block/lightstone"
-    },
-    "facing=east": {
-      "model": "lightstones:block/wall_lightstone",
-      "y": 90
-    },
-    "facing=north": {
-      "model": "lightstones:block/wall_lightstone"
-    },
-    "facing=south": {
-      "model": "lightstones:block/wall_lightstone",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "lightstones:block/wall_lightstone",
-      "y": 270
-    }
+    "facing=down": [
+      { "model": "lightstones:block/roof_lightstone" },
+      { "model": "lightstones:block/roof_lightstone_1" },
+      { "model": "lightstones:block/roof_lightstone_2" }
+    ],
+    "facing=up": [
+      { "model": "lightstones:block/lightstone" },
+      { "model": "lightstones:block/lightstone_1" },
+      { "model": "lightstones:block/lightstone_2" }
+    ],
+    "facing=east": [
+      { "model": "lightstones:block/wall_lightstone", "y": 90 },
+      { "model": "lightstones:block/wall_lightstone_1", "y": 90 },
+      { "model": "lightstones:block/wall_lightstone_2", "y": 90 }
+    ],
+    "facing=north": [
+      { "model": "lightstones:block/wall_lightstone" },
+      { "model": "lightstones:block/wall_lightstone_1" },
+      { "model": "lightstones:block/wall_lightstone_2" }
+    ],
+    "facing=south": [
+      { "model": "lightstones:block/wall_lightstone", "y": 180 },
+      { "model": "lightstones:block/wall_lightstone_1", "y": 180 },
+      { "model": "lightstones:block/wall_lightstone_2", "y": 180 }
+    ],
+    "facing=west": [
+      { "model": "lightstones:block/wall_lightstone", "y": 270 },
+      { "model": "lightstones:block/wall_lightstone_1", "y": 270 },
+      { "model": "lightstones:block/wall_lightstone_2", "y": 270 }
+    ]
   }
 }

@@ -1,10 +1,14 @@
 {
   "variants": {
-    "charged=false": {
-      "model": "lightstones:block/corestone_block"
-    },
-    "charged=true": {
-      "model": "lightstones:block/charged_corestone_block"
-    }
+    "charged=false": [
+        { "model": "lightstones:block/corestone_block" },
+        { "model": "lightstones:block/corestone_block_1" },
+        { "model": "lightstones:block/corestone_block_2" }
+    ],
+    "charged=true": [
+        { "model": "lightstones:block/charged_corestone_block" },
+        { "model": "lightstones:block/charged_corestone_block" },
+        { "model": "lightstones:block/charged_corestone_block" }
+    ]
   }
 }

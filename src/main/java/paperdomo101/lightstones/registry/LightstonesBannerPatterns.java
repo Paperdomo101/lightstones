@@ -4,12 +4,9 @@ package paperdomo101.lightstones.registry;
 import net.minecraft.block.entity.BannerPattern;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-// import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.tag.TagKey;
 import paperdomo101.lightstones.Lightstones;
-// import net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents;
-// import net.minecraft.registry.RegistryKeys;
 
 public class LightstonesBannerPatterns {
 
@@ -45,23 +42,6 @@ public class LightstonesBannerPatterns {
     }
 
     public static void init() {
-        // Lightstones.LOGGER.info(
-        //     "Skrall pattern registered: {}",
-        //     Registries.BANNER_PATTERN.get(Lightstones.id("skrall")) != null
-        // );
+
     }
-
-    // public static void registerTagChecks() {
-    //     CommonLifecycleEvents.TAGS_LOADED.register((registries, client) -> {
-    //         var bannerPatterns = registries.get(RegistryKeys.BANNER_PATTERN);
-
-    //         var skrallTag = bannerPatterns.getEntryList(SKRALL_KEY);
-
-    //         Lightstones.LOGGER.info("Skrall tag exists: {}", skrallTag.isPresent());
-
-    //         skrallTag.ifPresent(entries ->
-    //             Lightstones.LOGGER.info("Skrall tag entries: {}", entries.size())
-    //         );
-    //     });
-    // }
 }

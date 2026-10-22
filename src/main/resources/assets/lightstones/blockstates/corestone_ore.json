@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "lightstones:block/corestone_ore"
-    }
+    "": [
+      { "model": "lightstones:block/corestone_ore" },
+      { "model": "lightstones:block/corestone_ore_1" },
+      { "model": "lightstones:block/corestone_ore_2" }
+    ]
   }
 }

@@ -1,0 +1,8 @@
+{
+  "ambientocclusion": false,
+  "parent": "lightstones:block/lifestone",
+  "textures": {
+    "0": "lightstones:block/lifestone_2",
+    "particle": "lightstones:block/lifestone_block"
+  }
+}

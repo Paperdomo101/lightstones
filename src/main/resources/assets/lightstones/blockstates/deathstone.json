@@ -1,25 +1,79 @@
 {
   "variants": {
-    "facing=down": {
-      "model": "lightstones:block/roof_deathstone"
-    },
-    "facing=up": {
-      "model": "lightstones:block/deathstone"
-    },
-    "facing=east": {
-      "model": "lightstones:block/wall_deathstone",
-      "y": 90
-    },
-    "facing=north": {
-      "model": "lightstones:block/wall_deathstone"
-    },
-    "facing=south": {
-      "model": "lightstones:block/wall_deathstone",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "lightstones:block/wall_deathstone",
-      "y": 270
-    }
+    "facing=down": [
+      {
+        "model": "lightstones:block/roof_deathstone"
+      },
+      {
+        "model": "lightstones:block/roof_deathstone_1"
+      },
+      {
+        "model": "lightstones:block/roof_deathstone_2"
+      }
+    ],
+    "facing=up": [
+      {
+        "model": "lightstones:block/deathstone"
+      },
+      {
+        "model": "lightstones:block/deathstone_1"
+      },
+      {
+        "model": "lightstones:block/deathstone_2"
+      }
+    ],
+    "facing=east": [
+      {
+        "model": "lightstones:block/wall_deathstone",
+        "y": 90
+      },
+      {
+        "model": "lightstones:block/wall_deathstone_1",
+        "y": 90
+      },
+      {
+        "model": "lightstones:block/wall_deathstone_2",
+        "y": 90
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "lightstones:block/wall_deathstone"
+      },
+      {
+        "model": "lightstones:block/wall_deathstone_1"
+      },
+      {
+        "model": "lightstones:block/wall_deathstone_2"
+      }
+    ],
+    "facing=south": [
+      {
+        "model": "lightstones:block/wall_deathstone",
+        "y": 180
+      },
+      {
+        "model": "lightstones:block/wall_deathstone_1",
+        "y": 180
+      },
+      {
+        "model": "lightstones:block/wall_deathstone_2",
+        "y": 180
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "lightstones:block/wall_deathstone",
+        "y": 270
+      },
+      {
+        "model": "lightstones:block/wall_deathstone_1",
+        "y": 270
+      },
+      {
+        "model": "lightstones:block/wall_deathstone_2",
+        "y": 270
+      }
+    ]
   }
 }

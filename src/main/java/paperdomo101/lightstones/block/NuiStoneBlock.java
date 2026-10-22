@@ -57,14 +57,7 @@ public class NuiStoneBlock extends FallingBlock {
     @Override
     public void onLanding(World world, BlockPos pos, BlockState fallingBlockState, BlockState currentStateInPos, FallingBlockEntity fallingBlockEntity) {
         if (!world.isClient) {
-            world.playSound(
-                    null, // Player - if non-null, will play sound for every nearby player *except* the specified player
-                    pos, // The position of where the sound will come from
-                    fallSound, // The sound that will play
-                    SoundCategory.BLOCKS, // This determines which of the volume sliders affect this sound
-                    1f, //Volume multiplier, 1 is normal, 0.5 is half volume, etc
-                    1f // Pitch multiplier, 1 is normal, 0.5 is half pitch, etc
-            );
+            world.playSound(null, pos, fallSound, SoundCategory.BLOCKS, 1.0f, 1.0f);
         }
     }
 

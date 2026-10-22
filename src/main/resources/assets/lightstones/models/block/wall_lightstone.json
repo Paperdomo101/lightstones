@@ -1,7 +1,7 @@
 {
   "textures": {
     "0": "lightstones:block/lightstone",
-    "particle": "lightstones:block/lightstone"
+    "particle": "lightstones:block/lightstone_block"
   },
   "elements": [
     {

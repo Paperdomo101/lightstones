@@ -17,7 +17,7 @@ public class ChargeableLightstoneBlock extends LightstoneBlock {
     public ChargeableLightstoneBlock(int weakPower, Settings settings) {
         super(weakPower, settings);
         this.weakPower = weakPower;
-        this.setDefaultState((this.stateManager.getDefaultState()).with(FACING, Direction.UP).with(WATERLOGGED, false).with(CHARGED, false));
+        this.setDefaultState((this.stateManager.getDefaultState()).with(FACING, Direction.UP).with(WATER_LEVEL, 0).with(WATER_FALLING, false).with(CHARGED, false));
     }
     
     @Override
@@ -27,7 +27,7 @@ public class ChargeableLightstoneBlock extends LightstoneBlock {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, CHARGED);
+        builder.add(FACING, WATER_LEVEL, WATER_FALLING, CHARGED);
     }
 
 }

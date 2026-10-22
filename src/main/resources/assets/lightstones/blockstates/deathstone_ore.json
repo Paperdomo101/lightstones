@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "lightstones:block/deathstone_ore"
-    }
+    "": [
+      { "model": "lightstones:block/deathstone_ore" },
+      { "model": "lightstones:block/deathstone_ore_1" },
+      { "model": "lightstones:block/deathstone_ore_2" }
+    ]
   }
 }

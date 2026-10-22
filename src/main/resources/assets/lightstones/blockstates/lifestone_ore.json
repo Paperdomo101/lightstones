@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "": [
+      { "model": "lightstones:block/lifestone_ore" },
+      { "model": "lightstones:block/lifestone_ore_1" },
+      { "model": "lightstones:block/lifestone_ore_2" }
+    ]
+  }
+}

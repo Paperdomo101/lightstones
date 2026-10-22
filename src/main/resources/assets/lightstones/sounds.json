@@ -4,6 +4,22 @@
       "lightstones:block/corestone/charge"
     ]
   },
+  "entity.lava_surfboard.splash": {
+    "sounds": [
+      "lightstones:entity/lava_surfboard/splash1",
+      "lightstones:entity/lava_surfboard/splash2",
+      "lightstones:entity/lava_surfboard/splash3",
+      "lightstones:entity/lava_surfboard/splash4"
+    ]
+  },
+  "entity.lava_surfboard.wake": {
+    "sounds": [
+        {
+            "name": "lightstones:entity/lava_surfboard/wake1",
+            "stream": true
+        }
+    ]
+  },
   "block.mata_nui_stone.place": {
     "sounds": [
       "lightstones:block/mata_nui_stone/place1",
@@ -40,6 +56,70 @@
     "sounds": [
       {
         "name": "lightstones:records/end",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.band": {
+    "sounds": [
+      {
+        "name": "lightstones:records/band",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.company": {
+    "sounds": [
+      {
+        "name": "lightstones:records/company",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.mines": {
+    "sounds": [
+      {
+        "name": "lightstones:records/mines",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.naho": {
+    "sounds": [
+      {
+        "name": "lightstones:records/naho",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.plague": {
+    "sounds": [
+      {
+        "name": "lightstones:records/plague",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.rama": {
+    "sounds": [
+      {
+        "name": "lightstones:records/rama",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.sanctum": {
+    "sounds": [
+      {
+        "name": "lightstones:records/sanctum",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.killing_machines": {
+    "sounds": [
+      {
+        "name": "lightstones:records/killing_machines",
         "stream": true
       }
     ]

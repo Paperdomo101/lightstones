@@ -10,7 +10,7 @@
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/lightstones",
-    "issues": "https://github.com/Sunconure11/lightstones/issues",
+    "issues": "https://github.com/Paperdomo101/lightstones/issues",
     "sources": "https://github.com/Paperdomo101/lightstones"
   },
   "license": "MIT",
@@ -21,6 +21,7 @@
       "paperdomo101.lightstones.Lightstones"
     ],
     "client": [
+      "paperdomo101.lightstones.client.LightstonesClient"
     ],
     "modmenu": [
       "paperdomo101.lightstones.config.LightstonesModMenu"

@@ -1,0 +1,7 @@
+{
+  "parent": "lightstones:block/wall_lightstone",
+  "textures": {
+    "0": "lightstones:block/lightstone_2",
+    "particle": "lightstones:block/lightstone_block"
+  }
+}

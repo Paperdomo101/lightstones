@@ -1,0 +1,8 @@
+{
+  "ambientocclusion": false,
+  "parent": "lightstones:block/roof_deathstone",
+  "textures": {
+    "0": "lightstones:block/deathstone_2",
+    "particle": "lightstones:block/deathstone_block"
+  }
+}

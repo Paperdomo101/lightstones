@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "lightstones:block/blightstone_ore"
-    }
+    "": [
+      { "model": "lightstones:block/blightstone_ore" },
+      { "model": "lightstones:block/blightstone_ore_1" },
+      { "model": "lightstones:block/blightstone_ore_2" }
+    ]
   }
 }

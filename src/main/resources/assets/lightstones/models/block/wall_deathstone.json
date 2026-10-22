@@ -2,6 +2,6 @@
   "parent": "lightstones:block/wall_lightstone",
   "textures": {
     "0": "lightstones:block/deathstone",
-    "particle": "lightstones:block/deathstone"
+    "particle": "lightstones:block/deathstone_block"
   }
 }

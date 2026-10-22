@@ -2,7 +2,7 @@
   "ambientocclusion": false,
   "textures": {
     "0": "lightstones:block/blightstone",
-    "particle": "lightstones:block/blightstone"
+    "particle": "lightstones:block/blightstone_block"
   },
   "elements": [
     {

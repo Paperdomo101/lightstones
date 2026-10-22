@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:nether/strider_tipper",
+  "criteria": {
+    "lava_surfboard": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "lightstones:lava_surfboard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.nether.lava_surfboard.description"
+    },
+    "frame": "goal",
+    "hidden": true,
+    "icon": {
+      "item": "lightstones:lava_surfboard"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.nether.lava_surfboard.title"
+    }
+  },
+  "requirements": [
+    [
+      "lava_surfboard"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

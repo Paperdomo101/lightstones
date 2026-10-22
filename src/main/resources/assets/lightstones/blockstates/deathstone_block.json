@@ -1,7 +1,15 @@
 {
   "variants": {
-    "": {
-      "model": "lightstones:block/deathstone_block"
-    }
+    "": [
+      {
+        "model": "lightstones:block/deathstone_block"
+      },
+      {
+        "model": "lightstones:block/deathstone_block_1"
+      },
+      {
+        "model": "lightstones:block/deathstone_block_2"
+      }
+    ]
   }
 }

@@ -1,25 +1,34 @@
 {
   "variants": {
-    "facing=down": {
-      "model": "lightstones:block/roof_blightstone"
-    },
-    "facing=up": {
-      "model": "lightstones:block/blightstone"
-    },
-    "facing=east": {
-      "model": "lightstones:block/wall_blightstone",
-      "y": 90
-    },
-    "facing=north": {
-      "model": "lightstones:block/wall_blightstone"
-    },
-    "facing=south": {
-      "model": "lightstones:block/wall_blightstone",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "lightstones:block/wall_blightstone",
-      "y": 270
-    }
+    "facing=down": [
+      { "model": "lightstones:block/roof_blightstone" },
+      { "model": "lightstones:block/roof_blightstone_1" },
+      { "model": "lightstones:block/roof_blightstone_2" }
+    ],
+    "facing=up": [
+      { "model": "lightstones:block/blightstone" },
+      { "model": "lightstones:block/blightstone_1" },
+      { "model": "lightstones:block/blightstone_2" }
+    ],
+    "facing=east": [
+      { "model": "lightstones:block/wall_blightstone", "y": 90 },
+      { "model": "lightstones:block/wall_blightstone_1", "y": 90 },
+      { "model": "lightstones:block/wall_blightstone_2", "y": 90 }
+    ],
+    "facing=north": [
+      { "model": "lightstones:block/wall_blightstone" },
+      { "model": "lightstones:block/wall_blightstone_1" },
+      { "model": "lightstones:block/wall_blightstone_2" }
+    ],
+    "facing=south": [
+      { "model": "lightstones:block/wall_blightstone", "y": 180 },
+      { "model": "lightstones:block/wall_blightstone_1", "y": 180 },
+      { "model": "lightstones:block/wall_blightstone_2", "y": 180 }
+    ],
+    "facing=west": [
+      { "model": "lightstones:block/wall_blightstone", "y": 270 },
+      { "model": "lightstones:block/wall_blightstone_1", "y": 270 },
+      { "model": "lightstones:block/wall_blightstone_2", "y": 270 }
+    ]
   }
 }

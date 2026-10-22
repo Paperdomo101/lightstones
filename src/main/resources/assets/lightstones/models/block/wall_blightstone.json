@@ -2,6 +2,6 @@
   "parent": "lightstones:block/wall_lightstone",
   "textures": {
     "0": "lightstones:block/blightstone",
-    "particle": "lightstones:block/blightstone"
+    "particle": "lightstones:block/blightstone_block"
   }
 }

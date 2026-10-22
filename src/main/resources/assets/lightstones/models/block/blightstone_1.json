@@ -1,0 +1,8 @@
+{
+  "ambientocclusion": false,
+  "parent": "lightstones:block/blightstone",
+  "textures": {
+    "0": "lightstones:block/blightstone_1",
+    "particle": "lightstones:block/blightstone_block"
+  }
+}

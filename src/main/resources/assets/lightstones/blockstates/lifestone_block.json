@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "lightstones:block/lifestone_block"
+      },
+      {
+        "model": "lightstones:block/lifestone_block_1"
+      },
+      {
+        "model": "lightstones:block/lifestone_block_2"
+      }
+    ]
+  }
+}
