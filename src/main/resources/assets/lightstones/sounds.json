@@ -123,5 +123,13 @@
         "stream": true
       }
     ]
+  },
+  "music_disc.creeping_in_my_soul": {
+    "sounds": [
+      {
+        "name": "lightstones:records/creeping_in_my_soul",
+        "stream": true
+      }
+    ]
   }
 }

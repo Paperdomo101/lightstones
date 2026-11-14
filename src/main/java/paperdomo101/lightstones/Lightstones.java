@@ -63,7 +63,7 @@ public class Lightstones implements ModInitializer {
                     entries.add(LightstonesItems.VIRTUES_BANNER_PATTERN);
                     entries.add(LightstonesItems.RAHKSHI_BANNER_PATTERN);
                     
-                    entries.add(LightstonesItems.STRIDER_HIDE);
+                    entries.add(LightstonesItems.LAVA_SURFBOARD);
 
                     entries.add(LightstonesItems.DEATHSTONE);
                     entries.add(LightstonesItems.LIGHTSTONE);
@@ -74,9 +74,7 @@ public class Lightstones implements ModInitializer {
                     entries.add(LightstonesItems.MUSIC_DISC_TELESCOPE);
                     entries.add(LightstonesItems.MUSIC_DISC_MAKUTA);
                     entries.add(LightstonesItems.MUSIC_DISC_END);
-                    
-                    entries.add(LightstonesItems.LAVA_SURFBOARD);
-
+                
                     entries.add(LightstonesItems.MUSIC_DISC_BAND);
                     entries.add(LightstonesItems.MUSIC_DISC_COMPANY);
                     entries.add(LightstonesItems.MUSIC_DISC_MINES);
@@ -85,6 +83,9 @@ public class Lightstones implements ModInitializer {
                     entries.add(LightstonesItems.MUSIC_DISC_RAMA);
                     entries.add(LightstonesItems.MUSIC_DISC_SANCTUM);
                     entries.add(LightstonesItems.MUSIC_DISC_KILLING_MACHINES);
+                    entries.add(LightstonesItems.MUSIC_DISC_CREEPING_IN_MY_SOUL);
+                    
+                    entries.add(LightstonesItems.STRIDER_HIDE);
                 })
 
                 .build()

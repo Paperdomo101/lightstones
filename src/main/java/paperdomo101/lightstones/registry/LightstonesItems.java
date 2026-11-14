@@ -93,17 +93,18 @@ public class LightstonesItems {
                 new Item.Settings().maxCount(1).rarity(Rarity.RARE), duration));
     }
 
-    public static final Item MUSIC_DISC_TELESCOPE = music_disc("music_disc_telescope",LightstonesSounds.MUSIC_DISC_TELESCOPE,  137);
-    public static final Item MUSIC_DISC_MAKUTA    = music_disc("music_disc_makuta",   LightstonesSounds.MUSIC_DISC_MAKUTA,     112);
-    public static final Item MUSIC_DISC_END       = music_disc("music_disc_end",      LightstonesSounds.MUSIC_DISC_END,        321);
-    public static final Item MUSIC_DISC_BAND      = music_disc("music_disc_band",     LightstonesSounds.MUSIC_DISC_BAND,       200);
-    public static final Item MUSIC_DISC_COMPANY   = music_disc("music_disc_company",  LightstonesSounds.MUSIC_DISC_COMPANY,    145);
-    public static final Item MUSIC_DISC_MINES     = music_disc("music_disc_mines",    LightstonesSounds.MUSIC_DISC_MINES,      166);
-    public static final Item MUSIC_DISC_NAHO      = music_disc("music_disc_naho",     LightstonesSounds.MUSIC_DISC_NAHO,        95);
-    public static final Item MUSIC_DISC_PLAGUE    = music_disc("music_disc_plague",   LightstonesSounds.MUSIC_DISC_PLAGUE,     130);
-    public static final Item MUSIC_DISC_RAMA      = music_disc("music_disc_rama",     LightstonesSounds.MUSIC_DISC_RAMA,       314);
-    public static final Item MUSIC_DISC_SANCTUM   = music_disc("music_disc_sanctum",  LightstonesSounds.MUSIC_DISC_SANCTUM,    190);
-    public static final Item MUSIC_DISC_KILLING_MACHINES = music_disc("music_disc_killing_machines",  LightstonesSounds.MUSIC_DISC_KILLING_MACHINES, 238);
+    public static final Item MUSIC_DISC_TELESCOPE           = music_disc("music_disc_telescope",            LightstonesSounds.MUSIC_DISC_TELESCOPE,           137);
+    public static final Item MUSIC_DISC_MAKUTA              = music_disc("music_disc_makuta",               LightstonesSounds.MUSIC_DISC_MAKUTA,              112);
+    public static final Item MUSIC_DISC_END                 = music_disc("music_disc_end",                  LightstonesSounds.MUSIC_DISC_END,                 321);
+    public static final Item MUSIC_DISC_BAND                = music_disc("music_disc_band",                 LightstonesSounds.MUSIC_DISC_BAND,                200);
+    public static final Item MUSIC_DISC_COMPANY             = music_disc("music_disc_company",              LightstonesSounds.MUSIC_DISC_COMPANY,             145);
+    public static final Item MUSIC_DISC_MINES               = music_disc("music_disc_mines",                LightstonesSounds.MUSIC_DISC_MINES,               166);
+    public static final Item MUSIC_DISC_NAHO                = music_disc("music_disc_naho",                 LightstonesSounds.MUSIC_DISC_NAHO,                 95);
+    public static final Item MUSIC_DISC_PLAGUE              = music_disc("music_disc_plague",               LightstonesSounds.MUSIC_DISC_PLAGUE,              130);
+    public static final Item MUSIC_DISC_RAMA                = music_disc("music_disc_rama",                 LightstonesSounds.MUSIC_DISC_RAMA,                314);
+    public static final Item MUSIC_DISC_SANCTUM             = music_disc("music_disc_sanctum",              LightstonesSounds.MUSIC_DISC_SANCTUM,             190);
+    public static final Item MUSIC_DISC_KILLING_MACHINES    = music_disc("music_disc_killing_machines",     LightstonesSounds.MUSIC_DISC_KILLING_MACHINES,    238);
+    public static final Item MUSIC_DISC_CREEPING_IN_MY_SOUL = music_disc("music_disc_creeping_in_my_soul",  LightstonesSounds.MUSIC_DISC_CREEPING_IN_MY_SOUL, 232);
 
 
     public static final Item SKRALL_BANNER_PATTERN = register("skrall_banner_pattern",

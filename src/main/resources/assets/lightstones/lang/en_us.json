@@ -44,6 +44,8 @@
   "item.lightstones.music_disc_sanctum.desc": "Justin Luchter - Sanctum",
   "item.lightstones.music_disc_killing_machines": "Music Disc",
   "item.lightstones.music_disc_killing_machines.desc": "Paul Hardcastle - Killing Machines",
+  "item.lightstones.music_disc_creeping_in_my_soul": "Music Disc",
+  "item.lightstones.music_disc_creeping_in_my_soul.desc": "Cryoshell - Creeping in My Soul",
   "item.lightstones.skrall_banner_pattern": "§cBanner Pattern",
   "item.lightstones.skrall_banner_pattern.desc": "Skrall",
   "block.minecraft.banner.lightstones.skrall.black": "Black Skrall",
@@ -146,5 +148,9 @@
   "item.minecraft.lingering_potion.effect.ablepsy": "Lingering Potion of Ablepsy",
   "item.minecraft.lingering_potion.effect.long_ablepsy": "Lingering Potion of Ablepsy",
   "item.minecraft.tipped_arrow.effect.ablepsy": "Arrow of Ablepsy",
-  "item.minecraft.tipped_arrow.effect.long_ablepsy": "Arrow of Ablepsy"
+  "item.minecraft.tipped_arrow.effect.long_ablepsy": "Arrow of Ablepsy",
+  "advancements.nether.strider_tipper.title": "Strider Tipper",
+  "advancements.nether.strider_tipper.description": "Harvest some fireproof Strider Hide",
+  "advancements.nether.lava_surfboard.title": "Dangerous, but Fun!",
+  "advancements.nether.lava_surfboard.description": "Obtain a Lava Surfboard"
 }
