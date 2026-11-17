@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "lightstones",
+  "version": "${version}",
+  "name": "Lightstones",
+  "description": "Authentic lightstones straight from Onu-Koro!",
+  "authors": [
+    "Paperdomo101",
+    "Sunconure11"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/lightstones",
+    "issues": "https://github.com/Paperdomo101/lightstones/issues",
+    "sources": "https://github.com/Paperdomo101/lightstones"
+  },
+  "license": "MIT",
+  "icon": "assets/lightstones/icon.png",
+  "accessWidener": "lightstones.accesswidener",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "paperdomo101.lightstones.fabric.LightstonesFabric"
+    ],
+    "client": [
+      "paperdomo101.lightstones.fabric.client.LightstonesFabricClient"
+    ],
+    "modmenu": [
+      "paperdomo101.lightstones.fabric.config.LightstonesModMenu"
+    ]
+  },
+  "mixins": [
+    "lightstones-common.mixins.json",
+    "lightstones-fabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.20.1",
+    "java": ">=17"
+  },
+  "suggests": {
+    "cloth-config": "*"
+  }
+}

@@ -1,23 +1,23 @@
 # gradle
-
 .gradle/
 build/
+*/build/
 out/
 classes/
 
-# eclipse
+# architectury
+.architectury-transformer/
 
+# eclipse
 *.launch
 
 # idea
-
 .idea/
 *.iml
 *.ipr
 *.iws
 
 # vscode
-
 .settings/
 .vscode/
 bin/
@@ -25,9 +25,9 @@ bin/
 .project
 
 # macos
-
 *.DS_Store
 
-# fabric
-
+# runtime / local release staging
 run/
+*/run/
+dist/

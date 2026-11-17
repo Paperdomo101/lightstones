@@ -1,0 +1,72 @@
+package paperdomo101.lightstones.block;
+
+import java.util.function.Supplier;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.FallingBlock;
+import net.minecraft.entity.FallingBlockEntity;
+import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.state.StateManager.Builder;
+import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.Properties;
+import net.minecraft.util.BlockMirror;
+import net.minecraft.util.BlockRotation;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
+import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
+
+public class NuiStoneBlock extends FallingBlock {
+
+    public static final DirectionProperty FACING;
+
+    static {
+        FACING = Properties.HORIZONTAL_FACING;
+    }
+
+    private final int color;
+    public final Supplier<SoundEvent> fallSound;
+
+    public NuiStoneBlock(int color, Settings settings, Supplier<SoundEvent> fallSound) {
+        super(settings);
+        this.fallSound = fallSound;
+        this.color = color;
+        this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH));
+    }
+
+    public int getColor(BlockState state, BlockView world, BlockPos pos) {
+        return this.color;
+    }
+
+    public BlockState rotate(BlockState state, BlockRotation rotation) {
+        return state.with(FACING, rotation.rotate(state.get(FACING)));
+    }
+
+    public BlockState mirror(BlockState state, BlockMirror mirror) {
+        return state.rotate(mirror.getRotation(state.get(FACING)));
+    }
+
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
+    }
+
+    @Override
+    public void onLanding(World world, BlockPos pos, BlockState fallingBlockState, BlockState currentStateInPos, FallingBlockEntity fallingBlockEntity) {
+        if (!world.isClient) {
+            world.playSound(null, pos, fallSound.get(), SoundCategory.BLOCKS, 1.0f, 1.0f);
+        }
+    }
+
+    public boolean hasComparatorOutput(BlockState state) {
+        return true;
+    }
+
+    @Override
+    protected void appendProperties(Builder<Block, BlockState> builder) {
+        builder.add(FACING);
+    }
+
+}
