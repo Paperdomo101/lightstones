@@ -1,11 +1,13 @@
 # gradle
 .gradle/
+**/.gradle/
 build/
-*/build/
+**/build/
 out/
 classes/
 
-# architectury
+# stonecutter & architectury
+.stonecutter/
 .architectury-transformer/
 
 # eclipse
@@ -29,5 +31,5 @@ bin/
 
 # runtime / local release staging
 run/
-*/run/
+**/run/
 dist/

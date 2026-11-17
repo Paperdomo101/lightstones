@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "group": "lightstone",
+  "ingredient": {
+	"item": "lightstones:blightstone_ore"
+  },
+  "result": "lightstones:blightstone",
+  "experience": 0.3,
+  "cookingtime": 200
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "lightstones:mata_nui_stone"
+    }
+  ],
+  "result": {
+    "item": "lightstones:virtues_banner_pattern"
+  }
+}

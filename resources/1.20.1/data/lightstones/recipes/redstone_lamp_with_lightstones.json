@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LRL",
+    "RLR",
+    "LRL"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "L": {
+      "item": "lightstones:lightstone"
+    }
+  },
+  "result": {
+    "item": "minecraft:redstone_lamp"
+  }
+}

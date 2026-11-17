@@ -1,0 +1,24 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "paperdomo101.lightstones.mixin",
+  "compatibilityLevel": "JAVA_${java_major}",
+  "mixins": [
+    "LavaSurfboardRiderMixin",
+    "LavaSurfboardDismountMixin",
+    "LavaSurfboardDataFixerMixin",
+    "LavaSurfboardTargetingMixin"
+  ],
+  "client": [
+    "LavaSurfboardInputMixin",
+    "LavaSurfboardStandMixin",
+    "LavaSurfboardRightClickDismountMixin",
+    "LavaSurfboardMountHintMixin",
+    "LavaSurfboardSoundMixin",
+    "LavaSurfboardShaderMixin",
+    "LavaSurfboardSilencePassengerWarnMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

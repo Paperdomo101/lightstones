@@ -20,14 +20,13 @@ jobs:
         if: ${{ runner.os != 'Windows' }}
         run: chmod +x ./gradlew
       - name: build
-        run: ./gradlew build
+        run: ./gradlew buildAndCollect
       - name: capture artifacts
         if: ${{ matrix.os == 'ubuntu-latest' }}
         uses: actions/upload-artifact@v4
         with:
-          name: Lightstones-1.21.1-Artifacts
+          name: Lightstones-Artifacts
           path: |
-            fabric/build/libs/*.jar
-            neoforge/build/libs/*.jar
-            !**/build/libs/*-dev-shadow.jar
-            !**/build/libs/*-sources.jar
+            build/libs/*.jar
+            !build/libs/*-dev*.jar
+            !build/libs/*-sources*.jar

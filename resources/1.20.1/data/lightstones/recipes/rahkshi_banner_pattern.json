@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "lightstones:makuta_stone"
+    }
+  ],
+  "result": {
+    "item": "lightstones:rahkshi_banner_pattern"
+  }
+}
