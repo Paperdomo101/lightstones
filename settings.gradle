@@ -14,4 +14,4 @@ plugins {
 
 rootProject.name = 'lightstones'
 
-include('common', 'fabric', 'forge')
+include('common', 'fabric', 'neoforge')

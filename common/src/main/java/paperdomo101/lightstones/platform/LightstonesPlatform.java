@@ -5,7 +5,6 @@ import java.util.ServiceLoader;
 import java.util.function.Supplier;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.entity.BannerPattern;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -31,8 +30,6 @@ public interface LightstonesPlatform {
 
     Supplier<SoundEvent> registerSoundEvent(String name, Supplier<SoundEvent> supplier);
 
-    Supplier<BannerPattern> registerBannerPattern(String name, Supplier<BannerPattern> supplier);
-
     Supplier<LootConditionType> registerLootConditionType(String name, Supplier<LootConditionType> supplier);
 
     Supplier<ItemGroup> registerItemGroup(
@@ -40,13 +37,6 @@ public interface LightstonesPlatform {
             Supplier<Text> displayName,
             Supplier<ItemStack> icon,
             ItemGroup.EntryCollector entries
-    );
-
-    Item createMusicDiscItem(
-            int comparatorOutput,
-            Supplier<SoundEvent> sound,
-            Item.Settings settings,
-            int lengthInSeconds
     );
 
     Path getConfigDir();

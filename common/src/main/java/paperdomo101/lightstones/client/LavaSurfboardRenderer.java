@@ -13,7 +13,7 @@ import paperdomo101.lightstones.entity.LavaSurfboardEntity;
 
 public class LavaSurfboardRenderer extends EntityRenderer<LavaSurfboardEntity> {
 
-    public static final Identifier TEXTURE = new Identifier(Lightstones.MOD_ID, "textures/entity/lava_surfboard.png");
+    public static final Identifier TEXTURE = Identifier.of(Lightstones.MOD_ID, "textures/entity/lava_surfboard.png");
 
     private final LavaSurfboardModel model;
 
@@ -32,7 +32,7 @@ public class LavaSurfboardRenderer extends EntityRenderer<LavaSurfboardEntity> {
         matrices.scale(1.0F, -1.0F, 1.0F);
 
         var vertexConsumer = vcp.getBuffer(LightstonesRenderLayers.getUnlitEntityCutout(TEXTURE));
-        model.render(matrices, vertexConsumer, light, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
+        model.render(matrices, vertexConsumer, light, OverlayTexture.DEFAULT_UV, -1);
 
         matrices.pop();
         super.render(entity, yaw, tickDelta, matrices, vcp, light);

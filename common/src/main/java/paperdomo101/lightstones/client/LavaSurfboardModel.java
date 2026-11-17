@@ -23,7 +23,7 @@ public class LavaSurfboardModel extends EntityModel<LavaSurfboardEntity> {
 
 	public static final EntityModelLayer LAYER =
 		new EntityModelLayer(
-				new Identifier("lightstones", "lava_surfboard"), "main"
+				Identifier.of("lightstones", "lava_surfboard"), "main"
 		);
 	
 		public static TexturedModelData getTexturedModelData() {
@@ -57,7 +57,7 @@ public class LavaSurfboardModel extends EntityModel<LavaSurfboardEntity> {
 	) {
 	}
 	@Override
-	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
-		bb_main.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
+	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, int color) {
+		bb_main.render(matrices, vertexConsumer, light, overlay, color);
 	}
 }

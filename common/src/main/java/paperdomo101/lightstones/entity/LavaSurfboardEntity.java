@@ -10,6 +10,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MovementType;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.ItemStack;
@@ -38,7 +39,7 @@ import paperdomo101.lightstones.registry.LightstonesSounds;
 
 
 public class LavaSurfboardEntity extends Entity {
-    public static final Identifier VELOCITY_SYNC_ID = new Identifier(Lightstones.MOD_ID, "surfboard_velocity_sync");
+    public static final Identifier VELOCITY_SYNC_ID = Identifier.of(Lightstones.MOD_ID, "surfboard_velocity_sync");
 
     private static final double LAVA_FLOAT_CLEARANCE = -0.05;
     private static final float FORWARD_THRUST = 0.06F;
@@ -95,7 +96,7 @@ public class LavaSurfboardEntity extends Entity {
     }
 
     @Override
-    protected void initDataTracker() {}
+    protected void initDataTracker(DataTracker.Builder builder) {}
     @Override
     protected void readCustomDataFromNbt(NbtCompound nbt) {}
     @Override
@@ -140,15 +141,12 @@ public class LavaSurfboardEntity extends Entity {
     public boolean canHit() { return !this.isRemoved(); }
 
     @Override
-    public double getMountedHeightOffset() { return PHYSICAL_HEIGHT; }
-
-    @Override
     public EntityDimensions getDimensions(EntityPose pose) {
         EntityDimensions base = super.getDimensions(pose);
         if (this.hasPassengers()) {
             // while mounted the board's bounding box expands to the player's 
             // height so it can't slide under a blocks that overhang lava 
-            return EntityDimensions.changing(base.width, RIDING_HEIGHT);
+            return EntityDimensions.changing(base.width(), RIDING_HEIGHT);
         }
         return base;
     }
@@ -254,7 +252,7 @@ public class LavaSurfboardEntity extends Entity {
     }
 
     @Override
-    public void updateTrackedPositionAndAngles(double x, double y, double z, float yaw, float pitch, int interpolationSteps, boolean interpolate) {
+    public void updateTrackedPositionAndAngles(double x, double y, double z, float yaw, float pitch, int interpolationSteps) {
         this.trackedX = x;
         this.trackedY = y;
         this.trackedZ = z;

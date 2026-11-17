@@ -5,8 +5,10 @@ import java.util.function.Supplier;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.sound.SoundEvent;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Rarity;
+import paperdomo101.lightstones.Lightstones;
 import paperdomo101.lightstones.item.LavaSurfboardItem;
 import paperdomo101.lightstones.item.LightstonesBannerPatternItem;
 import paperdomo101.lightstones.platform.LightstonesPlatform;
@@ -49,27 +51,27 @@ public class LightstonesItems {
     public static final Supplier<Item> LAVA_SURFBOARD = register("lava_surfboard",
             () -> new LavaSurfboardItem(new Item.Settings().maxCount(1).fireproof()));
 
-    private static Supplier<Item> musicDisc(String name, Supplier<SoundEvent> sound, int duration) {
-        return register(name, () -> LightstonesPlatform.INSTANCE.createMusicDiscItem(
-                15,
-                sound,
-                new Item.Settings().maxCount(1).rarity(Rarity.RARE),
-                duration
+    private static Supplier<Item> musicDisc(String name, String songId) {
+        return register(name, () -> new Item(
+                new Item.Settings()
+                        .maxCount(1)
+                        .rarity(Rarity.RARE)
+                        .jukeboxPlayable(RegistryKey.of(RegistryKeys.JUKEBOX_SONG, Lightstones.id(songId)))
         ));
     }
 
-    public static final Supplier<Item> MUSIC_DISC_TELESCOPE           = musicDisc("music_disc_telescope",            LightstonesSounds.MUSIC_DISC_TELESCOPE,           137);
-    public static final Supplier<Item> MUSIC_DISC_MAKUTA              = musicDisc("music_disc_makuta",               LightstonesSounds.MUSIC_DISC_MAKUTA,              112);
-    public static final Supplier<Item> MUSIC_DISC_END                 = musicDisc("music_disc_end",                  LightstonesSounds.MUSIC_DISC_END,                 321);
-    public static final Supplier<Item> MUSIC_DISC_BAND                = musicDisc("music_disc_band",                 LightstonesSounds.MUSIC_DISC_BAND,                200);
-    public static final Supplier<Item> MUSIC_DISC_COMPANY             = musicDisc("music_disc_company",              LightstonesSounds.MUSIC_DISC_COMPANY,             145);
-    public static final Supplier<Item> MUSIC_DISC_MINES               = musicDisc("music_disc_mines",                LightstonesSounds.MUSIC_DISC_MINES,               166);
-    public static final Supplier<Item> MUSIC_DISC_NAHO                = musicDisc("music_disc_naho",                 LightstonesSounds.MUSIC_DISC_NAHO,                 95);
-    public static final Supplier<Item> MUSIC_DISC_PLAGUE              = musicDisc("music_disc_plague",               LightstonesSounds.MUSIC_DISC_PLAGUE,              130);
-    public static final Supplier<Item> MUSIC_DISC_RAMA                = musicDisc("music_disc_rama",                 LightstonesSounds.MUSIC_DISC_RAMA,                314);
-    public static final Supplier<Item> MUSIC_DISC_SANCTUM             = musicDisc("music_disc_sanctum",              LightstonesSounds.MUSIC_DISC_SANCTUM,             190);
-    public static final Supplier<Item> MUSIC_DISC_KILLING_MACHINES    = musicDisc("music_disc_killing_machines",     LightstonesSounds.MUSIC_DISC_KILLING_MACHINES,    238);
-    public static final Supplier<Item> MUSIC_DISC_CREEPING_IN_MY_SOUL = musicDisc("music_disc_creeping_in_my_soul",  LightstonesSounds.MUSIC_DISC_CREEPING_IN_MY_SOUL, 232);
+    public static final Supplier<Item> MUSIC_DISC_TELESCOPE           = musicDisc("music_disc_telescope",            "telescope");
+    public static final Supplier<Item> MUSIC_DISC_MAKUTA              = musicDisc("music_disc_makuta",               "makuta");
+    public static final Supplier<Item> MUSIC_DISC_END                 = musicDisc("music_disc_end",                  "end");
+    public static final Supplier<Item> MUSIC_DISC_BAND                = musicDisc("music_disc_band",                 "band");
+    public static final Supplier<Item> MUSIC_DISC_COMPANY             = musicDisc("music_disc_company",              "company");
+    public static final Supplier<Item> MUSIC_DISC_MINES               = musicDisc("music_disc_mines",                "mines");
+    public static final Supplier<Item> MUSIC_DISC_NAHO                = musicDisc("music_disc_naho",                 "naho");
+    public static final Supplier<Item> MUSIC_DISC_PLAGUE              = musicDisc("music_disc_plague",               "plague");
+    public static final Supplier<Item> MUSIC_DISC_RAMA                = musicDisc("music_disc_rama",                 "rama");
+    public static final Supplier<Item> MUSIC_DISC_SANCTUM             = musicDisc("music_disc_sanctum",              "sanctum");
+    public static final Supplier<Item> MUSIC_DISC_KILLING_MACHINES    = musicDisc("music_disc_killing_machines",     "killing_machines");
+    public static final Supplier<Item> MUSIC_DISC_CREEPING_IN_MY_SOUL = musicDisc("music_disc_creeping_in_my_soul",  "creeping_in_my_soul");
 
     public static final Supplier<Item> SKRALL_BANNER_PATTERN = register("skrall_banner_pattern",
             () -> new LightstonesBannerPatternItem(LightstonesBannerPatterns.SKRALL_KEY, new Item.Settings().maxCount(1)));

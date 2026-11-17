@@ -1,5 +1,8 @@
 package paperdomo101.lightstones.block;
 
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.state.StateManager;
@@ -10,6 +13,13 @@ import net.minecraft.world.BlockView;
 
 public class ChargeableLightstoneBlock extends LightstoneBlock {
 
+    public static final MapCodec<ChargeableLightstoneBlock> CODEC = RecordCodecBuilder.mapCodec(instance ->
+            instance.group(
+                    Codec.INT.fieldOf("weak_power").forGetter(block -> block.weakPower),
+                    createSettingsCodec()
+            ).apply(instance, ChargeableLightstoneBlock::new)
+    );
+
     public static final BooleanProperty CHARGED = BooleanProperty.of("charged");
 
     private int weakPower;
@@ -19,7 +29,12 @@ public class ChargeableLightstoneBlock extends LightstoneBlock {
         this.weakPower = weakPower;
         this.setDefaultState((this.stateManager.getDefaultState()).with(FACING, Direction.UP).with(WATER_LEVEL, 0).with(WATER_FALLING, false).with(CHARGED, false));
     }
-    
+
+    @Override
+    protected MapCodec<? extends LightstoneBlock> getCodec() {
+        return CODEC;
+    }
+
     @Override
     public int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
         return state.get(CHARGED) ? weakPower : 0;

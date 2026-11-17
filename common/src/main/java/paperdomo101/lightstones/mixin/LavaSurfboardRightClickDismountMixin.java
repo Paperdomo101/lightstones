@@ -28,7 +28,7 @@ public abstract class LavaSurfboardRightClickDismountMixin {
             if (this.lightstones$surfboardDismounted) { 
                 ci.cancel(); 
             } 
-            else if (this.lightstones$isLookingAt(player, board, client.interactionManager.getReachDistance())) {
+            else if (this.lightstones$isLookingAt(player, board, player.getEntityInteractionRange())) {
                 this.lightstones$surfboardDismounted = true;
                 client.interactionManager.interactEntity(player, board, Hand.MAIN_HAND);
                 ci.cancel();

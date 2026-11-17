@@ -10,24 +10,24 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
-      - name: setup jdk 17
+      - name: setup jdk 21
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '21'
           cache: 'gradle'
       - name: make gradle wrapper executable
         if: ${{ runner.os != 'Windows' }}
         run: chmod +x ./gradlew
       - name: build
         run: ./gradlew build
-      - name: capture fabric artifacts
+      - name: capture artifacts
         if: ${{ matrix.os == 'ubuntu-latest' }}
         uses: actions/upload-artifact@v4
         with:
-          name: Lightstones-1.20.1-Artifacts
+          name: Lightstones-1.21.1-Artifacts
           path: |
             fabric/build/libs/*.jar
-            forge/build/libs/*.jar
+            neoforge/build/libs/*.jar
             !**/build/libs/*-dev-shadow.jar
             !**/build/libs/*-sources.jar

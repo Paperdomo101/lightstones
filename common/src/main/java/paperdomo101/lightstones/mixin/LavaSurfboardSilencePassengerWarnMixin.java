@@ -13,7 +13,7 @@ public abstract class LavaSurfboardSilencePassengerWarnMixin {
     @Inject(method = "onEntityPassengersSet", at = @At("HEAD"), cancellable = true)
     private void lightstones$silenceUnknownPassenger(EntityPassengersSetS2CPacket packet, CallbackInfo ci) {
         ClientPlayNetworkHandler self = (ClientPlayNetworkHandler) (Object) this;
-        if (self.getWorld().getEntityById(packet.getId()) == null) {
+        if (self.getWorld().getEntityById(packet.getEntityId()) == null) {
             ci.cancel();
         }
     }

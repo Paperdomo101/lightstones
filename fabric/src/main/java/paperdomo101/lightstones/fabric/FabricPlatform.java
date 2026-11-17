@@ -6,7 +6,6 @@ import java.util.function.Supplier;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
-import net.minecraft.block.entity.BannerPattern;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -17,7 +16,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
 import paperdomo101.lightstones.Lightstones;
-import paperdomo101.lightstones.item.LightstonesMusicDiscItem;
 import paperdomo101.lightstones.platform.LightstonesPlatform;
 
 public class FabricPlatform implements LightstonesPlatform {
@@ -58,12 +56,6 @@ public class FabricPlatform implements LightstonesPlatform {
     }
 
     @Override
-    public Supplier<BannerPattern> registerBannerPattern(String name, Supplier<BannerPattern> supplier) {
-        BannerPattern registered = Registry.register(Registries.BANNER_PATTERN, Lightstones.id(name), supplier.get());
-        return () -> registered;
-    }
-
-    @Override
     public Supplier<LootConditionType> registerLootConditionType(String name, Supplier<LootConditionType> supplier) {
         LootConditionType registered = Registry.register(Registries.LOOT_CONDITION_TYPE, Lightstones.id(name), supplier.get());
         return () -> registered;
@@ -86,16 +78,6 @@ public class FabricPlatform implements LightstonesPlatform {
                         .build()
         );
         return () -> registered;
-    }
-
-    @Override
-    public Item createMusicDiscItem(
-            int comparatorOutput,
-            Supplier<SoundEvent> sound,
-            Item.Settings settings,
-            int lengthInSeconds
-    ) {
-        return new LightstonesMusicDiscItem(comparatorOutput, sound.get(), settings, lengthInSeconds);
     }
 
     @Override

@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.lightstones.music_disc_creeping_in_my_soul.desc"
+  },
+  "length_in_seconds": 232.0,
+  "sound_event": "lightstones:music_disc.creeping_in_my_soul"
+}

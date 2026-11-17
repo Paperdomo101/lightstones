@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "group": "lightstone",
+  "ingredient": {
+    "item": "lightstones:deathstone_ore"
+  },
+  "result": {
+    "id": "lightstones:deathstone"
+  },
+  "experience": 0.3,
+  "cookingtime": 200
+}

@@ -14,7 +14,7 @@ public class LightstonesEntities {
                     "lava_surfboard",
                     () -> EntityType.Builder
                             .<LavaSurfboardEntity>create(LavaSurfboardEntity::new, SpawnGroup.MISC)
-                            .setDimensions(1.25F, 0.125F)
+                            .dimensions(1.25F, 0.125F)
                             .makeFireImmune()
                             .maxTrackingRange(10)
                             .trackingTickInterval(10)

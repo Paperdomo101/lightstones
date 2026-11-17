@@ -2,6 +2,9 @@ package paperdomo101.lightstones.block;
 
 import java.util.function.Supplier;
 
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FallingBlock;
@@ -9,6 +12,7 @@ import net.minecraft.entity.FallingBlockEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager.Builder;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
@@ -20,6 +24,13 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
 public class NuiStoneBlock extends FallingBlock {
+
+    public static final MapCodec<NuiStoneBlock> CODEC = RecordCodecBuilder.mapCodec(instance ->
+            instance.group(
+                    Codec.INT.fieldOf("color").forGetter(block -> block.color),
+                    createSettingsCodec()
+            ).apply(instance, (color, settings) -> new NuiStoneBlock(color, settings, () -> SoundEvents.BLOCK_STONE_FALL))
+    );
 
     public static final DirectionProperty FACING;
 
@@ -35,6 +46,11 @@ public class NuiStoneBlock extends FallingBlock {
         this.fallSound = fallSound;
         this.color = color;
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH));
+    }
+
+    @Override
+    protected MapCodec<? extends FallingBlock> getCodec() {
+        return CODEC;
     }
 
     public int getColor(BlockState state, BlockView world, BlockPos pos) {

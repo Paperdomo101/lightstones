@@ -1,7 +1,11 @@
 package paperdomo101.lightstones.block;
 
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
@@ -18,8 +22,16 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
+import org.jetbrains.annotations.Nullable;
 
 public class LightstoneBlock extends FacingBlock implements Waterloggable {
+
+    public static final MapCodec<LightstoneBlock> CODEC = RecordCodecBuilder.mapCodec(instance ->
+            instance.group(
+                    Codec.INT.fieldOf("weak_power").forGetter(block -> block.weakPower),
+                    createSettingsCodec()
+            ).apply(instance, LightstoneBlock::new)
+    );
 
     /** The contained water level: 0 is dry, 1-7 is flowing water, 8 is a full block. */
     public static final IntProperty WATER_LEVEL;
@@ -53,6 +65,11 @@ public class LightstoneBlock extends FacingBlock implements Waterloggable {
                 .with(FACING, Direction.UP)
                 .with(WATER_LEVEL, 0)
                 .with(WATER_FALLING, false));
+    }
+
+    @Override
+    protected MapCodec<? extends LightstoneBlock> getCodec() {
+        return CODEC;
     }
 
     public boolean hasSidedTransparency(BlockState state) {
@@ -114,7 +131,7 @@ public class LightstoneBlock extends FacingBlock implements Waterloggable {
     }
 
     @Override
-    public boolean canFillWithFluid(BlockView world, BlockPos pos, BlockState state, Fluid fluid) {
+    public boolean canFillWithFluid(@Nullable PlayerEntity player, BlockView world, BlockPos pos, BlockState state, Fluid fluid) {
         return fluid.matchesType(Fluids.WATER);
     }
 
@@ -134,7 +151,7 @@ public class LightstoneBlock extends FacingBlock implements Waterloggable {
     }
 
     @Override
-    public ItemStack tryDrainFluid(WorldAccess world, BlockPos pos, BlockState state) {
+    public ItemStack tryDrainFluid(@Nullable PlayerEntity player, WorldAccess world, BlockPos pos, BlockState state) {
         if (state.get(WATER_LEVEL) != 0) {
             world.setBlockState(pos, state.with(WATER_LEVEL, 0).with(WATER_FALLING, false), Block.NOTIFY_ALL);
             if (!state.canPlaceAt(world, pos)) {

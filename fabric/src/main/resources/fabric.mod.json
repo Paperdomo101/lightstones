@@ -33,10 +33,10 @@
     "lightstones-fabric.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.6",
-    "fabric": "*",
-    "minecraft": "~1.20.1",
-    "java": ">=17"
+    "fabricloader": ">=0.16.0",
+    "fabric-api": "*",
+    "minecraft": ">=1.21 <=1.21.1",
+    "java": ">=21"
   },
   "suggests": {
     "cloth-config": "*"

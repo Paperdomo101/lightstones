@@ -11,7 +11,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import paperdomo101.lightstones.config.LightstonesConfig;
 import paperdomo101.lightstones.platform.LightstonesPlatform;
-import paperdomo101.lightstones.registry.LightstonesBannerPatterns;
 import paperdomo101.lightstones.registry.LightstonesBlocks;
 import paperdomo101.lightstones.registry.LightstonesEntities;
 import paperdomo101.lightstones.registry.LightstonesItems;
@@ -82,7 +81,7 @@ public class Lightstones {
     public static LightstonesConfig CONFIG;
 
     public static Identifier id(String name) {
-        return new Identifier(MOD_ID, name);
+        return Identifier.of(MOD_ID, name);
     }
 
     public static void init() {
@@ -90,7 +89,6 @@ public class Lightstones {
 
         LightstonesSounds.init();
         LightstonesBlocks.init();
-        LightstonesBannerPatterns.init();
         LightstonesEntities.init();
         LightstonesItems.init();
         LightstonesLoot.init();

@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.lightstones.music_disc_naho.desc"
+  },
+  "length_in_seconds": 95.0,
+  "sound_event": "lightstones:music_disc.naho"
+}

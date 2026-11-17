@@ -11,7 +11,7 @@ public class LightstonesLoot {
     public static final Supplier<LootConditionType> SILK_TOUCH_IF_CONFIGURED =
             LightstonesPlatform.INSTANCE.registerLootConditionType(
                     "silk_touch_if_configured",
-                    () -> new LootConditionType(new SilkTouchIfConfiguredLootCondition.Serializer())
+                    () -> new LootConditionType(SilkTouchIfConfiguredLootCondition.CODEC)
             );
 
     public static void init() {
